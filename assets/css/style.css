@@ -1876,11 +1876,11 @@ img {
 .service-item-two .content .read-btn {
   padding: 6px 16px;
   color: #292323;
-  border: 1px solid #ee786c;
+  border: 1px solid #28a745;
 }
 .service-item-two .content .read-btn:hover {
   color: #fff;
-  background-color: #ee786c;
+  background-color: #28a745;
 }
 .service-article .service-article-img {
   margin-bottom: 30px;
@@ -1911,7 +1911,7 @@ img {
   text-align: center;
   font-size: 120px;
   font-weight: 400;
-  color: #ee786c;
+  color: #28a745;
   font-family: Flaticon;
   line-height: 0;
   opacity: 0.2;
@@ -1926,7 +1926,7 @@ img {
   text-align: center;
   font-size: 50px;
   font-weight: 400;
-  background-color: #ee786c;
+  background-color: #28a745;
 }
 .service-article .service-article-content .blockquote p {
   font-size: 20px;
@@ -1960,13 +1960,13 @@ img {
   margin-bottom: 0;
 }
 .service-article .service-facility-content ul li:hover {
-  color: #ee786c;
+  color: #28a745;
 }
 .service-article .service-facility-content ul li:hover i {
   color: #292323;
 }
 .service-article .service-facility-content ul li i {
-  color: #ee786c;
+  color: #28a745;
   margin-right: 10px;
 }
 .service-article .more-services h2 {
@@ -2001,7 +2001,7 @@ img {
   border: 1px solid #ee786c7a;
 }
 .services-bar-widget .side-bar-categories ul li:hover {
-  background-color: #ee786c;
+  background-color:#28a745;
 }
 .services-bar-widget .side-bar-categories ul li a {
   display: inline-block;
@@ -4894,6 +4894,177 @@ img {
   /* margin-bottom: 30px; */
 }
 
+.blog-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.blog-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.read-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #549154; /* Green border */
+  color:#549154;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 15px;
+}
+
+.read-btn:hover {
+  background-color: #549154;
+  color: white;
+}
+
+.text-center h3 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.text-center h3 a:hover {
+  color: #549154; /* Green color for hover */
+}
+
+.activity-item {
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.activity-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.activity-icon {
+  width: 120px; /* Increase the size of the icon */
+  height: auto;
+}
+
+.activity-content {
+  padding: 20px;
+}
+
+.activity-content h4 {
+  color: #28a745;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.activity-content p {
+  font-size: 18px;
+  color: #555;
+  font-family:serif;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.section-title span {
+  color: #28a745;
+  font-size: 16px;
+}
+
+.section-title h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.section-title p {
+  color: #000;
+  font-size: 18px;
+  font-family:serif;
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Zoom Icon Style */
+.zoom-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: none;
+}
+
+.gallery-item:hover .zoom-icon {
+  display: block;
+}
+/*browse button*/
+.btn-custom {
+  display: inline-block;
+  width: 150px; /* Adjust the width as per your preference */
+  height: 50px; /* Adjust height to make it appear proportional */
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+   /* For slight rounded corners */
+  padding: 0;
+  line-height: 50px; /* Ensures text is vertically centered */
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.btn-custom:hover {
+  background-color: #28a745; /* Slightly darker green for hover */
+}
+/* Section Title Styles */
+.section-title span {
+  color: #28a745;
+  font-size: 16px;
+}
+
+.section-title h2 {
+  color: #333;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.section-title p {
+  color: #666;
+  font-size: 16px;
+}
+
+.blog-item img {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.blog-item img:hover {
+  transform: scale(1.05);
+}
+
 .pt-40{
     padding-top: 40px;
 }
@@ -5097,6 +5268,27 @@ img {
   box-shadow: 0 1px 20px 1px #82b440;
   font-size: 13px;
   font-weight: 600;
+}
+
+.services-area .blog-item {
+  margin-bottom: 30px;
+  /* Space between items */
+}
+
+.blog-item img.blog-image {
+  width: 100%;
+  /* Ensures the image fills the entire width of the div */
+  height: 300px;
+  /* Sets the height of the image */
+  object-fit: cover;
+  /* Ensures the image covers the area without distortion */
+}
+
+@media screen and (max-width: 768px) {
+  .blog-item img.blog-image {
+      height: 200px;
+      /* Adjust the height for smaller screens */
+  }
 }
 .buy-now-btn img {
   top: 50%;
@@ -5304,4 +5496,135 @@ img {
   84% {
     border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
   }
+}
+.blog-card {
+  background: #f8f9fa; /* Optional background color */
+  border: 1px solid #ddd; /* Optional border */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensures full height inside the parent container */
+}
+
+.blog-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image scales properly */
+}
+
+.row.pt-45 .col-lg-6 {
+  display: flex;
+  flex-direction: column;
+}
+/*About us*/
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+.about-area {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.default-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.services-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.services-card:hover {
+  background-color: #549154; /* Green hover background */
+  color: #fff; /* Change text color to white */
+  border-color: #549154;
+}
+
+.services-card i {
+  font-size: 40px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+  color: #333;
+}
+
+.services-card:hover i {
+  color: #fff; /* Icon changes to white on hover */
+}
+
+.services-card h3 a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.services-card:hover h3 a {
+  color: #fff; /* Link text changes to white on hover */
+}
+
+.services-card p {
+  color: #666;
+  transition: color 0.3s ease-in-out;
+}
+
+.services-card:hover p {
+  color: #fff; /* Paragraph text changes to white on hover */
+}
+
+
+/* Adjusting the height of the images */
+.blog-img img {
+  width: 100%;
+  height: 300px; /* Increase the height of the images */
+  object-fit: cover; /* Ensure the image is cropped to fit the box */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add a hover effect for images */
+.blog-img img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Blog Card content */
+.blog-content h3 a {
+  color: #333;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.blog-content h3 a:hover {
+  color: #2ecc71; /* Green hover effect for the title */
+}
+
+.blog-content p {
+  color: #777;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.blog-card:hover .blog-content p {
+  color: #555; /* Change text color on hover */
 }

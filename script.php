@@ -24,3 +24,4 @@
                     <script src="assets/js/contact-form-script.js "></script>
 
                     <script src="assets/js/custom.js "></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>

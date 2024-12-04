@@ -25,3 +25,6 @@
 <link rel="stylesheet" href="assets/css/theme-dark.css" />
 
 <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<!-- Include Font Awesome for Zoom Icon -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">

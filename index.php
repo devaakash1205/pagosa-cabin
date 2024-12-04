@@ -59,7 +59,7 @@ include("header.php");
             <div class="banner-two__content__top wow fadeInUp" data-wow-delay="300ms">
                 <h1 class="banner-two__title">
                     <?php
-                    echo isset($homepage_details) && $homepage_details["banner_text"] != null ? $homepage_details["banner_text"] : "Let’s Make your stay unforgettable";
+                    echo isset($homepage_details) && $homepage_details["banner_text"] != null ? $homepage_details["banner_text"] : "Adventures at Serendipitiy Mountains Home ";
                     ?>
                 </h1>
                 <?php
@@ -80,11 +80,11 @@ include("header.php");
 <div class="banner-area">
     <div class="container">
         <div class="banner-content">
-            <h1>Distinctively Different in the Heart of “Uptown” Saint John.</h1>
-            <p>
-                The hotel and resort business is one of the best and loyal business
-                <br> in the global market.
-            </p>
+            <h1>Serendipity Vacation Home
+                &
+                Studio Apartment
+
+                Vacation Rental</h1>
             <div class="banner-btn">
 
             </div>
@@ -92,8 +92,74 @@ include("header.php");
     </div>
 </div>
 
-<div class="about-area pt-100 pb-70">
+<!--Services-->
+<div class="blog-area pb-70 pt-100">
+    <div class="container">
+        <div class="section-title text-center">
+            <span>Services</span>
+            <h2>Our Services</h2>
+        </div>
+        <div class="row pt-45">
+            <!-- First Blog Card -->
+            <div class="col-lg-6 d-flex">
+                <div class="blog-card d-flex flex-column" style="flex-grow: 1;">
+                    <div class="row align-items-center justify-content-center h-100">
+                        <div class="col-lg-5 col-md-4 p-0">
+                            <div class="blog-img">
+                                <a href="blog-details.html">
+                                    <img src="assets/img/gallery/house-2.jpg" alt="Serendipity Living" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-8 p-0">
+                            <div class="blog-content">
+                                <h3>
+                                    <a href="blog-details.html">Serendipity Living and Dining</a>
+                                </h3>
+                                <p>Experience the charm of elegant living spaces and the joy of fine dining. A perfect retreat for relaxation and luxury.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second Blog Card -->
+            <div class="col-lg-6 d-flex">
+                <div class="blog-card d-flex flex-column" style="flex-grow: 1;">
+                    <div class="row align-items-center justify-content-center h-100">
+                        <div class="col-lg-5 col-md-4 p-0">
+                            <div class="blog-img">
+                                <a href="blog-details.html">
+                                    <img src="assets/img/service/service-1.jpg" alt="Beautiful View" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-8 p-0">
+                            <div class="blog-content">
+                                <h3>
+                                    <a href="service.php">A Beautiful View from Serendipity</a>
+                                </h3>
+                                <p>Indulge in stunning panoramic views that surround you, offering a peaceful and scenic escape to recharge your senses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+            <a href="service.php" class="default-btn btn-bg-one border-radius-5">
+                Read More
+            </a>
+        </div>
+        </div>
+    </div>
+</div>
+
+<!--About Us-->
+<div class="about-area pt-70 pb-70">
     <div class="container-fluid">
+        <div class="section-title text-center">
+            <span>About Us</span>
+            <h2>About Us</h2>
+        </div>
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6">
                 <div class="about-img">
@@ -102,87 +168,77 @@ include("header.php");
             </div>
             <div class="col-lg-6">
                 <div class="about-content">
-                    <div class="section-title">
-                        <span>About Us</span>
-                        <h2>
-                            A Pagosa Springs, Colorado Vacation Home in the Heart of the San Juan Mtns.
-                        </h2>
-                        <p>
-                            Nestled on the mountain side of The San Juan River Village, this lovely mountain home with reliable high speed Starlinks wifi has a secluded setting and a magnificent panoramic view of the San Juan Mountains. It is located a convenient 7 miles East of
-                            Pagosa Springs, Colorado and 50 min. east of Durango. It is just 20 minutes from the Wolf Creek Ski Area, which boasts the best ski powder in the State of Colorado. It is 10 minutes from the famous Pagosa Hots Springs with
-                            outdoor pools that cascade down the hill to the river. Several of the pools are actually in the river!
-                        </p>
+                    <h2>A Pagosa Springs, <span class="text-success"> Colorado Vacation Home in the Heart of the San Juan Mtns.</span></h2>
+
+                    <p>
+                        Nestled on the mountain side of The San Juan River Village, this lovely mountain home with
+                        reliable high-speed Starlinks wifi has a secluded setting and a magnificent panoramic view
+                        of the San Juan Mountains.
+                    </p>
+                    <div class="text-left">
+                        <a href="about-us.php" class="default-btn btn-bg-one border-radius-5">Read More</a>
                     </div>
-                    <!-- <ul>
-                            <li>
-                                <i class="flaticon-restaurant"></i>
-                                <div class="content">
-                                    <h3>Deck and Gardens</h3>
-                                    <p>
-                                        We are one of the best company in the global market and we have a restaurant facilities for all of our guides and all of our guests.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <i class="flaticon-wifi-signal-1"></i>
-                                <div class="content">
-                                    <h3>TV</h3>
-                                    <p>
-                                        This is the place where you will get a free wifi zone on a reasonable price and this will help you to make a colourful happy moments.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul> -->
-                    <a href="" class="default-btn btn-bg-one border-radius-5">Read More</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="services-area pb-70">
+
+<!-- Activity Item with Increased Icon Size -->
+<div class="services-area-two pt-70 pb-70">
     <div class="container">
         <div class="section-title text-center">
-            <span>Our Services</span>
-            <h2>
-                Our Services on the Global Market for Our Client's Reservation
-            </h2>
+            <span class="sp-color">Activity</span>
+            <h2>Our Activities</h2>
         </div>
-        <div class="services-slider owl-carousel owl-theme pt-45">
-            <div class="services-item">
-                <i class="flaticon-hotel"></i>
-                <h3>
-                    <a href="service-details.html">Standard Room </a>
-                </h3>
-                <p>
-                    You can easily reserve a hotel room in a suitable place as you want. This will be able to make good feelings.
-                </p>
-                <a href="service-details.html" class="get-btn">Get Service</a>
+        <div class="row pt-45">
+            <div class="col-lg-4 col-sm-6">
+                <div class="services-card">
+                    <i class="fas fa-sleigh text-color"></i>
+                    <h3><a href="service-details.html">Sleigh Rides</a></h3>
+                    <p>Whimsical sleigh rides and sledding opportunities.</p>
+                </div>
             </div>
-            <div class="services-item">
-                <i class="flaticon-resort"></i>
-                <h3>
-                    <a href="service-details.html">Deluxe Room </a>
-                </h3>
-                <p>
-                    One can easily reserve a resort room in a suitable place as you want. This will be able to make good feelings.
-                </p>
-                <a href="service-details.html" class="get-btn">Get Service</a>
+            <div class="col-lg-4 col-sm-6">
+                <div class="services-card">
+                    <i class="fas fa-skiing text-color"></i>
+                    <h3><a href="service-details.html">Downhill Skiing</a></h3>
+                    <p>Downhill skiing and snowmobiling at nearby trails.</p>
+                </div>
             </div>
-            <div class="services-item">
-                <i class="flaticon-buildings"></i>
-                <h3>
-                    <a href="service-details.html">Suites Room
-                    </a>
-                </h3>
-                <p>
-                    Wedding hall reservation is possible in a suitable place as you want. This will be able to make good feelings.
-                </p>
-                <a href="service-details.html" class="get-btn">Get Service</a>
+            <div class="col-lg-4 col-sm-6">
+                <div class="services-card">
+                    <i class="fas fa-hot-tub text-color"></i>
+                    <h3><a href="service-details.html">Pagosa Hot Springs</a></h3>
+                    <p>Soak in the Pagosa Hot Springs year-round, a rejuvenating experience surrounded by nature.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="services-card">
+                    <i class="fas fa-hiking text-color"></i>
+                    <h3><a href="service-details.html">Hiking</a></h3>
+                    <p>Explore 3 million acres of the surrounding San Juan National Forest.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="services-card">
+                    <i class="fas fa-fish text-color"></i>
+                    <h3><a href="service-details.html">Fishing</a></h3>
+                    <p>Enjoy private access to the San Juan River and nearby trout ponds.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <div class="services-card">
+                    <i class="fas fa-water text-color"></i>
+                    <h3><a href="service-details.html">Water Activities</a></h3>
+                    <p>Try river rafting or relax by the shimmering waters of the San Juan River.</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- <div class="reservation-area section-bg pt-100 pb-70">
         <div class="container">
@@ -211,415 +267,200 @@ include("header.php");
             </div>
         </div>
     </div> -->
-
-<div class="specialty-area pt-100 pb-70">
+<!--Rooms-->
+<div class="room-area pt-100 pb-70 section-bg">
     <div class="container">
         <div class="section-title text-center">
-            <span>SPECIALTY</span>
-            <h2>Our Specialization Sectors & All of the Other Details</h2>
+            <span class="sp-color">Rooms</span>
+            <h2>Our Rooms</h2>
         </div>
-        <div class="row pt-45 align-items-center">
-            <div class="col-lg-6 col-xxl-7">
-                <div class="specialty-img">
-                    <img src="assets/img/specialty/208232768.jpg" alt="Images" />
-                </div>
-            </div>
-            <div class="col-lg-6 col-xxl-5">
-                <div class="specialty-list">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12">
-                            <div class="specialty-list-card">
-                                <i class="flaticon-decoration"></i>
-                                <h3>Well Decoration</h3>
-                                <p>
-                                    We are very careful about our room and all of the resort decorations. So, try us.
-                                </p>
+        <div class="row pt-45">
+            <div class="col-lg-6">
+                <div class="room-card-two">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-5 col-md-4 p-0">
+                            <div class="room-card-img">
+                                <a href="room-details.html">
+                                    <img src="assets/img/gallery/house-4.jpg" alt="Images">
+                                </a>
                             </div>
                         </div>
-                        <div class="col-lg-12">
-                            <div class="specialty-list-card">
-                                <i class="flaticon-wifi-signal-1"></i>
-                                <h3>Wifi</h3>
-                                <p>
-                                    You can easily enjoy free access to a superstar bar at a reasonable price.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="specialty-list-card">
-                                <i class="flaticon-vacuum"></i>
+                        <div class="col-lg-7 col-md-8 p-0">
+                            <div class="room-card-content">
+                                <h3>
+                                    <a href="room-details.html">Luxury Room</a>
+                                </h3>
+                                <span class="text-success">320 / Per Night </span>
+                                <p>Indulge in unparalleled comfort with elegant décor, plush bedding, and modern amenities, offering a truly luxurious experience. Perfect for those seeking sophistication and style during their stay.</p>
 
-                                <h3>Laundry</h3>
-                                <p>
-                                    You can easily enjoy free access to a superstar bar at a reasonable price.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="specialty-list-card">
-                                <i class="flaticon-beach-vacation"></i>
-                                <h3>Deck and Gardens </h3>
-                                <p>
-                                    You can easily enjoy free access to a superstar bar at a reasonable price.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="specialty-list-card">
-                                <i class="flaticon-fireworks"></i>
-                                <h3>5 Stars Rettings</h3>
-                                <p>
-                                    Atoli is a Well Known Agency and the Agency is One of the Best by 5 Star Retting.
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="room-card-two">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-5 col-md-4 p-0">
+                            <div class="room-card-img">
+                                <a href="room-details.html">
+                                    <img src="assets/img/gallery/house-7.jpg" alt="Images">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-8 p-0">
+                            <div class="room-card-content">
+                                <h3>
+                                    <a href="room-details.html">Single Room</a>
+                                </h3>
+                                <span class="text-success">300 / Per Night </span>
+                                <p>Cozy and functional, our single room is designed for solo travelers, featuring all essential amenities to ensure a comfortable and peaceful stay.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="gallery.php" class="default-btn btn-bg-one border-radius-5">
+                    Browse More
+                </a>
             </div>
         </div>
     </div>
 </div>
 
-<div class="room-area pt-100 pb-70 section-bg">
-    <div class="container">
-        <div class="section-title text-center">
-            <span>ROOMS</span>
-            <h2>Our Rooms & Rates</h2>
+<!-- Gallery Section -->
+<div class="container pt-100 pb-70">
+    <div class="section-title text-center">
+        <span>Gallery</span>
+        <h2>Our Gallery</h2>
+    </div>
+
+    <div class="row p-4">
+        <!-- First Gallery Item -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="gallery-item position-relative">
+                <!-- Image with Hover Effect -->
+                <a href="assets/img/gallery/house-9.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="assets/img/gallery/house-9.jpg" alt="Gallery Image 1" class="img-fluid rounded"
+                        style="height: 300px; object-fit: cover;">
+                    <div class="zoom-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </a>
+                <h5 class="text-center mt-3 p-3">Downstairs Bedroom w/Queen</h5>
+            </div>
         </div>
-        <div class="row pt-45">
-            <div class="col-lg-4 col-md-6 ">
-                <div class="room-card ">
-                    <a href="room-details.html ">
-                        <img src="assets/img/room/room-details-img2.jpg " alt="Images " />
-                    </a>
-                    <div class="content ">
-                        <h3>
-                            <a href="room-details.html ">High Rate Main House
-                            </a>
-                        </h3>
-                        <div class="rating ">
-                            <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                        </div>
-                        <div class="pricing">
-                            <p><strong>Nightly:</strong> $260</p>
-                            <p><strong>Week:</strong> $1560</p>
-                            <p><strong>Month:</strong> $5,000</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 ">
-                <div class="room-card ">
-                    <a href="room-details.html ">
-                        <img src="assets/img/room/room-details-img3.jpg " alt="Images " />
-                    </a>
-                    <div class="content ">
-                        <h3>
-                            <a href="room-details.html ">
-                                Major Spring Holidays
-                            </a>
-                        </h3>
-                        <div class="rating ">
-                            <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                        </div>
-                        <div class="pricing">
-                            <p><strong>Nightly:</strong> $300</p>
-                            <p><strong>Week:</strong> $1,800</p>
-                            <p><strong>Month:</strong> $5,500</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 ">
-                <div class="room-card ">
-                    <a href="room-details.html ">
-                        <img src="assets/img/room/room-details-img1.jpg " alt="Images " />
-                    </a>
-                    <div class="content ">
-                        <h3>
-                            <a href="room-details.html ">Labour Color
-                            </a>
-                        </h3>
-                        <div class="rating ">
-                            <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                        </div>
-                        <div class="pricing">
-                            <p><strong>Nightly:</strong> $300</p>
-                            <p><strong>Week:</strong> $1,800</p>
-                            <p><strong>Month:</strong> $5,500</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 ">
-                <div class="room-card ">
-                    <a href="room-details.html ">
-                        <img src="assets/img/room/480_IMG_0080.jpg " alt="Images " />
-                    </a>
-                    <div class="content ">
-                        <h3>
-                            <a href="room-details.html ">Fall Colors
 
-                            </a>
-                        </h3>
-                        <div class="rating ">
-                            <p style="font-size:13px; ">(4th bedroom, 3rd bath)</p>
-                        </div>
-                        <div class="pricing">
-                            <p><strong>Nightly:</strong> $100</p>
-                            <p><strong>Week:</strong> $650</p>
-                            <p><strong>Month:</strong> $2000</p>
-                        </div>
+        <!-- Second Gallery Item -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="gallery-item position-relative">
+                <!-- Image with Hover Effect -->
+                <a href="assets/img/gallery/house-8.jpg" data-lightbox="gallery" data-title="Image 2">
+                    <img src="assets/img/gallery/house-8.jpg" alt="Gallery Image 2" class="img-fluid rounded"
+                        style="height: 300px; object-fit: cover;">
+                    <div class="zoom-icon">
+                        <i class="fas fa-search-plus"></i>
                     </div>
-                </div>
+                </a>
+                <h5 class="text-center mt-3 p-3">Master Bedroom w/Deck</h5>
             </div>
-            <div class="col-lg-4 col-md-6 ">
-                <div class="room-card ">
-                    <a href="room-details.html ">
-                        <img src="assets/img/room/480_IMG_0078.jpg " alt="Images " />
-                    </a>
-                    <div class="content ">
-                        <h3>
-                            <a href="room-details.html ">Low Rate Main House
+        </div>
 
-                            </a>
-                        </h3>
-                        <div class="rating ">
-                            <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                        </div>
-                        <div class="pricing">
-                            <p><strong>Nightly:</strong> $100</p>
-                            <p><strong>Week:</strong> $650</p>
-                            <p><strong>Month:</strong> $2000</p>
-                        </div>
+        <!-- Third Gallery Item -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="gallery-item position-relative">
+                <!-- Image with Hover Effect -->
+                <a href="assets/img/gallery/house-6.jpg" data-lightbox="gallery" data-title="Image 3">
+                    <img src="assets/img/gallery/house-6.jpg" alt="Gallery Image 3" class="img-fluid rounded"
+                        style="height: 300px; object-fit: cover;">
+                    <div class="zoom-icon">
+                        <i class="fas fa-search-plus"></i>
                     </div>
-                </div>
+                </a>
+                <h5 class="text-center mt-3 p-3">Entry and lots of views</h5>
             </div>
-            <div class="col-lg-4 col-md-6 ">
-                <div class="room-card ">
-                    <a href="room-details.html ">
-                        <img src="assets/img/room/480_IMG_0050.jpg " alt="Images " />
-                    </a>
-                    <div class="content ">
-                        <h3>
-                            <a href="room-details.html ">Memorial Day
+        </div>
+        <div class="text-center">
+            <a href="gallery.php" class="default-btn btn-bg-one border-radius-5">
+                Browse More
+            </a>
+        </div>
+    </div>
+</div>
 
-                            </a>
-                        </h3>
-                        <div class="rating ">
-                            <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                        </div>
-                        <div class="pricing">
-                            <p><strong>Nightly:</strong> $100</p>
-                            <p><strong>Week:</strong> $650</p>
-                            <p><strong>Month:</strong> $2000</p>
-                        </div>
-                    </div>
-                </div>
+<div class="testimonials-area pt-100 pb-70 ">
+    <div class="container ">
+        <div class="section-title text-center ">
+
+            <h2>What Our Client Says</h2>
+        </div>
+        <div class="testimonials-slider owl-carousel owl-theme pt-45 ">
+            <div class="testimonials-item ">
+                <i class="flaticon-left-quote "></i>
+                <p>
+                    "Thank you-Thank you-Thank you! You guys own a piece of heaven! " Burke Family, Pasadena, CA </p>
+                <ul>
+                    <li>
+                        <img src="assets/img/testimonials/testimonials-img1.jpg " alt="Images " />
+                        <h3>Burke Family</h3>
+                        <span>Pasadena, CA</span>
+                    </li>
+                </ul>
             </div>
-
-            <div class="testimonials-area pt-100 pb-70 ">
-                <div class="container ">
-                    <div class="section-title text-center ">
-
-                        <h2>What Our Client Says</h2>
-                    </div>
-                    <div class="testimonials-slider owl-carousel owl-theme pt-45 ">
-                        <div class="testimonials-item ">
-                            <i class="flaticon-left-quote "></i>
-                            <p>
-                                "Thank you-Thank you-Thank you! You guys own a piece of heaven! " Burke Family, Pasadena, CA </p>
-                            <ul>
-                                <li>
-                                    <img src="assets/img/testimonials/testimonials-img1.jpg " alt="Images " />
-                                    <h3>Mary Marden</h3>
-                                    <span>New York City</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="testimonials-item ">
-                            <i class="flaticon-left-quote "></i>
-                            <p>
-                                "What a great time we had. What a perfectly gorgeous time of year " The Snavely's, Harlington, TX </p>
-                            <ul>
-                                <li>
-                                    <img src="assets/img/testimonials/testimonials-img2.jpg " alt="Images " />
-                                    <h3>Harriet Johnson</h3>
-                                    <span>London City</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="testimonials-item ">
-                            <i class="flaticon-left-quote "></i>
-                            <p>
-                                "We really enjoyed your place. The snow was great and so was the neighborhood.The Snavely's, Harlington, TX
-                            </p>
-                            <ul>
-                                <li>
-                                    <img src="assets/img/testimonials/testimonials-img3.jpg " alt="Images " />
-                                    <h3>Tyrone Morgan</h3>
-                                    <span>New Jersey</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="testimonials-item ">
-                            <i class="flaticon-left-quote "></i>
-                            <p style="font-weight:normal;">
-                                "The studio apartment was just perfect and the futon was so comfortable we are looking for a similar one for our guest room."
-                            <ul>
-                                <li>
-                                    <img src="assets/img/testimonials/testimonials-img3.jpg " alt="Images " />
-                                    <h3>Tyrone Morgan</h3>
-                                    <span>New Jersey</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+            <div class="testimonials-item ">
+                <i class="flaticon-left-quote "></i>
+                <p>
+                    "What a great time we had. What a perfectly gorgeous time of year " The Snavely's, Harlington, TX
+                </p>
+                <ul>
+                    <li>
+                        <img src="assets/img/testimonials/testimonials-img2.jpg " alt="Images " />
+                        <h3>The Snavely's</h3>
+                        <span>Harlington, TX</span>
+                    </li>
+                </ul>
             </div>
-            <div class="faq-area pt-100 pb-70 section-bg ">
-                <div class="container ">
-                    <div class="row align-items-center justify-content-center ">
-                        <div class="col-lg-6 col-xxl-7 ">
-                            <div class="faq-img ">
-                                <img src="assets/img/faq/faq-img1.jpg " alt="Images " />
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xxl-5 ">
-                            <div class="faq-content ">
-                                <div class="section-title ">
-                                    <h2>
-                                        Let's Start a Free of Questions And Get a Quick Support That Will Help You to Know Us
-                                    </h2>
-                                </div>
-                                <div class="faq-accordion ">
-                                    <ul class="accordion ">
-                                        <li class="accordion-item ">
-                                            <a class="accordion-title " href="javascript:void(0) ">
-                                                <i class="bx bx-plus "></i> How I Will Book a Room or Resort?
-                                            </a>
-                                            <div class="accordion-content ">
-                                                <p>
-                                                    To book a room or resort in Pagosa Springs, visit our website or app to explore available options and select your dates. Complete the booking process by providing necessary details and payment information. You can also call our reservations team for personalized
-                                                    assistance. Make sure to book in advance, especially during peak seasons, to secure your spot in beautiful Pagosa Springs!
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li class="accordion-item ">
-                                            <a class="accordion-title " href="javascript:void(0) ">
-                                                <i class="bx bx-plus "></i> How I Will Be Able to Add on the Admin Portal?
-                                            </a>
-                                            <div class="accordion-content ">
-                                                <p>
-                                                    To add a booking on the admin portal, log in to your account and navigate to the "Manage Bookings" section. Select "Add New Booking" and enter the required details, including the guest's information, room type, dates, and payment status. Once completed,
-                                                    click "Save" or "Confirm" to finalize the booking. Ensure all information is accurate before submission. You can also view and modify existing bookings as needed from this section.
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li class="accordion-item ">
-                                            <a class="accordion-title " href="javascript:void(0) ">
-                                                <i class="bx bx-plus "></i> What are the Benefits of These Agencies?
-                                            </a>
-                                            <div class="accordion-content ">
-                                                <p>
-                                                    <b>Expertise and Guidance: </b>Agencies provide knowledgeable advice on destinations, accommodations, and activities.
-                                                    <br><b>Time-saving:</b> They handle all aspects of planning, from flights to accommodations, saving you time. <br> <b>Exclusive Deals: </b>Agencies often have access to special rates, discounts,
-                                                    and packages not available to the public. <br><b>Convenience:</b> They offer hassle-free booking and customer service support, especially during emergencies. <br><b>Tailored Packages:</b> Agencies
-                                                    can customize trips based on your preferences and budget.
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li class="accordion-item ">
-                                            <a class="accordion-title active " href="javascript:void(0) ">
-                                                <i class="bx bx-plus "></i> How I Will Make Payment for Room Book?
-                                            </a>
-                                            <div class="accordion-content show ">
-                                                <p>
-                                                    <b>Online Payment:</b> After selecting your room and dates, proceed to checkout. Enter your payment details (credit/debit card or other payment methods) on the secure payment page. <br> <b>Payment Confirmation: </b> Once the payment is processed, you will receive a confirmation email with booking details and a receipt. <br><b>Alternative Methods:</b> Some hotels may also accept payments via bank transfer,
-                                                    PayPal, or in person at the property.
-                                                </p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="testimonials-item ">
+                <i class="flaticon-left-quote "></i>
+                <p>
+                    "We really enjoyed your place. The snow was great and so was the neighborhood.The Snavely's,
+                    Harlington, TX
+                </p>
+                <ul>
+                    <li>
+                        <img src="assets/img/testimonials/testimonials-img3.jpg " alt="Images " />
+                        <h3>The Miletello's</h3>
+                        <span>Ruston, LA</span>
+                    </li>
+                </ul>
             </div>
-
-            <div class="blog-area pb-70 ">
-                <div class="container ">
-                    <div class="section-title text-center ">
-                        <span>BLOGS</span>
-                        <h2>Our Latest Blogs to the Intranational Journal at a Glance
-                        </h2>
-                    </div>
-                    <div class="row pt-45 ">
-                        <div class="col-lg-6 ">
-                            <div class="blog-card ">
-                                <div class="row align-items-center justify-content-center ">
-                                    <div class="col-lg-5 col-md-4 p-0 ">
-                                        <div class="blog-img ">
-                                            <a href="blog-details.html ">
-                                                <img src="assets/img/blog/blog-img1.jpg " alt="Images " />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-md-8 p-0 ">
-                                        <div class="blog-content ">
-                                            <span>October 08, 2024</span>
-                                            <h3>
-                                                <a href="blog-details.html ">Hotel Management is
-                                                    the Best Policy</a>
-                                            </h3>
-                                            <p>
-                                                This is one of the best & quality full hotels in the world that will help you to make a good market.
-                                            </p>
-                                            <a href="blog-details.html " class="read-btn ">
-                                                Read More </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 ">
-                            <div class="blog-card ">
-                                <div class="row align-items-center justify-content-center ">
-                                    <div class="col-lg-5 col-md-4 p-0 ">
-                                        <div class="blog-img ">
-                                            <a href="blog-details.html ">
-                                                <img src="assets/img/blog/blog-img2.jpg " alt="Images " />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-md-8 p-0 ">
-                                        <div class="blog-content ">
-                                            <span>October 11, 2024</span>
-                                            <h3>
-                                                <a href="blog-details.html ">3d Hotel Models
-                                                    Have a Royal Model</a>
-                                            </h3>
-                                            <p>
-                                                Hotel has made a revolutionary into the global market by making a 3D model on the hotel.
-                                            </p>
-                                            <a href="blog-details.html " class="read-btn ">
-                                                Read More </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="testimonials-item ">
+                <i class="flaticon-left-quote "></i>
+                <p style="font-weight:normal;">
+                    "The studio apartment was just perfect and the futon was so comfortable we are looking for a similar
+                    one for our guest room."
+                <ul>
+                    <li>
+                        <img src="assets/img/testimonials/testimonials-img3.jpg " alt="Images " />
+                        <h3>The Freeman's</h3>
+                        <span>San Gabriel, CA</span>
+                    </li>
+                </ul>
             </div>
-
-            <?php
-            include("footer.php");
-            include("script.php");
-            ?>
+        </div>
+    </div>
+</div>
 
 
-            </body>
+<?php
+include("footer.php");
+include("script.php");
+?>
+
+
+</body>
 
 </html>
