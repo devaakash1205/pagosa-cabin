@@ -50,16 +50,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6">
                     <div class="contact-content">
-                        <div class="section-title">
-                            <h2>Let's Start to Give Us a Message and Contact With Us</h2>
-                        </div>
-                        <div class="contact-img">
-                            <img src="assets/img/contact/contact-img1.jpg" alt="Images">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="contact-form">
+                        <div class="contact-form">
                         <form id="contactForm">
                             <div class="row justify-content-center">
                                 <div class="col-lg-6 col-sm-6">
@@ -103,17 +94,10 @@
                             </div>
                         </form>
                     </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="contact-another pb-70">
-        <div class="container">
-            <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="contact-another-content">
+                <div class="contact-another-content">
                         <div class="section-title">
                             <h2>Contacts Info</h2>
                             <p>
@@ -126,41 +110,26 @@
                                 <li>
                                     <i class="bx bx-home-alt"></i>
                                     <div class="content">
-                                        <span>123 Virgil A Stanton, Virginia, USA</span>
-                                        <span>163 Virgil A Stanton, Virginia, USA</span>
+                                        <span>Colorado</span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="bx bx-phone-call"></i>
                                     <div class="content">
-                                        <span><a href="tel:+1(123)4567890">+1 (123) 456 7890</a></span>
-                                        <span><a href="tel:+1(123)4567896">+1 (123) 456 7896</a></span>
+                                        <span><a href="tel:+(626) 482-7900">+(626) 482-7900</a></span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="bx bx-envelope"></i>
                                     <div class="content">
-                                        <span><a href="https://templates.hibootstrap.com/atoli/default/info@atoli.com"><span class="__cf_email__" data-cfemail="472e292128072633282b2e6924282a">[email&#160;protected]</span></a></span>
-                                        <span><a href="https://templates.hibootstrap.com/atoli/default/hello@atoli.com"><span class="__cf_email__" data-cfemail="c3aba6afafac83a2b7acafaaeda0acae">[email&#160;protected]</span></a></span>
+                                        <span><a href="codopagosa@earthlink.net"><span class="__cf_email__" data-cfemail="472e292128072633282b2e6924282a">codopagosa@earthlink.net</span></a></span>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="contact-another-img">
-                        <img src="assets/img/contact/contact-img2.jpg" alt="Images">
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
-
-
-    <div class="map-area">
-        <div class="container-fluid m-0 p-0">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50194.82376159623!2d-79.09792989247224!3d38.159337740034566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b4a08eb8621697%3A0xe5d6e4710a09b66e!2zU3RhdW50b24sIOCmreCmvuCmsOCnjeCmnOCmv-CmqOCmv-Cmr-CmvOCmviAyNDQwMSwg4Kau4Ka-4Kaw4KeN4KaV4Ka_4KaoIOCmr-CngeCmleCnjeCmpOCmsOCmvuCmt-CnjeCmn-CnjeCmsA!5e0!3m2!1sbn!2sbd!4v1604126938221!5m2!1sbn!2sbd"></iframe>
         </div>
     </div>
     <?php

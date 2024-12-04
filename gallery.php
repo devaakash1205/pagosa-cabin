@@ -45,108 +45,150 @@
     </div>
 
 
-    <div class="gallery-area pt-100 pb-70">
-        <div class="container">
-            <div class="sorting-menu gallery-tab text-center">
-                <ul>
-                    <li class="filter mixitup-control-active" data-filter="all">
-                        ALL
-                    </li>
-                    <li class="filter" data-filter=".hotel_room">
-                        Hotel Room
-                    </li>
-                    <li class="filter" data-filter=".conference">
-                        Conference
-                    </li>
-                    <li class="filter" data-filter=".resort_reserve">
-                        Resort Reserve
-                    </li>
-                    <li class="filter" data-filter=".weeding_hall">
-                        Weeding Hall
-                    </li>
-                    <li class="filter" data-filter=".community_center">
-                        Community Center
-                    </li>
-                </ul>
-            </div>
-            <div class="container mt-5">
-                <div class="row">
-                    <!-- Individual Gallery Items -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 float-left mb-4">
-                        <div class="single-gallery">
-                            <img src="assets/img/gallery/house-1.jpg" alt="Image 1" class="img-fluid">
-                            <a href="assets/img/gallery/house-1.jpg" class="gallery-icon">
-                                <i class="bx bx-plus"></i>
-                            </a>
+    <!-- Gallery Section -->
+    <div class="container pt-100 pb-70">
+        <div class="section-title text-center">
+            <span>Gallery</span>
+            <h2>Our Gallery</h2>
+        </div>
+
+        <div class="row p-4">
+            <!-- First Gallery Item -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item position-relative">
+                    <!-- Image with Hover Effect -->
+                    <a href="assets/img/gallery/house-9.jpg" data-lightbox="gallery" data-title="Image 1">
+                        <img src="assets/img/gallery/house-9.jpg" alt="Gallery Image 1" class="img-fluid rounded"
+                            style="height: 300px; object-fit: cover;">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 float-left mb-4">
-                        <div class="single-gallery">
-                            <img src="assets/img/gallery/house-2.jpg" alt="Image 2" class="img-fluid">
-                            <a href="assets/img/gallery/house-2.jpg" class="gallery-icon">
-                                <i class="bx bx-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 float-left mb-4">
-                        <div class="single-gallery">
-                            <img src="assets/img/gallery/house-3.jpg" alt="Image 3" class="img-fluid">
-                            <a href="assets/img/gallery/house-3.jpg" class="gallery-icon">
-                                <i class="bx bx-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 float-left mb-4">
-                        <div class="single-gallery">
-                            <img src="assets/img/gallery/house-4.jpg" alt="Image 4" class="img-fluid">
-                            <a href="assets/img/gallery/house-4.jpg" class="gallery-icon">
-                                <i class="bx bx-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 float-left mb-4">
-                        <div class="single-gallery">
-                            <img src="assets/img/gallery/house-5.jpg" alt="Image 5" class="img-fluid">
-                            <a href="assets/img/gallery/house-5.jpg" class="gallery-icon">
-                                <i class="bx bx-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 float-left mb-4">
-                        <div class="single-gallery">
-                            <img src="assets/img/gallery/house-6.jpg" alt="Image 6" class="img-fluid">
-                            <a href="assets/img/gallery/house-6.jpg" class="gallery-icon">
-                                <i class="bx bx-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 float-left mb-4">
-                        <div class="single-gallery">
-                            <img src="assets/img/gallery/house-7.jpg" alt="Image 7" class="img-fluid">
-                            <a href="assets/img/gallery/house-7.jpg" class="gallery-icon">
-                                <i class="bx bx-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 float-left mb-4">
-                        <div class="single-gallery">
-                            <img src="assets/img/gallery/house-8.jpg" alt="Image 8" class="img-fluid">
-                            <a href="assets/img/gallery/house-8.jpg" class="gallery-icon">
-                                <i class="bx bx-plus"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 float-left mb-4">
-                        <div class="single-gallery">
-                            <img src="assets/img/gallery/house-9.jpg" alt="Image 9" class="img-fluid">
-                            <a href="assets/img/gallery/house-9.jpg" class="gallery-icon">
-                                <i class="bx bx-plus"></i>
-                            </a>
-                        </div>
-                    </div>
+                    </a>
+                    <h5 class="text-center mt-3 p-3">Downstairs Bedroom w/Queen</h5>
                 </div>
             </div>
 
+            <!-- Second Gallery Item -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item position-relative">
+                    <!-- Image with Hover Effect -->
+                    <a href="assets/img/gallery/house-8.jpg" data-lightbox="gallery" data-title="Image 2">
+                        <img src="assets/img/gallery/house-8.jpg" alt="Gallery Image 2" class="img-fluid rounded"
+                            style="height: 300px; object-fit: cover;">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                    <h5 class="text-center mt-3 p-3">Master Bedroom w/Deck</h5>
+                </div>
+            </div>
+
+            <!-- Third Gallery Item -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item position-relative">
+                    <!-- Image with Hover Effect -->
+                    <a href="assets/img/gallery/house-6.jpg" data-lightbox="gallery" data-title="Image 3">
+                        <img src="assets/img/gallery/house-6.jpg" alt="Gallery Image 3" class="img-fluid rounded"
+                            style="height: 300px; object-fit: cover;">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                    <h5 class="text-center mt-3 p-3">Entry and lots of views</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row p-4">
+            <!-- First Gallery Item -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item position-relative">
+                    <!-- Image with Hover Effect -->
+                    <a href="assets/img/gallery/house-3.jpg" data-lightbox="gallery" data-title="Image 1">
+                        <img src="assets/img/gallery/house-3.jpg" alt="Gallery Image 1" class="img-fluid rounded"
+                            style="height: 300px; object-fit: cover;">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                    <h5 class="text-center mt-3 p-3">Pine Paneling and Western Decor</h5>
+                </div>
+            </div>
+
+            <!-- Second Gallery Item -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item position-relative">
+                    <!-- Image with Hover Effect -->
+                    <a href="assets/img/gallery/house-2.jpg" data-lightbox="gallery" data-title="Image 2">
+                        <img src="assets/img/gallery/house-2.jpg" alt="Gallery Image 2" class="img-fluid rounded"
+                            style="height: 300px; object-fit: cover;">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                    <h5 class="text-center mt-3 p-3">Comfy Living and Dining w/Views</h5>
+                </div>
+            </div>
+
+            <!-- Third Gallery Item -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item position-relative">
+                    <!-- Image with Hover Effect -->
+                    <a href="assets/img/gallery/house-5.jpg" data-lightbox="gallery" data-title="Image 3">
+                        <img src="assets/img/gallery/house-5.jpg" alt="Gallery Image 3" class="img-fluid rounded"
+                            style="height: 300px; object-fit: cover;">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                    <h5 class="text-center mt-3 p-3">Fully Stocked Kitchen & Attached Laundry</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row p-4">
+            <!-- First Gallery Item -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item position-relative">
+                    <!-- Image with Hover Effect -->
+                    <a href="assets/img/gallery/house-13.jpg" data-lightbox="gallery" data-title="Image 1">
+                        <img src="assets/img/gallery/house-13.jpg" alt="Gallery Image 1" class="img-fluid rounded"
+                            style="height: 300px; object-fit: cover;">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                    <h5 class="text-center mt-3 p-3">Studio Kitchenette</h5>
+                </div>
+            </div>
+
+            <!-- Second Gallery Item -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item position-relative">
+                    <!-- Image with Hover Effect -->
+                    <a href="assets/img/gallery/house-12.jpg" data-lightbox="gallery" data-title="Image 2">
+                        <img src="assets/img/gallery/house-12.jpg" alt="Gallery Image 2" class="img-fluid rounded"
+                            style="height: 300px; object-fit: cover;">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                    <h5 class="text-center mt-3 p-3">Studio Log Stove and Dining</h5>
+                </div>
+            </div>
+
+            <!-- Third Gallery Item -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="gallery-item position-relative">
+                    <!-- Image with Hover Effect -->
+                    <a href="assets/img/gallery/house-11.jpg" data-lightbox="gallery" data-title="Image 3">
+                        <img src="assets/img/gallery/house-11.jpg" alt="Gallery Image 3" class="img-fluid rounded"
+                            style="height: 300px; object-fit: cover;">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </a>
+                    <h5 class="text-center mt-3 p-3">Upstairs Bedroom w/2Twins and large closet</h5>
+                </div>
+            </div>
         </div>
     </div>
     <?php
