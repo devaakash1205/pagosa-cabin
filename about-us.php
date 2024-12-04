@@ -81,7 +81,7 @@
         </div>
     </div>
     <!--Services-->
-    <div class="blog-area pb-70 pt-100">
+    <div class="blog-area pb-70 pt-70">
         <div class="container">
             <div class="section-title text-center">
                 <span>Services</span>
@@ -131,11 +131,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="text-center">
-                    <a href="service.php" class="default-btn btn-bg-one border-radius-5">
-                        Read More
-                    </a>
                 </div>
             </div>
         </div>
