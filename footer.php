@@ -53,7 +53,7 @@
                         <ul class="footer-list-contact ">
                             <li>
                                 <i class="bx bx-home-alt "></i>
-                                <a href="codopagosa@earthlink.net">Colorado</a>
+                                <a href="javascript:void(0);">Colorado</a>
                             </li>
                             <li>
                                 <i class="bx bx-phone-call "></i>

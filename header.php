@@ -6,7 +6,7 @@
                     <ul>
                         <li>
                             <i class="bx bx-home-alt"></i>
-                            <a href="./">Colorado</a>
+                            <a href="javascript:void(0);">Colorado</a>
                         </li>
                     </ul>
                 </div>
