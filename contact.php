@@ -122,7 +122,7 @@
                                 <li>
                                     <i class="bx bx-envelope"></i>
                                     <div class="content">
-                                        <span><a href="codopagosa@earthlink.net"><span class="__cf_email__" data-cfemail="472e292128072633282b2e6924282a">codopagosa@earthlink.net</span></a></span>
+                                        <span><a href="mailto:codopagosa@earthlink.net"><span class="__cf_email__" data-cfemail="472e292128072633282b2e6924282a">codopagosa@earthlink.net</span></a></span>
                                     </div>
                                 </li>
                             </ul>
