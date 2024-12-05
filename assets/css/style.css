@@ -5628,3 +5628,166 @@ img {
 .blog-card:hover .blog-content p {
   color: #555; /* Change text color on hover */
 }
+/* Ensure box-sizing includes padding and borders */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+.banner-two__content {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 5% 10%; /* Use percentage-based padding for responsive design */
+}
+
+.banner-two__title {
+  font-size: 2.5rem; /* Extra-large font for big screens */
+  font-weight: bold;
+  margin-bottom: 20px;
+  word-wrap: break-word; /* Ensure text wraps properly */
+}
+
+.blog-card__link {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px; /* Default padding */
+}
+
+.blog-card__link:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+/* Extra Small Devices (max-width: 375px) */
+@media (max-width: 375px) {
+  .banner-two__title {
+    font-size: 1.5rem; /* Smaller font size for small screens */
+  }
+  .blog-card__link {
+    font-size: 1rem;
+    padding: 12px 20px; /* Increased padding for small screens */
+  }
+  .banner-two__content {
+    padding: 10% 15%; /* Further increased padding for smaller screens */
+  }
+}
+
+/* Small Devices (max-width: 575px) */
+@media (max-width: 575px) {
+  .banner-two__title {
+    font-size: 1.8rem; /* Slightly bigger font for phones */
+  }
+  .blog-card__link {
+    font-size: 1rem;
+    padding: 25px 35px; /* Increased padding */
+  }
+  .banner-two__content {
+    padding: 15% 20%; /* Further increased padding for phones */
+  }
+}
+
+/* Medium Devices (Tablets, Phablets, Small Laptops, max-width: 1024px) */
+@media (max-width: 1024px) {
+  .banner-two__title {
+    font-size: 2rem; /* Medium font size */
+  }
+  .blog-card__link {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+  .banner-two__content {
+    padding: 10% 15%; /* Adjust padding for medium screens */
+  }
+}
+
+/* Large Devices (Laptops, Desktops, min-width: 1025px) */
+@media (min-width: 1025px) {
+  .banner-two__title {
+    font-size: 2.2rem;
+  }
+  .blog-card__link {
+    font-size: 1.2rem;
+    padding: 15px 28px;
+  }
+  .banner-two__content {
+    padding: 5% 10%; /* Default padding */
+  }
+}
+
+/* Extra-Large Screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .banner-two__title {
+    font-size: 2.5rem;
+  }
+  .blog-card__link {
+    font-size: 1.3rem;
+  }
+  .banner-two__content {
+    padding: 4% 8%; /* Adjust padding for large screens */
+  }
+}
+
+/*footer*/
+/* Default Styling */
+.copy-right-area {
+  padding: 20px 0;
+  background-color: #333;
+}
+
+.copy-right-area p {
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.social-link {
+  padding: 10px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center; /* Centers the icons horizontally */
+  align-items: center; /* Vertically aligns the icons */
+}
+
+.social-link li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.social-icon i {
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.social-icon i:hover {
+  color: #007bff;
+}
+
+/* Mobile View */
+@media (max-width: 575px) {
+  .copy-right-area .row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .social-link {
+      padding-left: 0;
+  }
+
+  .social-link li {
+      margin: 0 10px;
+  }
+}

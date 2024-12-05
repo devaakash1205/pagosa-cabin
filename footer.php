@@ -102,15 +102,15 @@
         </div>
         <!-- Social Links and Copy Right Section -->
         <div class="copy-right-area">
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-center">
                 <!-- Copyright Text -->
-                <div class="col-lg-6 col-md-6 text-start">
+                <div class="col-lg-6 col-md-6 text-center">
                     <p class="text-light">
                         © <span>Copyright 2024 by <a href="https://www.apexwebsoft.com/" class="text-light">Apex Websoft</a>. All Rights Reserved.</span>
                     </p>
                 </div>
                 <!-- Social Media Icons -->
-                <div class="col-lg-6 col-md-6 text-end">
+                <div class="col-lg-6 col-md-6 text-center">
                     <div class="social-icon">
                         <ul class="social-link list-inline mb-0">
                             <li class="list-inline-item">
@@ -130,5 +130,4 @@
                 </div>
             </div>
         </div>
-
 </footer>

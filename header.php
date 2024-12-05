@@ -1,7 +1,7 @@
 <header class="top-header top-header-bg">
     <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-lg-2 col-md-2 pr-0">
+        <div class="row">
+            <div class="col-lg-2 col-md-2 d-none d-md-block">
                 <div class="header-right">
                     <ul>
                         <li>
@@ -11,7 +11,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-10 col-md-10">
+            <div class="col-lg-10 col-md-10 col-sm-8 col-12">
                 <div class="header-right">
                     <ul>
                         <li>
@@ -32,8 +32,7 @@
 <div class="navbar-area">
     <div class="mobile-nav">
         <a href="./" class="logo">
-            <img src="assets/img/logos/logo2.png" class="logo-one" alt="Logo" />
-            <img src="assets/img/logos/logo2.png" class="logo-two" alt="Logo" />
+            <img src="assets/img/logos/logo2.png" class="logo-one" alt="Logo" style="width: auto;" />
         </a>
     </div>
 
@@ -42,7 +41,6 @@
             <nav class="navbar navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="./">
                     <img src="assets/img/logos/logo2.png" class="logo-one" alt="Logo" />
-                    <img src="assets/img/logos/logo2.png" class="logo-two" alt="Logo" />
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
