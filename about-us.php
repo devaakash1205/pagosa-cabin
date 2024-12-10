@@ -57,7 +57,7 @@
                     <div class="about-content">
                         <h2>A Pagosa Springs,<span class="font-weight-500 text-success"> Colorado Vacation Home in the Heart of the San Juan Mtns.</span></h2>
                         <p>
-                            Nestled on the picturesque mountainside of The San Juan River Village, our charming vacation home offers a peaceful retreat with reliable high-speed <span class="text-success" style="font-weight:bold;">Starlink Wi-Fi</span> and breathtaking panoramic views of the <span class="text-success" style="font-weight:bold;">San Juan Mountains</span>San Juan Mountains. Conveniently located just <span class="text-success" style="font-weight:bold;">7 miles east of Pagosa Springs,</span> Colorado, and a mere <span class="text-success" style="font-weight:bold;">50 minutes east of Durango,</span> this home places you within proximity to a plethora of activities and attractions.
+                            Nestled on the picturesque mountainside of The San Juan River Village, our charming vacation home offers a peaceful retreat with reliable high-speed <span class="text-success" style="font-weight:bold;">Starlink Wi-Fi</span> and breathtaking panoramic views of the <span class="text-success" style="font-weight:bold;">San Juan Mountains</span> Conveniently located just <span class="text-success" style="font-weight:bold;">7 miles east of Pagosa Springs,</span> Colorado, and a mere <span class="text-success" style="font-weight:bold;">50 minutes east of Durango,</span> this home places you within proximity to a plethora of activities and attractions.
                             <br>
                             Our location boasts the perfect blend of serenity and adventure:
 
@@ -68,7 +68,7 @@
                                 10 minutes from the Pagosa Hot Springs, famous for its cascading outdoor pools and natural mineral baths.
                             </li>
                             <li>
-                                This two-story mountain retreat, steeped in an "Old West" aesthetic, features warm wooden accents, plush furnishings, and modern conveniences.
+                                This two-story mountain retreat,is steeped in an "Old West" aesthetic, features warm wooden accents, plush furnishings, and modern conveniences.
                             </li>
                             <li>
                                 The spacious three-bedroom, two-bath cabin and an optional studio apartment ensure a comfortable and memorable stay for all guests.
@@ -136,70 +136,9 @@
         </div>
     </div>
 
-    <div class="testimonials-area pt-100 pb-70 ">
-        <div class="container ">
-            <div class="section-title text-center ">
-
-                <h2>What Our Client Says</h2>
-            </div>
-            <div class="testimonials-slider owl-carousel owl-theme pt-45 ">
-                <div class="testimonials-item ">
-                    <i class="flaticon-left-quote "></i>
-                    <p>
-                        "Thank you-Thank you-Thank you! You guys own a piece of heaven! " Burke Family, Pasadena, CA </p>
-                    <ul>
-                        <li>
-                            <img src="assets/img/testimonials/testimonials-img1.jpg " alt="Images " />
-                            <h3>Burke Family</h3>
-                            <span>Pasadena, CA</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="testimonials-item ">
-                    <i class="flaticon-left-quote "></i>
-                    <p>
-                        "What a great time we had. What a perfectly gorgeous time of year " The Snavely's, Harlington, TX
-                    </p>
-                    <ul>
-                        <li>
-                            <img src="assets/img/testimonials/testimonials-img2.jpg " alt="Images " />
-                            <h3>The Snavely's</h3>
-                            <span>Harlington, TX</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="testimonials-item ">
-                    <i class="flaticon-left-quote "></i>
-                    <p>
-                        "We really enjoyed your place. The snow was great and so was the neighborhood.The Snavely's,
-                        Harlington, TX
-                    </p>
-                    <ul>
-                        <li>
-                            <img src="assets/img/testimonials/testimonials-img3.jpg " alt="Images " />
-                            <h3>The Miletello's</h3>
-                            <span>Ruston, LA</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="testimonials-item ">
-                    <i class="flaticon-left-quote "></i>
-                    <p style="font-weight:normal;">
-                        "The studio apartment was just perfect and the futon was so comfortable we are looking for a similar
-                        one for our guest room."
-                    <ul>
-                        <li>
-                            <img src="assets/img/testimonials/testimonials-img3.jpg " alt="Images " />
-                            <h3>The Freeman's</h3>
-                            <span>San Gabriel, CA</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
+    <?php
+    include("testimonials.php");
+    ?>
     <?php
     include("footer.php");
     include("script.php");

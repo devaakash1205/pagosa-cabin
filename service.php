@@ -8,7 +8,7 @@
     <?php
     include("link.php");
     ?>
-    <title>Pagosa Cabin | Contact</title>
+    <title>Pagosa Cabin | Activities</title>
 </head>
 
 <body>
@@ -37,69 +37,93 @@
                         <a href="./">Home</a>
                     </li>
                     <li><i class="bx bx-chevron-right"></i></li>
-                    <li>Services</li>
+                    <li>Activities</li>
                 </ul>
-                <h3>Our Services</h3>
+                <h3>Our Activities</h3>
             </div>
         </div>
     </div>
 
-    <!--Services-->
-    <div class="blog-area pb-70 pt-100">
-        <div class="container">
-            <div class="section-title text-center">
-                <span>Services</span>
-                <h2>Our Services</h2>
+    <!-- Main Activities Section -->
+    <div class="container my-5">
+        <h2 class="section-heading font-weight-bold">Explore Our Activities</h2>
+        <div class="row g-4">
+
+            <!-- Activity 1: Winter Sports -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card activity-card shadow-sm">
+                    <div class="card-body">
+                        <i class="fa-solid fa-skiing activity-icon"></i>
+                        <h5 class="card-title mt-2">Winter Sports</h5>
+                        <p class="card-text">
+                            Cross-country skiing, downhill skiing, snowmobiling, and sled rides for all winter enthusiasts.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="row pt-45">
-                <!-- First Blog Card -->
-                <div class="col-lg-6 d-flex">
-                    <div class="blog-card d-flex flex-column" style="flex-grow: 1;">
-                        <div class="row align-items-center justify-content-center h-100">
-                            <div class="col-lg-5 col-md-4 p-0">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/gallery/house-2.jpg" alt="Serendipity Living" class="img-fluid">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-md-8 p-0">
-                                <div class="blog-content">
-                                    <h3>
-                                        <a href="blog-details.html">Serendipity Living and Dining</a>
-                                    </h3>
-                                    <p>Experience the charm of elegant living spaces and the joy of fine dining. A perfect retreat for relaxation and luxury.</p>
-                                </div>
-                            </div>
-                        </div>
+
+            <!-- Activity 2: Hiking -->
+            <div class="col-lg-4 col-sm-6 col-md-6 col-sm-12">
+                <div class="card activity-card shadow-sm">
+                    <div class="card-body">
+                        <i class="fa-solid fa-hiking activity-icon"></i>
+                        <h5 class="card-title mt-2">Hiking</h5>
+                        <p class="card-text">
+                            Explore miles of hiking trails and natural landscapes in the San Juan National Forest.
+                        </p>
                     </div>
                 </div>
-                <!-- Second Blog Card -->
-                <div class="col-lg-6 d-flex">
-                    <div class="blog-card d-flex flex-column" style="flex-grow: 1;">
-                        <div class="row align-items-center justify-content-center h-100">
-                            <div class="col-lg-5 col-md-4 p-0">
-                                <div class="blog-img">
-                                    <a href="blog-details.html">
-                                        <img src="assets/img/service/service-1.jpg" alt="Beautiful View" class="img-fluid">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-md-8 p-0">
-                                <div class="blog-content">
-                                    <h3>
-                                        <a href="service.php">A Beautiful View from Serendipity</a>
-                                    </h3>
-                                    <p>Indulge in stunning panoramic views that surround you, offering a peaceful and scenic escape to recharge your senses.</p>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+
+            <!-- Activity 3: River Rafting -->
+            <div class="col-lg-4 col-sm-6  col-md-6 col-sm-12">
+                <div class="card activity-card shadow-sm">
+                    <div class="card-body">
+                    <i class="fa-solid fa-ship activity-icon"></i>
+                        <h5 class="card-title mt-2">River Rafting</h5>
+                        <p class="card-text">
+                            Enjoy river rafting adventures on the San Juan River and create unforgettable memories.
+                        </p>
                     </div>
                 </div>
-                <div class="text-center">
-                    <a href="service.php" class="default-btn btn-bg-one border-radius-5">
-                        Read More
-                    </a>
+            </div>
+
+            <!-- Activity 4: Horseback Riding -->
+            <div class="col-lg-4 col-sm-6 col-md-6 col-sm-12">
+                <div class="card activity-card shadow-sm">
+                    <div class="card-body">
+                        <i class="fa-solid fa-horse activity-icon"></i>
+                        <h5 class="card-title mt-2">Horseback Riding</h5>
+                        <p class="card-text">
+                            Explore the natural beauty of the San Juan River Village on horseback.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 5: Fishing -->
+            <div class="col-lg-4 col-sm-6 col-md-6 col-sm-12">
+                <div class="card activity-card shadow-sm">
+                    <div class="card-body">
+                        <i class="fa-solid fa-fish activity-icon"></i>
+                        <h5 class="card-title mt-2">Fishing</h5>
+                        <p class="card-text">
+                            Private access to the San Juan River for a relaxing fishing experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 6: Exploring Ancient Ruins -->
+            <div class="col-lg-4 col-sm-6 col-md-6 col-sm-12">
+                <div class="card activity-card shadow-sm">
+                    <div class="card-body">
+                        <i class="fa-solid fa-landmark activity-icon"></i>
+                        <h5 class="card-title mt-2">Exploring Ancient Ruins</h5>
+                        <p class="card-text">
+                            Explore the Ancestral Anasazi ruins and immerse yourself in history.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

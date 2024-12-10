@@ -1290,7 +1290,7 @@ img {
   color: #fff;
 }
 .inner-banner .inner-title ul li a:hover {
-  color: #ee786c;
+  color: green;
 }
 .inner-banner .inner-title ul li i {
   font-size: 24px;
@@ -1307,13 +1307,13 @@ img {
   font-family: open sans, sans-serif;
 }
 .inner-bg1 {
-  background-image: url(../img/inner-banner/inner-banner1.jpg);
+  background-image: url(../img/inner-banner/about.JPG);
 }
 .inner-bg2 {
-  background-image: url(../img/inner-banner/inner-banner2.jpg);
+  background-image: url(../img/inner-banner/about.JPG);
 }
 .inner-bg3 {
-  background-image: url(../img/inner-banner/inner-banner3.jpg);
+  background-image: url(../img/inner-banner/about.JPG);
 }
 .inner-bg4 {
   background-image: url(../img/inner-banner/inner-banner4.jpg);
@@ -1331,7 +1331,7 @@ img {
   background-image: url(../img/inner-banner/inner-banner8.jpg);
 }
 .inner-bg9 {
-  background-image: url(../img/inner-banner/inner-banner9.jpg);
+  background-image: url(../img/room/room-12.jpg);
 }
 .inner-bg10 {
   background-image: url(../img/inner-banner/inner-banner10.jpg);

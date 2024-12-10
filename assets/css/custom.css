@@ -1,0 +1,74 @@
+.room-card-img img {
+    width: 100%; /* Adjust the width to fit its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Set maximum width for smaller size */
+    object-fit: cover; /* Ensure the image fits properly */
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Ensures the image fits the given height proportionally */
+}
+.card-title a:hover {
+    color: #549154; /* Change color on hover */
+}
+.pagination .page-link {
+    color: #549154;
+}
+.pagination .page-link:hover {
+    background-color: #549154;
+    color: #fff;
+}
+.image-hover-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-hover-container img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-hover-container img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.9; /* Reduce opacity for a subtle effect */
+}
+
+.bg-color{
+    background-color:lightgrey;
+}
+/* Custom hover effect */
+.activity-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon styling */
+.activity-icon {
+    font-size: 36px;
+    color: #28a745;
+}
+
+/* Section heading styles */
+.section-heading {
+    text-align: center;
+    color:black;
+    margin-bottom: 20px;
+    font-weight:bold;
+}
+
+/* Card Content Styling */
+.activity-card .card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+}
+

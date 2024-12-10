@@ -42,118 +42,211 @@
             </div>
         </div>
     </div>
-
-
+    
     <div class="room-area pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
                 <span class="sp-color">ROOMS</span>
-                <h2>Our Rooms & Rates</h2>
+                <h2>Our Rooms</h2>
             </div>
-            <div class="row pt-45">
+            <div class="row pt-45 g-4">
+                <!-- Room Card -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img1.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">High Rate Main House</a></h3>
-                            <ul>
-                                <li class="text-color">$260</li>
-                                <li class="text-color">Night</li><br>
-                                
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-1.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Comfy Living and Dining w/Views</a>
+                            </h5>
                         </div>
                     </div>
                 </div>
+                <!-- Repeat similar blocks for other rooms -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img2.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Major Spring Holidays</a></h3>
-                            <ul>
-                                <li class="text-color">$300</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-2.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Pine Panelling and Western Decor</a>
+                            </h5>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img3.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Labour Color</a></h3>
-                            <ul>
-                                <li class="text-color">$370</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-3.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Dining Area</a>
+                            </h5>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img4.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Fall Colors</a></h3>
-                            <ul>
-                                <li class="text-color">$370</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-4.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Fully Stocked Kitchen & Attached Laundry</a>
+                            </h5>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img5.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Low Rate Main House</a></h3>
-                            <ul>
-                                <li class="text-color">$270</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-5.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Entry and lots of views</a>
+                            </h5>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img6.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Memorial Day</a></h3>
-                            <ul>
-                                <li class="text-color">$270</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-6.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Gas Log fireplace</a>
+                            </h5>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-7.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Master Bedroom w/Deck</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-8.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Downstairs Bedroom w/Queen</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-9.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Upstairs Bedroom w/2Twins and large closet</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-10.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Serendipity Studio Apt.</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-11.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Studio Log Store and Dining</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-12.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">Studio Kitchenette</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow border-0">
+                        <div class="image-hover-container">
+                            <a href="room-details.php" class="d-block">
+                                <img src="assets/img/room/room-13.jpg" class="card-img-top" alt="Images">
+                            </a>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <a href="room-details.php" class="text-dark text-decoration-none">The Studio Apartment over the garage</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+
+                
                 <div class="col-lg-12 col-md-12">
                     <div class="pagination-area">
                         <a href="room.html#" class="prev page-numbers">

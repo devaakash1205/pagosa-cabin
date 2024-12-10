@@ -11,6 +11,7 @@
                             </a>
                             <p class="mt-2">
                                 Nestled on the mountain side of The San Juan River Village, this lovely mountain home with reliable high-speed Starlinks wifi has a secluded setting and a magnificent panoramic view of the San Juan Mountains.
+                                <a href="about-us.php" class="text-light" style="text-decoration:none;">Read More</a>
                             </p>
                         </div>
                     </div>
@@ -25,27 +26,27 @@
                             <ul class="footer-list ">
                                 <li>
                                     <a href="about-us.php " target="_blank ">
-                                        <i class="bx bx-caret-right "></i> About Us
+                                        <i class="bx bx-caret-right "style="text-decoration:none;"></i> About Us
                                     </a>
                                 </li>
                                 <li>
                                     <a href="rooms.php " target="_blank ">
-                                        <i class="bx bx-caret-right "></i> Rooms
+                                        <i class="bx bx-caret-right " style="text-decoration:none;"></i> Rooms
                                     </a>
                                 </li>
                                 <li>
                                     <a href="gallery.php" target="_blank ">
-                                        <i class="bx bx-caret-right "></i> Gallery
+                                        <i class="bx bx-caret-right " style="text-decoration:none;"></i> Gallery
                                     </a>
                                 </li>
                                 <li>
                                     <a href="service.php" target="_blank ">
-                                        <i class="bx bx-caret-right "></i> Services
+                                        <i class="bx bx-caret-right " style="text-decoration:none;"></i> Services
                                     </a>
                                 </li>
                                 <li>
                                     <a href="contact.php" target="_blank ">
-                                        <i class="bx bx-caret-right "></i> Contact us
+                                        <i class="bx bx-caret-right " style="text-decoration:none;"></i> Contact us
                                     </a>
                                 </li>
                             </ul>
@@ -63,16 +64,16 @@
                             <ul class="footer-list-contact ">
                                 <li>
                                     <i class="bx bx-home-alt "></i>
-                                    <a href="javascript:void(0);">Colorado</a>
+                                    <a href="javascript:void(0);" style="text-decoration:none;">Colorado</a>
                                 </li>
                                 <li>
                                     <i class="bx bx-phone-call "></i>
-                                    <a href="tel:(626)482-7900">(626)
+                                    <a href="tel:(626)482-7900" style="text-decoration:none;">(626)
                                         482-7900</a>
                                 </li>
                                 <li>
                                     <i class="bx bx-envelope "></i>
-                                    <a href="mailto:codopagosa@earthlink.net"><span
+                                    <a href="mailto:codopagosa@earthlink.net" style="text-decoration:none;"><span
                                             class=" ">codopagosa@earthlink.net</span></a>
                                 </li>
                             </ul>
@@ -90,7 +91,7 @@
                             <ul class="footer-list-contact ">
                                 <li>
                                     <i class="bx bx-file "></i>
-                                    <a href="assets/download/2017-2018_Booking_Agreement_Serendipity.pdf"><span
+                                    <a href="assets/download/2017-2018_Booking_Agreement_Serendipity.pdf" style="text-decoration:none;"><span
                                             class=" ">Click Here to Download Reservation Form</span></a>
                                 </li>
                             </ul>
@@ -106,7 +107,7 @@
                 <!-- Copyright Text -->
                 <div class="col-lg-6 col-md-6 text-center">
                     <p class="text-light">
-                        © <span>Copyright 2024 by <a href="https://www.apexwebsoft.com/" class="text-light">Apex Websoft</a>. All Rights Reserved.</span>
+                        © <span>Copyright 2024 by <a href="https://www.apexwebsoft.com/" class="text-light" style="text-decoration:none;">Apex Websoft</a>. All Rights Reserved.</span>
                     </p>
                 </div>
                 <!-- Social Media Icons -->
