@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
     include("link.php");
     ?>
@@ -27,66 +27,26 @@
 <?php
 include("header.php");
 ?>
-<section class="banner-two">
-    <div class="banner-two__carousel villoz-owl__carousel owl-carousel owl-theme" data-owl-option='{
-     "items":1,
-     "margin":0,
-     "loop":true,
-     "smartSpeed":700,
-     "autoplay":true,
-     "nav":true,
-     "dots":false,
-     "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
-      "animateOut": "fadeOut",  
-     }'>
-        <!--Slider Image Here-->
-        <?php
-        if (!empty($banner_image) && is_array($banner_image)) {
-            foreach ($banner_image as $key) {
-        ?>
-                <div class="item">
-                    <div class="banner-two__image" style="background-image: url(<?php echo $key["dest"] ?>);"></div>
-                </div>
-        <?php
-            }
-        }
-        ?>
-
-    </div>
-    <!--Banner Slider-->
-    <div class="banner-two__content">
-        <div class="container">
-            <div class="banner-two__content__top wow fadeInUp" data-wow-delay="300ms">
-                <h1 class="banner-two__title">
-                    <?php
-                    echo isset($homepage_details) && $homepage_details["banner_text"] != null ? $homepage_details["banner_text"] : "Adventures at Serendipitiy Mountains Home ";
-                    ?>
-                </h1>
-                <?php
-                if (isset($homepage_details) && $homepage_details["btn_name"] != null && $homepage_details["btn_url"] != null && $homepage_details["enable_btn"] == 1) {
-                    echo "<div style='text-align: center;'>
-                                <a class='blog-card__link' href='" . $homepage_details["btn_url"] . "' style='display: inline-block; padding: 15px 20px; font-size: 14px; text-decoration: none; border-radius: 5px;'>
-                                    " . $homepage_details["btn_name"] . "
-                                </a>
-                            </div>";
-                }
-                ?>
-
-
-            </div>
-        </div>
-    </div>
-</section>
 <div class="banner-area">
     <div class="container">
         <div class="banner-content">
-            <h1>Serendipity Vacation Home
-                &
-                Studio Apartment
-
-                Vacation Rental</h1>
-            <div class="banner-btn">
-
+            <h1>
+                <?php
+                echo isset($homepage_details) && $homepage_details["banner_text"] != null
+                    ? $homepage_details["banner_text"]
+                    : "Serendipity Vacation Home & Studio Apartment Vacation Rental";
+                ?>
+            </h1>
+            <div class="nav-btn">
+                <?php
+                if (isset($homepage_details) && $homepage_details["btn_name"] != null && $homepage_details["btn_url"] != null && $homepage_details["enable_btn"] == 1) {
+                    echo "<div style='text-align: center;'>
+                            <a class='default-btn btn-bg-one border-radius-5' href='" . $homepage_details["btn_url"] . "'>
+                                " . $homepage_details["btn_name"] . "
+                            </a>
+                        </div>";
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -145,10 +105,10 @@ include("header.php");
                 </div>
             </div>
             <div class="text-center">
-            <a href="service.php" class="default-btn btn-bg-one border-radius-5">
-                Read More
-            </a>
-        </div>
+                <a href="service.php" class="default-btn btn-bg-one border-radius-5">
+                    Read More
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -238,36 +198,6 @@ include("header.php");
         </div>
     </div>
 </div>
-
-
-<!-- <div class="reservation-area section-bg pt-100 pb-70">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6">
-                    <div class="reservation-content">
-                        <div class="section-title">
-                            <h2>
-                                <a href="reservation.html">You Easily Reserve the Desire
-                    Things That Makes All of Your
-                    Happiness & Joys</a>
-                            </h2>
-                            <p>
-                                This is one of the most important and crucial facts that helps us to make one of the booking easily. This booking will help you to make your journey and trip period easily. This will help you to make a journey more easier and that an easier journey is
-                                more useful for you. So, let's start!
-                            </p>
-                        </div>
-                        <a href="book.html" class="default-btn btn-bg-one border-radius-5">Quick Booking</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="reservation-img">
-                        <img src="assets/img/reservation/reservation-img.jpg" alt="Images" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-<!--Rooms-->
 <div class="room-area pt-100 pb-70 section-bg">
     <div class="container">
         <div class="section-title text-center">
@@ -390,7 +320,7 @@ include("header.php");
         </div>
     </div>
 </div>
-
+<!-- Testimonial Start here -->
 <div class="testimonials-area pt-100 pb-70 ">
     <div class="container ">
         <div class="section-title text-center ">
