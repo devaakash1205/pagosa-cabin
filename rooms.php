@@ -51,7 +51,7 @@
             </div>
             <div class="row pt-45 g-4">
                 <!-- Room Card -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <!-- Repeat similar blocks for other rooms -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -81,7 +81,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -96,7 +96,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -111,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -126,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -141,7 +141,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -156,7 +156,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -171,7 +171,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -186,7 +186,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -201,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -216,7 +216,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">
@@ -231,7 +231,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-sm-6 col-md-6 col-12">
                     <div class="card h-100 shadow border-0">
                         <div class="image-hover-container">
                             <a href="room-details.php" class="d-block">

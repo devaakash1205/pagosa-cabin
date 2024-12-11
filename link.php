@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="assets/css/responsive.css" />
 
 <link rel="stylesheet" href="assets/css/theme-dark.css" />
-<link rel="stylesheet" href="assets/css/custom.css" />
+
 <!-- Add Bootstrap CSS -->
 <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -37,3 +37,4 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 <!-- Include Font Awesome for Zoom Icon -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/custom.css" />

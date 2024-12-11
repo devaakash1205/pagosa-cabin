@@ -141,13 +141,31 @@
                     <div class="room-details-article">
                         <div class="room-details-slider owl-carousel owl-theme">
                             <div class="room-details-item">
-                                <img src="assets/img/room/room-details-img1.jpg" alt="Images">
+                                <img src="assets/img/room/room-1.jpg" alt="Images">
                             </div>
                             <div class="room-details-item">
-                                <img src="assets/img/room/room-details-img2.jpg" alt="Images">
+                                <img src="assets/img/room/room-2.jpg" alt="Images">
                             </div>
                             <div class="room-details-item">
-                                <img src="assets/img/room/room-details-img3.jpg" alt="Images">
+                                <img src="assets/img/room/room-5.jpg" alt="Images">
+                            </div>
+                            <div class="room-details-item">
+                                <img src="assets/img/room/room-8.jpg" alt="Images">
+                            </div>
+                            <div class="room-details-item">
+                                <img src="assets/img/room/room-9.jpg" alt="Images">
+                            </div>
+                            <div class="room-details-item">
+                                <img src="assets/img/room/room-10.jpg" alt="Images">
+                            </div>
+                            <div class="room-details-item">
+                                <img src="assets/img/room/room-11.jpg" alt="Images">
+                            </div>
+                            <div class="room-details-item">
+                                <img src="assets/img/room/room-12.jpg" alt="Images">
+                            </div>
+                            <div class="room-details-item">
+                                <img src="assets/img/room/room-13.jpg" alt="Images">
                             </div>
                         </div>
                         <div class="room-details-title">

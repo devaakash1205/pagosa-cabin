@@ -6,7 +6,7 @@
                     <ul>
                         <li>
                             <i class="bx bx-home-alt"></i>
-                            <a href="javascript:void(0);">Colorado</a>
+                            <a href="javascript:void(0);" class="text-decoration">Colorado</a>
                         </li>
                     </ul>
                 </div>
@@ -16,11 +16,11 @@
                     <ul>
                         <li>
                             <i class="bx bx-phone-call"></i>
-                            <a href="tel:+(626) 482-7900">(626) 482-7900</a>
+                            <a href="tel:+(626) 482-7900" class="text-decoration">(626) 482-7900</a>
                         </li>
                         <li>
                             <i class="bx bx-envelope"></i>
-                            <a href="mailto:codopagosa@earthlink.net"><span>codopagosa@earthlink.net</span></a>
+                            <a href="mailto:codopagosa@earthlink.net" class="text-decoration"><span>codopagosa@earthlink.net</span></a>
                         </li>
                     </ul>
                 </div>
@@ -45,32 +45,32 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
-                            <a href="./" class="nav-link active" style="text-decoration:none;">
+                            <a href="./" class="nav-link text-decoration active">
                                 Home
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="about-us.php" class="nav-link" style="text-decoration:none;"> About </a>
+                            <a href="about-us.php" class="nav-link text-decoration"> About </a>
                         </li>
                         <li class="nav-item">
-                            <a href="rooms.php" class="nav-link" style="text-decoration:none;"> Rooms </a>
+                            <a href="rooms.php" class="nav-link text-decoration"> Rooms </a>
                         </li>
                         <li class="nav-item">
-                            <a href="gallery.php" class="nav-link" style="text-decoration:none;"> Gallery </a>
+                            <a href="gallery.php" class="nav-link text-decoration"> Gallery </a>
                         </li>
                         <li class="nav-item">
-                            <a href="service.php" class="nav-link" style="text-decoration:none;">Activities</a>
+                            <a href="service.php" class="nav-link text-decoration">Activities</a>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.php" class="nav-link" style="text-decoration:none;"> Contact us
+                            <a href="contact.php" class="nav-link text-decoration"> Contact us
                             </a>
                         </li>
                         <li class="nav-item-btn">
-                            <a href="contact.php" class="default-btn btn-bg-one border-radius-5" style="text-decoration:none;">Book Now</a>
+                            <a href="contact.php" class="default-btn btn-bg-one border-radius-5 text-decoration">Book Now</a>
                         </li>
                     </ul>
                     <div class="nav-btn">
-                        <a href="contact.php" class="default-btn btn-bg-one border-radius-5" style="text-decoration:none;">Book Now</a>
+                        <a href="contact.php" class="default-btn btn-bg-one border-radius-5 text-decoration">Book Now</a>
                     </div>
                 </div>
             </nav>

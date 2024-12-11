@@ -1,3 +1,6 @@
+.text-decoration{
+    text-decoration:none;
+}
 .room-card-img img {
     width: 100%; /* Adjust the width to fit its container */
     height: auto; /* Maintain aspect ratio */
@@ -71,4 +74,54 @@
     font-size: 14px;
     color: #555;
 }
+.testimonials-item {
+    height: 250px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align content properly */
+    text-align: center;
+    overflow: hidden; /* Hide overflowing content */
+}
 
+.switch-box{
+    display: none !important;
+} 
+.img-height{
+    height:460px;
+}
+
+.font-size-10{
+    font-size: 10px !important;
+}
+
+.font-size-15{
+    font-size: 15px !important;
+}
+
+.font-size-20{
+    font-size: 20px !important;
+}
+
+.font-size-25{
+    font-size: 25px !important;
+}
+
+.font-size-30{
+    font-size: 30px !important;
+}
+
+.font-size-35{
+    font-size: 35px !important;
+}
+
+.font-size-40{
+    font-size: 40px !important;
+}
+
+.font-size-45{
+    font-size: 45px !important;
+}
+
+.font-size-50{
+    font-size: 50px !important;
+}

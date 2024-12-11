@@ -8,7 +8,7 @@
     <?php
     include("link.php");
     ?>
-    <title>Pagosa Cabin |Gallery</title>
+    <title>Pagosa Cabin | Gallery</title>
 </head>
 
 <body>
@@ -43,7 +43,6 @@
             </div>
         </div>
     </div>
-    
     <!-- Gallery Section -->
     <div class="container pt-100 pb-70">
         <div class="section-title text-center">
@@ -53,7 +52,7 @@
 
         <div class="row p-4">
             <!-- First Gallery Item -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
                 <div class="gallery-item position-relative">
                     <!-- Image with Hover Effect -->
                     <a href="assets/img/gallery/gallery-image-1.jpg" data-lightbox="gallery" data-title="Image 1">
@@ -68,7 +67,7 @@
             </div>
 
             <!-- Second Gallery Item -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
                 <div class="gallery-item position-relative">
                     <!-- Image with Hover Effect -->
                     <a href="assets/img/gallery/gallery-image-2.jpg" data-lightbox="gallery" data-title="Image 2">
@@ -83,7 +82,7 @@
             </div>
 
             <!-- Third Gallery Item -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
                 <div class="gallery-item position-relative">
                     <!-- Image with Hover Effect -->
                     <a href="assets/img/gallery/gallery-image-3.jpg" data-lightbox="gallery" data-title="Image 3">
@@ -99,7 +98,7 @@
         </div>
         <div class="row p-4">
             <!-- First Gallery Item -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
                 <div class="gallery-item position-relative">
                     <!-- Image with Hover Effect -->
                     <a href="assets/img/gallery/gallery-image-4.jpg" data-lightbox="gallery" data-title="Image 1">
@@ -114,10 +113,10 @@
             </div>
 
             <!-- Second Gallery Item -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
                 <div class="gallery-item position-relative">
                     <!-- Image with Hover Effect -->
-                    <a href="assets/img/gallery/gallery-image-5.jpg" data-lightbox="gallery" data-title="Image 2">
+                    <a href="assets/img/gallery/gallery-image-5.jpg" data-lightbox="gallery" data-title="Treasure Falls and View of the Valley">
                         <img src="assets/img/gallery/gallery-image-5.jpg" alt="Gallery Image 2" class="img-fluid rounded"
                             style="height: 300px; object-fit: cover;">
                         <div class="zoom-icon">
@@ -127,9 +126,8 @@
                     <h5 class="text-center mt-3 p-3">Treasure Falls and View of the Valley</h5>
                 </div>
             </div>
-
             <!-- Third Gallery Item -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
                 <div class="gallery-item position-relative">
                     <!-- Image with Hover Effect -->
                     <a href="assets/img/gallery/gallery-image-6.jpg" data-lightbox="gallery" data-title="Image 3">
@@ -145,7 +143,7 @@
         </div>
         <div class="row p-4">
             <!-- First Gallery Item -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
                 <div class="gallery-item position-relative">
                     <!-- Image with Hover Effect -->
                     <a href="assets/img/gallery/gallery-image-7.jpg" data-lightbox="gallery" data-title="Image 1">
@@ -160,7 +158,7 @@
             </div>
 
             <!-- Second Gallery Item -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
                 <div class="gallery-item position-relative">
                     <!-- Image with Hover Effect -->
                     <a href="assets/img/gallery/gallery-image-8.jpg" data-lightbox="gallery" data-title="Image 2">
@@ -175,7 +173,7 @@
             </div>
 
             <!-- Third Gallery Item -->
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
                 <div class="gallery-item position-relative">
                     <!-- Image with Hover Effect -->
                     <a href="assets/img/gallery/gallery-image-9.jpg" data-lightbox="gallery" data-title="Image 3">
@@ -190,7 +188,6 @@
             </div>
         </div>
     </div>
-
     <?php
     include("footer.php");
     include("script.php");
