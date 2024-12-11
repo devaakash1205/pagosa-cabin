@@ -177,7 +177,7 @@ include("header.php");
                             <div class="col-lg-7 col-md-8 p-0">
                                 <div class="room-card-content">
                                     <h3>
-                                        <a href="room-details.html" style="text-decoration:none;">Dining Area</a>
+                                        <a href="room-details.html" class="text-decoration">Dining Area</a>
                                     </h3>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@ include("header.php");
                             <div class="col-lg-7 col-md-8 p-0">
                                 <div class="room-card-content">
                                     <h3>
-                                        <a href="room-details.html" style="text-decoration:none;">Gas Log Fireplace</a>
+                                        <a href="room-details.html" class="text-decoration">Gas Log Fireplace</a>
                                     </h3>
                                 </div>
                             </div>
