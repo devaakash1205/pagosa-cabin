@@ -156,129 +156,130 @@ include("header.php");
             </a>
         </div>
     </div>
+</div>
 
-    <div class="room-area pt-100 pb-70 section-bg">
-        <div class="container">
-            <div class="section-title text-center">
-                <span class="sp-color">Rooms</span>
-                <h2>Our Rooms</h2>
-            </div>
-            <div class="row pt-45">
-                <div class="col-lg-6">
-                    <div class="room-card-two">
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-lg-5 col-md-4 p-0">
-                                <div class="room-card-img">
-                                    <a href="room-details.html">
-                                        <img src="assets/img/gallery/house-2.jpg" alt="Images">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-md-8 p-0">
-                                <div class="room-card-content">
-                                    <h3>
-                                        <a href="room-details.html" class="text-decoration">Dining Area</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="room-card-two">
-                        <div class="row align-items-center justify-content-center">
-                            <div class="col-lg-5 col-md-4 p-0">
-                                <div class="room-card-img">
-                                    <a href="room-details.html">
-                                        <img src="assets/img/gallery/house-3.jpg" alt="Images">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-md-8 p-0">
-                                <div class="room-card-content">
-                                    <h3>
-                                        <a href="room-details.html" class="text-decoration">Gas Log Fireplace</a>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center">
-                    <a href="rooms.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
-                        Browse More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Gallery Section -->
-    <div class="container pt-100 pb-70">
+<div class="room-area pt-100 pb-70 section-bg">
+    <div class="container">
         <div class="section-title text-center">
-            <span>Gallery</span>
-            <h2>Our Gallery</h2>
+            <span class="sp-color">Rooms</span>
+            <h2>Our Rooms</h2>
         </div>
-
-        <div class="row p-4">
-            <!-- First Gallery Item -->
-            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
-                <div class="gallery-item position-relative">
-                    <!-- Image with Hover Effect -->
-                    <a href="assets/img/gallery/gallery-image-1.jpg" data-lightbox="gallery" data-title="Image 1">
-                        <img src="assets/img/gallery/gallery-image-1.jpg" alt="Gallery Image 1" class="img-fluid rounded"
-                            style="height: 300px; object-fit: cover;">
-                        <div class="zoom-icon">
-                            <i class="fas fa-search-plus"></i>
+        <div class="row pt-45">
+            <div class="col-lg-6">
+                <div class="room-card-two">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-5 col-md-4 p-0">
+                            <div class="room-card-img">
+                                <a href="room-details.html">
+                                    <img src="assets/img/gallery/house-2.jpg" alt="Images">
+                                </a>
+                            </div>
                         </div>
-                    </a>
-                    <h5 class="text-center mt-3 p-3">The Alpine Glow from Serendipity</h5>
+                        <div class="col-lg-7 col-md-8 p-0">
+                            <div class="room-card-content">
+                                <h3>
+                                    <a href="room-details.html" class="text-decoration">Dining Area</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="room-card-two">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-5 col-md-4 p-0">
+                            <div class="room-card-img">
+                                <a href="room-details.html">
+                                    <img src="assets/img/gallery/house-3.jpg" alt="Images">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-8 p-0">
+                            <div class="room-card-content">
+                                <h3>
+                                    <a href="room-details.html" class="text-decoration">Gas Log Fireplace</a>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Second Gallery Item -->
-            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
-                <div class="gallery-item position-relative">
-                    <!-- Image with Hover Effect -->
-                    <a href="assets/img/gallery/gallery-image-2.jpg" data-lightbox="gallery" data-title="Image 2">
-                        <img src="assets/img/gallery/gallery-image-2.jpg" alt="Gallery Image 2" class="img-fluid rounded"
-                            style="height: 300px; object-fit: cover;">
-                        <div class="zoom-icon">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </a>
-                    <h5 class="text-center mt-3 p-3">River Rafting is fun!</h5>
-                </div>
-            </div>
-
-            <!-- Third Gallery Item -->
-            <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
-                <div class="gallery-item position-relative">
-                    <!-- Image with Hover Effect -->
-                    <a href="assets/img/gallery/gallery-image-3.jpg" data-lightbox="gallery" data-title="Image 3">
-                        <img src="assets/img/gallery/gallery-image-3.jpg" alt="Gallery Image 3" class="img-fluid rounded"
-                            style="height: 300px; object-fit: cover;">
-                        <div class="zoom-icon">
-                            <i class="fas fa-search-plus"></i>
-                        </div>
-                    </a>
-                    <h5 class="text-center mt-3 p-3">Our Family at Wolf Creek</h5>
-                </div>
-            </div>
             <div class="text-center">
-                <a href="gallery.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
+                <a href="rooms.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
                     Browse More
                 </a>
             </div>
         </div>
     </div>
-    <!-- Testimonial Start here -->
-    <?php
-    include("testimonials.php");
-    include("footer.php");
-    include("script.php");
-    ?>
-    </body>
+</div>
+
+<!-- Gallery Section -->
+<div class="container pt-100 pb-70">
+    <div class="section-title text-center">
+        <span>Gallery</span>
+        <h2>Our Gallery</h2>
+    </div>
+
+    <div class="row p-4">
+        <!-- First Gallery Item -->
+        <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
+            <div class="gallery-item position-relative">
+                <!-- Image with Hover Effect -->
+                <a href="assets/img/gallery/gallery-image-1.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="assets/img/gallery/gallery-image-1.jpg" alt="Gallery Image 1" class="img-fluid rounded"
+                        style="height: 300px; object-fit: cover;">
+                    <div class="zoom-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </a>
+                <h5 class="text-center mt-3 p-3">The Alpine Glow from Serendipity</h5>
+            </div>
+        </div>
+
+        <!-- Second Gallery Item -->
+        <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
+            <div class="gallery-item position-relative">
+                <!-- Image with Hover Effect -->
+                <a href="assets/img/gallery/gallery-image-2.jpg" data-lightbox="gallery" data-title="Image 2">
+                    <img src="assets/img/gallery/gallery-image-2.jpg" alt="Gallery Image 2" class="img-fluid rounded"
+                        style="height: 300px; object-fit: cover;">
+                    <div class="zoom-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </a>
+                <h5 class="text-center mt-3 p-3">River Rafting is fun!</h5>
+            </div>
+        </div>
+
+        <!-- Third Gallery Item -->
+        <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
+            <div class="gallery-item position-relative">
+                <!-- Image with Hover Effect -->
+                <a href="assets/img/gallery/gallery-image-3.jpg" data-lightbox="gallery" data-title="Image 3">
+                    <img src="assets/img/gallery/gallery-image-3.jpg" alt="Gallery Image 3" class="img-fluid rounded"
+                        style="height: 300px; object-fit: cover;">
+                    <div class="zoom-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </a>
+                <h5 class="text-center mt-3 p-3">Our Family at Wolf Creek</h5>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="gallery.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
+                Browse More
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Testimonial Start here -->
+<?php
+include("testimonials.php");
+include("footer.php");
+include("script.php");
+?>
+</body>
 
 </html>
