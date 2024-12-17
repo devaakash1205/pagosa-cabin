@@ -43,132 +43,61 @@
         </div>
     </div>
 
-
     <div class="room-area pt-100 pb-70">
         <div class="container">
             <div class="section-title text-center">
                 <span class="sp-color">ROOMS</span>
-                <h2>Our Rooms & Rates</h2>
+                <h2>Our Rooms</h2>
             </div>
-            <div class="row pt-45">
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img1.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">High Rate Main House</a></h3>
-                            <ul>
-                                <li class="text-color">$260</li>
-                                <li class="text-color">Night</li><br>
-                                
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
+            <div class="row pt-45 g-4">
+                <!-- Room Card -->
+                <?php
+                $roomData = getRooms();
+                $counter = 0;
+                if ($roomData == null) {
+                    echo "No rooms available.";
+                } else {
+                    foreach ($roomData as $room) {
+                        if ($counter % 3 == 0 && $counter != 0) {
+                            echo '</div><div class="row pt-4 g-4">';
+                        }
+                ?>
+                        <div class="col-lg-4 col-sm-6 col-md-6 col-12">
+                            <div class="card h-100 shadow border-0">
+                                <div class="image-hover-container">
+                                    <a href="room-details.php" class="d-block">
+                                        <img src="admin/dashboard/<?php echo $room['image_url']; ?>" class="card-img-top" alt="Images">
+                                    </a>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">
+                                        <a href="room-details.php" class="text-dark text-decoration-none"><?php echo $room['title']; ?></a>
+                                    </h5>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img2.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Major Spring Holidays</a></h3>
-                            <ul>
-                                <li class="text-color">$300</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img3.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Labour Color</a></h3>
-                            <ul>
-                                <li class="text-color">$370</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img4.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Fall Colors</a></h3>
-                            <ul>
-                                <li class="text-color">$370</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img5.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Low Rate Main House</a></h3>
-                            <ul>
-                                <li class="text-color">$270</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-card">
-                        <a href="room-details.php">
-                            <img src="assets/img/room/room-img6.jpg" alt="Images">
-                        </a>
-                        <div class="content">
-                            <h3><a href="room-details.php">Memorial Day</a></h3>
-                            <ul>
-                                <li class="text-color">$270</li>
-                                <li class="text-color">Night</li>
-                            </ul>
-                            <div class="rating ">
-                                <p style="font-size:11px; ">(4th bedroom, 3rd bath)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12">
-                    <div class="pagination-area">
-                        <a href="room.html#" class="prev page-numbers">
-                            <i class="bx bx-chevrons-left"></i>
-                        </a>
-                        <span class="page-numbers current" aria-current="page" style="background-color:#549154 ;">1</span>
-                        <a href="room.html#" class="page-numbers">2</a>
-                        <a href="room.html#" class="page-numbers">3</a>
-                        <a href="room.html#" class="next page-numbers">
-                            <i class="bx bx-chevrons-right"></i>
-                        </a>
-                    </div>
+                <?php
+                        $counter++;
+                    }
+                }
+                ?>
+            </div>
+
+            <div class="col-lg-12 col-md-12">
+                <div class="pagination-area">
+                    <a href="room.html#" class="prev page-numbers">
+                        <i class="bx bx-chevrons-left"></i>
+                    </a>
+                    <span class="page-numbers current" aria-current="page" style="background-color:#549154 ;">1</span>
+                    <a href="room.html#" class="page-numbers">2</a>
+                    <a href="room.html#" class="page-numbers">3</a>
+                    <a href="room.html#" class="next page-numbers">
+                        <i class="bx bx-chevrons-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <?php
     include("footer.php");

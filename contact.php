@@ -101,8 +101,7 @@
                         <div class="section-title">
                             <h2>Contacts Info</h2>
                             <p>
-                                We are one of the best agency and we can easily make a contract
-                                us anytime on the below details.
+                            Nestled on the mountain side of The San Juan River Village, this lovely mountain home with reliable high-speed Starlinks wifi has a secluded setting and a magnificent panoramic view of the San Juan Mountains. 
                             </p>
                         </div>
                         <div class="contact-item">
@@ -116,13 +115,13 @@
                                 <li>
                                     <i class="bx bx-phone-call"></i>
                                     <div class="content">
-                                        <span><a href="tel:+(626) 482-7900">+(626) 482-7900</a></span>
+                                        <span><a href="tel:+(626) 482-7900"  style="text-decoration:none;">+(626) 482-7900</a></span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="bx bx-envelope"></i>
                                     <div class="content">
-                                        <span><a href="mailto:codopagosa@earthlink.net"><span>codopagosa@earthlink.net</span></a></span>
+                                        <span><a href="mailto:codopagosa@earthlink.net" style="text-decoration:none;"><span>codopagosa@earthlink.net</span></a></span>
                                     </div>
                                 </li>
                             </ul>

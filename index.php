@@ -10,7 +10,6 @@
     <title>Pagosa Cabin | Home</title>
 </head>
 
-
 <div class="preloader">
     <div class="d-table">
         <div class="d-table-cell">
@@ -27,6 +26,23 @@
 <?php
 include("header.php");
 ?>
+<!-- Responsive Top Div -->
+<!-- dessktop view -->
+<div class="container-fluid d-none d-sm-block">
+    <div class="row justify-content-left">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+            <h2 class="text-dark"><b>Adventures at Serendipity Mountain Home</b></h2>
+        </div>
+    </div>
+</div>
+<!-- mobile view -->
+<div class="container-fluid d-block d-md-none">
+    <div class="row justify-content-left mt-1">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 mt-5">
+            <h6 class="text-dark"><b>Adventures at Serendipity Mountain Home</b></h6>
+        </div>
+    </div>
+</div>
 <div class="banner-area">
     <div class="container">
         <div class="banner-content">
@@ -51,68 +67,6 @@ include("header.php");
         </div>
     </div>
 </div>
-
-<!--Services-->
-<div class="blog-area pb-70 pt-100">
-    <div class="container">
-        <div class="section-title text-center">
-            <span>Services</span>
-            <h2>Our Services</h2>
-        </div>
-        <div class="row pt-45">
-            <!-- First Blog Card -->
-            <div class="col-lg-6 d-flex">
-                <div class="blog-card d-flex flex-column" style="flex-grow: 1;">
-                    <div class="row align-items-center justify-content-center h-100">
-                        <div class="col-lg-5 col-md-4 p-0">
-                            <div class="blog-img">
-                                <a href="blog-details.html">
-                                    <img src="assets/img/gallery/house-2.jpg" alt="Serendipity Living" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7 col-md-8 p-0">
-                            <div class="blog-content">
-                                <h3>
-                                    <a href="blog-details.html">Serendipity Living and Dining</a>
-                                </h3>
-                                <p>Experience the charm of elegant living spaces and the joy of fine dining. A perfect retreat for relaxation and luxury.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Second Blog Card -->
-            <div class="col-lg-6 d-flex">
-                <div class="blog-card d-flex flex-column" style="flex-grow: 1;">
-                    <div class="row align-items-center justify-content-center h-100">
-                        <div class="col-lg-5 col-md-4 p-0">
-                            <div class="blog-img">
-                                <a href="blog-details.html">
-                                    <img src="assets/img/service/service-1.jpg" alt="Beautiful View" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7 col-md-8 p-0">
-                            <div class="blog-content">
-                                <h3>
-                                    <a href="service.php">A Beautiful View from Serendipity</a>
-                                </h3>
-                                <p>Indulge in stunning panoramic views that surround you, offering a peaceful and scenic escape to recharge your senses.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <a href="service.php" class="default-btn btn-bg-one border-radius-5">
-                    Read More
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!--About Us-->
 <div class="about-area pt-70 pb-70">
     <div class="container-fluid">
@@ -121,14 +75,14 @@ include("header.php");
             <h2>About Us</h2>
         </div>
         <div class="row align-items-center justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                 <div class="about-img">
-                    <img src="assets/img/about/about-img.jpeg" alt="Images" />
+                    <img src="assets/img/about/about-img.jpeg" alt="Images" class="img-height" />
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-10">
                 <div class="about-content">
-                    <h2>A Pagosa Springs, <span class="text-success"> Colorado Vacation Home in the Heart of the San Juan Mtns.</span></h2>
+                    <h2><b>A Pagosa Springs, </b><span class="text-success"><b>Colorado Vacation Home in the Heart of the San Juan Mtns.</b></span></h2>
 
                     <p>
                         Nestled on the mountain side of The San Juan River Village, this lovely mountain home with
@@ -136,7 +90,7 @@ include("header.php");
                         of the San Juan Mountains.
                     </p>
                     <div class="text-left">
-                        <a href="about-us.php" class="default-btn btn-bg-one border-radius-5">Read More</a>
+                        <a href="about-us.php" class="default-btn btn-bg-one border-radius-5 text-decoration">Read More</a>
                     </div>
                 </div>
             </div>
@@ -196,8 +150,14 @@ include("header.php");
                 </div>
             </div>
         </div>
+        <div class="text-center">
+            <a href="service.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
+                Explore More
+            </a>
+        </div>
     </div>
 </div>
+
 <div class="room-area pt-100 pb-70 section-bg">
     <div class="container">
         <div class="section-title text-center">
@@ -211,18 +171,15 @@ include("header.php");
                         <div class="col-lg-5 col-md-4 p-0">
                             <div class="room-card-img">
                                 <a href="room-details.html">
-                                    <img src="assets/img/gallery/house-4.jpg" alt="Images">
+                                    <img src="assets/img/gallery/house-2.jpg" alt="Images">
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-7 col-md-8 p-0">
                             <div class="room-card-content">
                                 <h3>
-                                    <a href="room-details.html">Luxury Room</a>
+                                    <a href="room-details.html" class="text-decoration">Dining Area</a>
                                 </h3>
-                                <span class="text-success">320 / Per Night </span>
-                                <p>Indulge in unparalleled comfort with elegant décor, plush bedding, and modern amenities, offering a truly luxurious experience. Perfect for those seeking sophistication and style during their stay.</p>
-
                             </div>
                         </div>
                     </div>
@@ -234,18 +191,15 @@ include("header.php");
                         <div class="col-lg-5 col-md-4 p-0">
                             <div class="room-card-img">
                                 <a href="room-details.html">
-                                    <img src="assets/img/gallery/house-7.jpg" alt="Images">
+                                    <img src="assets/img/gallery/house-3.jpg" alt="Images">
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-7 col-md-8 p-0">
                             <div class="room-card-content">
                                 <h3>
-                                    <a href="room-details.html">Single Room</a>
+                                    <a href="room-details.html" class="text-decoration">Gas Log Fireplace</a>
                                 </h3>
-                                <span class="text-success">300 / Per Night </span>
-                                <p>Cozy and functional, our single room is designed for solo travelers, featuring all essential amenities to ensure a comfortable and peaceful stay.</p>
-
                             </div>
                         </div>
                     </div>
@@ -253,7 +207,7 @@ include("header.php");
             </div>
 
             <div class="text-center">
-                <a href="gallery.php" class="default-btn btn-bg-one border-radius-5">
+                <a href="rooms.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
                     Browse More
                 </a>
             </div>
@@ -270,127 +224,62 @@ include("header.php");
 
     <div class="row p-4">
         <!-- First Gallery Item -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
             <div class="gallery-item position-relative">
                 <!-- Image with Hover Effect -->
-                <a href="assets/img/gallery/house-9.jpg" data-lightbox="gallery" data-title="Image 1">
-                    <img src="assets/img/gallery/house-9.jpg" alt="Gallery Image 1" class="img-fluid rounded"
+                <a href="assets/img/gallery/gallery-image-1.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="assets/img/gallery/gallery-image-1.jpg" alt="Gallery Image 1" class="img-fluid rounded"
                         style="height: 300px; object-fit: cover;">
                     <div class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </a>
-                <h5 class="text-center mt-3 p-3">Downstairs Bedroom w/Queen</h5>
+                <h5 class="text-center mt-3 p-3">The Alpine Glow from Serendipity</h5>
             </div>
         </div>
 
         <!-- Second Gallery Item -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
             <div class="gallery-item position-relative">
                 <!-- Image with Hover Effect -->
-                <a href="assets/img/gallery/house-8.jpg" data-lightbox="gallery" data-title="Image 2">
-                    <img src="assets/img/gallery/house-8.jpg" alt="Gallery Image 2" class="img-fluid rounded"
+                <a href="assets/img/gallery/gallery-image-2.jpg" data-lightbox="gallery" data-title="Image 2">
+                    <img src="assets/img/gallery/gallery-image-2.jpg" alt="Gallery Image 2" class="img-fluid rounded"
                         style="height: 300px; object-fit: cover;">
                     <div class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </a>
-                <h5 class="text-center mt-3 p-3">Master Bedroom w/Deck</h5>
+                <h5 class="text-center mt-3 p-3">River Rafting is fun!</h5>
             </div>
         </div>
 
         <!-- Third Gallery Item -->
-        <div class="col-lg-4 col-md-6 mb-4">
+        <div class="col-lg-4 col-sm-6 col-md-6 mb-4">
             <div class="gallery-item position-relative">
                 <!-- Image with Hover Effect -->
-                <a href="assets/img/gallery/house-6.jpg" data-lightbox="gallery" data-title="Image 3">
-                    <img src="assets/img/gallery/house-6.jpg" alt="Gallery Image 3" class="img-fluid rounded"
+                <a href="assets/img/gallery/gallery-image-3.jpg" data-lightbox="gallery" data-title="Image 3">
+                    <img src="assets/img/gallery/gallery-image-3.jpg" alt="Gallery Image 3" class="img-fluid rounded"
                         style="height: 300px; object-fit: cover;">
                     <div class="zoom-icon">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </a>
-                <h5 class="text-center mt-3 p-3">Entry and lots of views</h5>
+                <h5 class="text-center mt-3 p-3">Our Family at Wolf Creek</h5>
             </div>
         </div>
         <div class="text-center">
-            <a href="gallery.php" class="default-btn btn-bg-one border-radius-5">
+            <a href="gallery.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
                 Browse More
             </a>
         </div>
     </div>
 </div>
 <!-- Testimonial Start here -->
-<div class="testimonials-area pt-100 pb-70 ">
-    <div class="container ">
-        <div class="section-title text-center ">
-
-            <h2>What Our Client Says</h2>
-        </div>
-        <div class="testimonials-slider owl-carousel owl-theme pt-45 ">
-            <div class="testimonials-item ">
-                <i class="flaticon-left-quote "></i>
-                <p>
-                    "Thank you-Thank you-Thank you! You guys own a piece of heaven! " Burke Family, Pasadena, CA </p>
-                <ul>
-                    <li>
-                        <img src="assets/img/testimonials/testimonials-img1.jpg " alt="Images " />
-                        <h3>Burke Family</h3>
-                        <span>Pasadena, CA</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="testimonials-item ">
-                <i class="flaticon-left-quote "></i>
-                <p>
-                    "What a great time we had. What a perfectly gorgeous time of year " The Snavely's, Harlington, TX
-                </p>
-                <ul>
-                    <li>
-                        <img src="assets/img/testimonials/testimonials-img2.jpg " alt="Images " />
-                        <h3>The Snavely's</h3>
-                        <span>Harlington, TX</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="testimonials-item ">
-                <i class="flaticon-left-quote "></i>
-                <p>
-                    "We really enjoyed your place. The snow was great and so was the neighborhood.The Snavely's,
-                    Harlington, TX
-                </p>
-                <ul>
-                    <li>
-                        <img src="assets/img/testimonials/testimonials-img3.jpg " alt="Images " />
-                        <h3>The Miletello's</h3>
-                        <span>Ruston, LA</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="testimonials-item ">
-                <i class="flaticon-left-quote "></i>
-                <p style="font-weight:normal;">
-                    "The studio apartment was just perfect and the futon was so comfortable we are looking for a similar
-                    one for our guest room."
-                <ul>
-                    <li>
-                        <img src="assets/img/testimonials/testimonials-img3.jpg " alt="Images " />
-                        <h3>The Freeman's</h3>
-                        <span>San Gabriel, CA</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 <?php
+include("testimonials.php");
 include("footer.php");
 include("script.php");
 ?>
-
-
 </body>
 
 </html>
