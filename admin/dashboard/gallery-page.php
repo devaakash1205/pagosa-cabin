@@ -64,7 +64,7 @@
                                             $data = getGalleryImage($conn);
                                             if (!empty($data) && is_array($data)) {
                                                 foreach ($data as $key) {
-                                                    ?>
+                                            ?>
                                                     <tr>
                                                         <td>
                                                             <?php echo $count++ ?>
@@ -83,7 +83,7 @@
                                                             Action
                                                         </td>
                                                     </tr>
-                                                    <?php
+                                            <?php
                                                 }
                                             } else {
                                                 echo "No record found!";

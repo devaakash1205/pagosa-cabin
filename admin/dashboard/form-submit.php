@@ -493,18 +493,18 @@ if (isset($_POST['change_password'])) {
                 echo "<script>alert('Something went wrong!');</script>";
             }
         } else {
-            ?>
+?>
             <script>
                 alert("Password not marching!");
             </script>
-            <?php
+        <?php
         }
     } else {
         ?>
         <script>
             alert("Current password does not match!");
         </script>
-        <?php
+<?php
     }
 }
 
@@ -531,83 +531,126 @@ if (isset($_POST['update_profile'])) {
     }
 }
 
-// *****---------------Villa--------**********
+// *****---------------rooms--------**********
 
-// add villa
+// add rooms
 
-if (isset($_POST['add_villa']) && isset($_FILES['image_url'])) {
-    $images = $_FILES['image_url'];
-    $name = $_POST["name"];
-    $description = $_POST["description"];
+if (isset($_POST['add_room']) && isset($_FILES['image_url'])) {
+    $image = $_FILES['image_url'];
+    $title = $_POST["title"];
 
-    $allowedTypes = ['image/jpeg', 'image/png', 'image/jpg'];
-    $uploadedFiles = []; // Array to store uploaded file paths
-    $uploadDir = 'uploads/villa/';
+    $allowedTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/webp', 'image/jfif'];
+    $uploadDir = 'uploads/rooms/';
 
     if (!is_dir($uploadDir)) {
         mkdir($uploadDir, 0777, true);
     }
 
-    $allFilesUploaded = true;
+    $fileName = $image['name'];
+    $fileTmpName = $image['tmp_name'];
+    $fileSize = $image['size'];
+    $fileError = $image['error'];
+    $fileType = $image['type'];
 
-    // Loop through each uploaded file
-    for ($i = 0; $i < count($images['name']); $i++) {
-        $fileName = $images['name'][$i];
-        $fileTmpName = $images['tmp_name'][$i];
-        $fileSize = $images['size'][$i];
-        $fileError = $images['error'][$i];
-        $fileType = $images['type'][$i];
+    if (in_array($fileType, $allowedTypes)) {
+        if ($fileError === 0) {
+            $fileExtension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+            $uniqueFileName = uniqid('', true) . '.' . $fileExtension;
+            $uploadPath = $uploadDir . $uniqueFileName;
 
-        if (in_array($fileType, $allowedTypes)) {
-            if ($fileError === 0) {
-                $fileExtension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
-                $uniqueFileName = uniqid('', true) . '.' . $fileExtension;
-                $uploadPath = $uploadDir . $uniqueFileName;
+            // File ko upload karenge
+            if (move_uploaded_file($fileTmpName, $uploadPath)) {
+                // File path ko database me insert karenge
+                $insertQuery = "INSERT INTO rooms (title, image_url) VALUES ('$title', '$uploadPath')";
 
-                if (move_uploaded_file($fileTmpName, $uploadPath)) {
-                    $uploadedFiles[] = $uploadPath; // Add the file path to the array
+                if (mysqli_query($conn, $insertQuery)) {
+                    echo "<script>alert('Room successfully added with an image!');</script>";
+                    echo "<script>window.location.href = 'our-room-page.php';</script>";
                 } else {
-                    $allFilesUploaded = false;
-                    echo "<script>alert('Error uploading file: $fileName');</script>";
-                    break;
+                    // Database insert fail hone par image ko delete karenge
+                    if (file_exists($uploadPath)) {
+                        unlink($uploadPath);
+                    }
+                    echo "<script>alert('Error inserting image path into database.');</script>";
                 }
             } else {
-                $allFilesUploaded = false;
-                echo "<script>alert('Error with file: $fileName');</script>";
-                break;
+                echo "<script>alert('Error uploading the image.');</script>";
             }
         } else {
-            $allFilesUploaded = false;
-            echo "<script>alert('Invalid file type for file: $fileName');</script>";
-            break;
-        }
-    }
-
-    if ($allFilesUploaded && !empty($uploadedFiles)) {
-        // Convert file paths array to JSON
-        $uploadedFilesJson = json_encode($uploadedFiles);
-
-        $insertQuery = "INSERT INTO villas (name, description, image_url) VALUES ('$name', '$description', '$uploadedFilesJson')";
-        if (mysqli_query($conn, $insertQuery)) {
-            echo "<script>alert('Villa successfully added with multiple images!');</script>";
-            echo "<script>window.location.href = 'our-villa-page.php';</script>";
-        } else {
-            // Database insert failed, delete uploaded files
-            foreach ($uploadedFiles as $file) {
-                if (file_exists($file)) {
-                    unlink($file);
-                }
-            }
-            echo "<script>alert('Error inserting image paths into database. Uploads have been reverted.');</script>";
+            echo "<script>alert('Error with the uploaded file.');</script>";
         }
     } else {
-        // Uploading files failed, delete partially uploaded files
-        foreach ($uploadedFiles as $file) {
-            if (file_exists($file)) {
-                unlink($file);
-            }
-        }
-        echo "<script>alert('No files were uploaded successfully.');</script>";
+        echo "<script>alert('Invalid file type. Only JPEG, PNG, JPG,JFIF, and WEBP are allowed.');</script>";
     }
 }
-// *****---------------Villa--------**********
+// *****---------------Rooms--------**********
+
+//***********Rooms details ***********/
+if (isset($_GET['id'])) {
+    $roomId = (int) $_GET['id'];
+    $query = "SELECT * FROM rooms WHERE id = $roomId";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) > 0) {
+        $roomData = mysqli_fetch_assoc($result);
+    } else {
+        $roomData = null;
+    }
+}
+
+//********Room Edit *********/
+if (isset($_POST['update'])) {
+    $title = $_POST['title'];
+    $roomId = $_POST['room_id'];
+    $upload_dir = 'uploads/rooms/';
+    
+    // Check if the directory exists and is writable
+    if (!is_dir($upload_dir)) {
+        mkdir($upload_dir, 0777, true);
+    }
+
+    if (!is_writable($upload_dir)) {
+        die("Upload directory is not writable!");
+    }
+    $image_url = $roomData['image_url'];
+
+    // Check if a new image is uploaded
+    if ($_FILES['image_url']['error'] == 0) {
+        // New image uploaded, handle the upload
+        $image_url = uniqid() . '-' . $_FILES['image_url']['name'];  // Creating unique filename
+        $tmp_name = $_FILES['image_url']['tmp_name'];
+        $target_path = $upload_dir . basename($image_url);
+
+        // Delete the old image if it exists
+        if (isset($roomData['image_url']) && file_exists($upload_dir . $roomData['image_url'])) {
+            unlink($upload_dir . $roomData['image_url']);  // Delete the old image
+        }
+
+        // Ensure file is an image (optional, but recommended)
+        $allowed_types = ['image/jpeg', 'image/png', 'image/gif', 'image/jfif'];
+        $file_type = mime_content_type($tmp_name);
+        if (!in_array($file_type, $allowed_types)) {
+            echo "<script>alert('Invalid image type!');</script>";
+            exit;
+        }
+
+        // Move the uploaded file to the target directory
+        if (move_uploaded_file($tmp_name, $target_path)) {
+            echo "Image uploaded successfully!";
+        } else {
+            echo "Error uploading image.";
+            exit;
+        }
+    }
+
+    // Update query to update title and image URL
+    $update_query = "UPDATE rooms SET title='$title', image_url='$image_url' WHERE id=$roomId";
+    
+    if (mysqli_query($conn, $update_query)) {
+        echo "<script>alert('Room details updated successfully!'); window.location.href='our-room-page.php';</script>";
+    } else {
+        echo "<script>alert('Error updating room.');</script>";
+    }
+}
+
+?>

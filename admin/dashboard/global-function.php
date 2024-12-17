@@ -247,12 +247,12 @@ function getGalleryImage($conn)
     return $data;
 }
 
-// **-------------Our villa------------******
-function getVillas() {
+// **-------------Our Rooms------------******
+function getRooms() {
     global $conn;
 
     $data = [];
-    $sql = mysqli_query($conn,"SELECT * FROM villas");
+    $sql = mysqli_query($conn,"SELECT * FROM rooms");
 
     if (mysqli_num_rows($sql) > 0) {
         while ($res = mysqli_fetch_assoc($sql)) {
@@ -263,11 +263,11 @@ function getVillas() {
     return $data;
 }
 
-// get villa by id
-function getVillaById($id) {
+// get rooms by id
+function getRoomById($id) {
     global $conn;
 
-    $sql = mysqli_query($conn,"SELECT * FROM villas WHERE id = '$id' AND status = 1");
+    $sql = mysqli_query($conn,"SELECT * FROM rooms WHERE id = '$id' AND status = 1");
 
     if (mysqli_num_rows($sql) > 0) {
         $result = mysqli_fetch_assoc($sql);
@@ -289,4 +289,5 @@ function getUserData($conn)
         return null;
     }
 }
+
 ?>

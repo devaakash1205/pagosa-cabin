@@ -1,3 +1,10 @@
+<?php
+include("./admin/config.php");
+include("./admin/dashboard/global-function.php");
+$galleryData = getGalleryImage($conn);
+$roomData = getRooms();
+
+?>
 <header class="top-header top-header-bg">
     <div class="container">
         <div class="row">

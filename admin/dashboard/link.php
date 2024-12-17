@@ -17,6 +17,10 @@
 
 <!-- Template Main CSS File -->
 <link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
 <!-- ck editor -->
 <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <!-- Bootstrap CSS -->
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIq0O3wS0mPzjMGxG5ANr8H8E6Sjj0ZzlvK7nD6r+qwm9sV5hT6" crossorigin="anonymous">
+<!-- Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">

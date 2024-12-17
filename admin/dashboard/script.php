@@ -96,3 +96,6 @@
         }
     }
 </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0O3wS0mPzjMGxG5ANr8H8E6Sjj0ZzlvK7nD6r+qwm9sV5hT6" crossorigin="anonymous"></script>
