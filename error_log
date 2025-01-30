@@ -1,0 +1,28 @@
+[17-Dec-2024 09:37:00 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php:8
+Stack trace:
+#0 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php(8): mysqli->__construct('localhost', 'root', '', 'pagosacabin')
+#1 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/header.php(2): include('/home2/apexwmdp...')
+#2 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/index.php(27): include('/home2/apexwmdp...')
+#3 {main}
+  thrown in /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php on line 8
+[17-Dec-2024 09:37:08 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php:8
+Stack trace:
+#0 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php(8): mysqli->__construct('localhost', 'root', '', 'pagosacabin')
+#1 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/header.php(2): include('/home2/apexwmdp...')
+#2 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/index.php(27): include('/home2/apexwmdp...')
+#3 {main}
+  thrown in /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php on line 8
+[17-Dec-2024 09:38:11 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php:8
+Stack trace:
+#0 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php(8): mysqli->__construct('localhost', 'root', '', 'pagosacabin')
+#1 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/header.php(2): include('/home2/apexwmdp...')
+#2 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/index.php(27): include('/home2/apexwmdp...')
+#3 {main}
+  thrown in /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php on line 8
+[17-Dec-2024 09:47:32 America/Chicago] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php:8
+Stack trace:
+#0 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php(8): mysqli->__construct('localhost', 'root', '', 'pagosacabin')
+#1 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/header.php(2): include('/home2/apexwmdp...')
+#2 /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/index.php(27): include('/home2/apexwmdp...')
+#3 {main}
+  thrown in /home2/apexwmdp/demo.apexwebsoft.com/pagoscabin/admin/config.php on line 8

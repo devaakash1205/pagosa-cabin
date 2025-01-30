@@ -26,12 +26,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Booking Request</h1>
+            <h1>User Reviews</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./">Dashboard</a></li>
-                    <li class="breadcrumb-item">Booking Request</li>
-                    <li class="breadcrumb-item active">Booking Request</li>
+                    <li class="breadcrumb-item">User Reviews</li>
+                    <li class="breadcrumb-item active">User Reviews</li>
                 </ol>
             </nav>
         </div>
@@ -42,7 +42,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body d-flex justify-content-between align-items-center">
-                            <h5 class="card-title">Booking Request</h5>
+                            <h5 class="card-title">User Reviews</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -58,15 +58,13 @@
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Phone</th>
-                                        <th scope="col">Check In-Check Out</th>
-                                        <th scope="col">Number of Adults</th>
-                                        <th scope="col">Number of Childrens</th>
-                                        <th scope="col">Date</th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col">Comment</th>
                                     </tr>
                                 </thead>
                                 <tbody id="messageTable">
                                     <?php
-                                    $sql = mysqli_query($conn, "SELECT * FROM booking_request ORDER BY created_at DESC");
+                                    $sql = mysqli_query($conn, "SELECT * FROM user_reviews");
                                     if (mysqli_num_rows($sql) > 0) {
                                         $count = isset($start) ? 1 + $start : 1;
                                         while ($row = mysqli_fetch_array($sql)) {
@@ -76,18 +74,13 @@
                                                 <td><?php echo htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8'); ?></td>
                                                 <td><?php echo htmlspecialchars($row['email'], ENT_QUOTES, 'UTF-8'); ?></td>
                                                 <td><?php echo htmlspecialchars(substr($row['phone'], 0, 50), ENT_QUOTES, 'UTF-8'); ?></td>
-                                                <td><?php echo htmlspecialchars($row['checkin'], ENT_QUOTES, 'UTF-8') . " - " . htmlspecialchars($row['checkout'], ENT_QUOTES, 'UTF-8'); ?></td>
-                                                <td><?php echo htmlspecialchars($row['no_of_adults'], ENT_QUOTES, 'UTF-8'); ?></td>
-                                                <td><?php echo htmlspecialchars($row['no_of_children'], ENT_QUOTES, 'UTF-8'); ?></td>
-                                                <td>
-                                                    <?php echo date('Y-m-d', strtotime($row['created_at'])); ?>
-                                                    </a>
-                                                </td>
+                                                <td><?php echo htmlspecialchars($row['address'], ENT_QUOTES, 'UTF-8'); ?></td>
+                                                <td><?php echo htmlspecialchars($row['description'], ENT_QUOTES, 'UTF-8'); ?></td>
                                             </tr>
                                     <?php
                                         }
                                     } else {
-                                        echo "<tr><td colspan='6'>No messages found</td></tr>";
+                                        echo "<tr><td colspan='6'>No Review found</td></tr>";
                                     }
                                     ?>
                                 </tbody>

@@ -10,19 +10,6 @@
     <title>Pagosa Cabin | Home</title>
 </head>
 
-<div class="preloader">
-    <div class="d-table">
-        <div class="d-table-cell">
-            <div class="sk-cube-area">
-                <div class="sk-cube1 sk-cube"></div>
-                <div class="sk-cube2 sk-cube"></div>
-                <div class="sk-cube4 sk-cube"></div>
-                <div class="sk-cube3 sk-cube"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <?php
 include("header.php");
 ?>
@@ -57,7 +44,7 @@ include("header.php");
                 <?php
                 if (isset($homepage_details) && $homepage_details["btn_name"] != null && $homepage_details["btn_url"] != null && $homepage_details["enable_btn"] == 1) {
                     echo "<div style='text-align: center;'>
-                            <a class='default-btn btn-bg-one border-radius-5' href='" . $homepage_details["btn_url"] . "'>
+                            <a class='default-btn btn-bg-one ' href='" . $homepage_details["btn_url"] . "'>
                                 " . $homepage_details["btn_name"] . "
                             </a>
                         </div>";
@@ -82,7 +69,8 @@ include("header.php");
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-10">
                 <div class="about-content">
-                    <h2><b>A Pagosa Springs, </b><span class="text-success"><b>Colorado Vacation Home in the Heart of the San Juan Mtns.</b></span></h2>
+                    <h2><b>A Pagosa Springs, </b><span class="text-success"><b>Colorado Vacation Home in the Heart of
+                                the San Juan Mtns.</b></span></h2>
 
                     <p>
                         Nestled on the mountain side of The San Juan River Village, this lovely mountain home with
@@ -90,7 +78,8 @@ include("header.php");
                         of the San Juan Mountains.
                     </p>
                     <div class="text-left">
-                        <a href="about-us.php" class="default-btn btn-bg-one border-radius-5 text-decoration">Read More</a>
+                        <a href="about-us.php" class="default-btn btn-bg-one text-decoration">Read
+                            More</a>
                     </div>
                 </div>
             </div>
@@ -98,6 +87,57 @@ include("header.php");
     </div>
 </div>
 
+<div class="about-area pt-20 pb-70">
+    <div class="container-fluid">
+        <div class="section-title text-center">
+            <span>Room</span>
+            <h2>Our Room</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="about-img">
+                        <img src="assets/img/room-new/room1.jpg" alt="Images" class="img-height" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="about-content">
+                        <h2>Adventures at Serendipity Vacation Home</h2>
+                        <p>
+                            Nestled on the mountainside of the San Juan River Resort, this lovely 3 bedroom 2 bath
+                            mountain
+                            home w/studio apartment for a 4th bedroom and 3rd bath has high speed, reliable Starlnks
+                            internet, and a magnificent panoramic view of the San Juan Mountains from inside and outside
+                            the
+                            home. It is located 7 miles east of Pagosa Springs and 20 minutes from Wolf Creek Ski Area.
+                        <ul>
+                            <li>
+                                <i class="fas fa-check text-success font-size-25 mt-3 p-0"></i>Pagosa Springs, Co is a
+                                "Little Piece of Heaven" in Colorado!
+                            </li>
+                            <li>
+                                <i class="fas fa-check text-success font-size-25 mt-3 p-0"></i>Military discounts
+                                offered.
+                                No smoking.Pets allowed upon approval.
+                            </li>
+                            <li>
+                                <i class="fas fa-check text-success font-size-25 mt-3 p-0"></i> Couples, family,
+                                weddings
+                                and groups.
+                            </li>
+                        </ul>
+                        </p>
+                        <div>
+                            <a href="rooms.php" class="default-btn btn-bg-one text-decoration">
+                                Book Room
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Activity Item with Increased Icon Size -->
 <div class="services-area-two pt-70 pb-70">
@@ -151,72 +191,15 @@ include("header.php");
             </div>
         </div>
         <div class="text-center">
-            <a href="service.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
+            <a href="service.php" class="default-btn btn-bg-one text-decoration">
                 Explore More
             </a>
         </div>
     </div>
 </div>
 
-<div class="room-area pt-100 pb-70 section-bg">
-    <div class="container">
-        <div class="section-title text-center">
-            <span class="sp-color">Rooms</span>
-            <h2>Our Rooms</h2>
-        </div>
-        <div class="row pt-45">
-            <div class="col-lg-6">
-                <div class="room-card-two">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-5 col-md-4 p-0">
-                            <div class="room-card-img">
-                                <a href="room-details.html">
-                                    <img src="assets/img/gallery/house-2.jpg" alt="Images">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7 col-md-8 p-0">
-                            <div class="room-card-content">
-                                <h3>
-                                    <a href="room-details.html" class="text-decoration">Dining Area</a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="room-card-two">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-lg-5 col-md-4 p-0">
-                            <div class="room-card-img">
-                                <a href="room-details.html">
-                                    <img src="assets/img/gallery/house-3.jpg" alt="Images">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-7 col-md-8 p-0">
-                            <div class="room-card-content">
-                                <h3>
-                                    <a href="room-details.html" class="text-decoration">Gas Log Fireplace</a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <a href="rooms.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
-                    Browse More
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- Gallery Section -->
-<div class="container pt-100 pb-70">
+<div class="container pt-50 pb-70">
     <div class="section-title text-center">
         <span>Gallery</span>
         <h2>Our Gallery</h2>
@@ -268,7 +251,7 @@ include("header.php");
             </div>
         </div>
         <div class="text-center">
-            <a href="gallery.php" class="default-btn btn-bg-one border-radius-5 text-decoration">
+            <a href="gallery.php" class="default-btn btn-bg-one text-decoration">
                 Browse More
             </a>
         </div>

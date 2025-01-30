@@ -59,7 +59,16 @@
                     <a href="booking-request.php">
                         <div class="card info-card revenue-card">
                             <div class="card-body">
-                                <h5 class="card-title text-center">Hotel Booking Request</h5>
+                                <h5 class="card-title text-center">Room Booking Request</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <a href="reviews.php">
+                        <div class="card info-card revenue-card">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">View Reviews</h5>
                             </div>
                         </div>
                     </a>
