@@ -39,177 +39,380 @@
                 <div class="col-lg-4">
                     <div class="room-details-side">
                         <div class="side-bar-form">
-                            <h3>Booking Sheet </h3>
-                            <form>
-                                <div class="row align-items-center justify-content-center">
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label>Check in</label>
-                                            <div class="input-group">
-                                                <input id="datetimepicker" type="text" class="form-control" placeholder="09/29/2024">
-                                                <span class="input-group-addon"></span>
-                                            </div>
-                                            <i class="bx bxs-calendar"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label>Check Out</label>
-                                            <div class="input-group">
-                                                <input id="datetimepicker-check" type="text" class="form-control" placeholder="09/29/2024">
-                                                <span class="input-group-addon"></span>
-                                            </div>
-                                            <i class="bx bxs-calendar"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label>Numbers of Persons</label>
-                                            <select class="form-control">
-                                                <option>01</option>
-                                                <option>02</option>
-                                                <option>03</option>
-                                                <option>04</option>
-                                                <option>05</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="form-group">
-                                            <label>Numbers of Rooms</label>
-                                            <select class="form-control">
-                                                <option>01</option>
-                                                <option>02</option>
-                                                <option>03</option>
-                                                <option>04</option>
-                                                <option>05</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12">
-                                        <button type="submit" class="default-btn btn-bg-three border-radius-5">
-                                            Book Now
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="side-bar-plan">
-                            <h3>Basic Plan Facilities</h3>
-                            <ul>
-                                <li><a href="room-details.html">Lunch Facility</a></li>
-                                <li><a href="room-details.html">Breakfast Facility</a></li>
-                                <li><a href="room-details.html">Outdoor Kitchen</a></li>
-                                <li><a href="room-details.html">Shampoo and Soap</a></li>
-                                <li><a href="room-details.html">Dinner Facility</a></li>
-                                <li><a href="room-details.html">Wireless Connectivity</a></li>
-                                <li><a href="room-details.html">Double Bed</a></li>
-                                <li><a href="room-details.html">5 Star Food Favor</a></li>
-                            </ul>
-                            <h3>Premium Plan Facilities</h3>
-                            <ul>
-                                <li><a href="room-details.html">Double Bed</a></li>
-                                <li><a href="room-details.html">Lunch Facility</a></li>
-                                <li><a href="room-details.html">Dinner Facility</a></li>
-                                <li><a href="room-details.html">Breakfast Facility</a></li>
-                                <li><a href="room-details.html">Outdoor Kitchen</a></li>
-                                <li><a href="room-details.html">Shampoo and Soap</a></li>
-                                <li><a href="room-details.html">Wireless Connectivity</a></li>
-                                <li><a href="room-details.html">Mini-Bar</a></li>
-                                <li><a href="room-details.html">5 Star Food Favor</a></li>
-                                <li><a href="room-details.html">Buffet Dinner</a></li>
-                                <li><a href="room-details.html">Satellite Tv</a></li>
-                                <li><a href="room-details.html">Air Condition Facility</a></li>
-                            </ul>
+                            <h3>Living room</h3>
+                            <p>Board games • Books and reading material • Ethernet connection • Indoor fireplace • TV</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="room-details-article">
-                        <div class="room-details-slider owl-carousel owl-theme">
+                        <div class="row">
                             <div class="room-details-item">
-                                <img src="assets/img/room/room-1.jpg" alt="Images">
+                                <img class="img-fluid" src="assets/img/room/1.png" alt="Images">
                             </div>
-                            <div class="room-details-item">
-                                <img src="assets/img/room/room-2.jpg" alt="Images">
-                            </div>
-                            <div class="room-details-item">
-                                <img src="assets/img/room/room-5.jpg" alt="Images">
-                            </div>
-                            <div class="room-details-item">
-                                <img src="assets/img/room/room-8.jpg" alt="Images">
-                            </div>
-                            <div class="room-details-item">
-                                <img src="assets/img/room/room-9.jpg" alt="Images">
-                            </div>
-                            <div class="room-details-item">
-                                <img src="assets/img/room/room-10.jpg" alt="Images">
-                            </div>
-                            <div class="room-details-item">
-                                <img src="assets/img/room/room-11.jpg" alt="Images">
-                            </div>
-                            <div class="room-details-item">
-                                <img src="assets/img/room/room-12.jpg" alt="Images">
-                            </div>
-                            <div class="room-details-item">
-                                <img src="assets/img/room/room-13.jpg" alt="Images">
-                            </div>
-                        </div>
-                        <div class="room-details-title">
-                            <h2>Double Bed Suits With Royal Express and Super Duplex Feelings</h2>
-                            <ul>
-                                <li>
-                                    Basic : $120/Night/Room
-                                </li>
-                                <li>
-                                    Premium : $140/Night/Room
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="room-details-content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                            </p>
-                            <p>
-                                Ecespiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                                ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
-                                ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quci velit modi tempora incidunt
-                                ut labore et dolore magnam aliquam quaerat .
-                            </p>
-                        </div>
-                        <div class="room-details-review">
-                            <h2>Clients Review and Retting's</h2>
-                            <div class="review-ratting">
-                                <h3>Your retting: </h3>
-                                <i class="bx bx-star"></i>
-                                <i class="bx bx-star"></i>
-                                <i class="bx bx-star"></i>
-                                <i class="bx bx-star"></i>
-                                <i class="bx bx-star"></i>
-                            </div>
-                            <form>
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-12 col-md-12">
-                                        <div class="form-group">
-                                            <textarea name="message" class="form-control" cols="30" rows="8" required data-error="Write your message" placeholder="Write your review here.... "></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12">
-                                        <button type="submit" class="default-btn btn-bg-three">
-                                            Submit Review
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Full kitchen</h3>
+                            <p>Baking sheet • Barbecue utensils • Blender • Coffee maker • Dishes and cutlery • Dishwasher • Cooking basics • Freezer • Microwave • Oven • Fridge • Cooker • Toaster • Wine glasses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/2.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Dining area</h3>
+                            <p>Dining table • Heating • Wine glasses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/3.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Bedroom 1</h3>
+                            <p>Queen bed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/4.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Bedroom 2</h3>
+                            <p>Queen bed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/5.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Bedroom 3</h3>
+                            <p>2 single beds</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/6.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Bedroom 4</h3>
+                            <p>Double bed • Ceiling fan • Clothes storage • Essentials</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/7.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Full bathroom 1</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/8.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Full bathroom 2</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/9.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Full bathroom 3</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/10.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Back garden</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/room-1.jpg" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Back garden</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/11.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Patio</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/12.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Garage</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/13.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Exterior</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/14.png" alt="Images">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="room-details-area pt-100 pb-70">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4">
+                    <div class="room-details-side">
+                        <div class="side-bar-form">
+                            <h3>Additional photos</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="room-details-article">
+                        <div class="row">
+                            <div class="room-details-item">
+                                <img class="img-fluid" src="assets/img/room/16.png" alt="Images">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="assets/img/room/17.png" alt="Images">
+                            </div>
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="assets/img/room/18.png" alt="Images">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <img class="img-fluid" src="assets/img/room/19.png" alt="Images">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <?php
     include("footer.php");

@@ -176,29 +176,35 @@
                                             <tr>
                                                 <th scope="col"><strong>Rooms</strong></th>
                                                 <th scope="col"><strong>Details</strong></th>
+                                                <th scope="col"><strong>View</strong></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td><strong>4th Bedroom in Studio</strong></td>
                                                 <td>1 Double, 1 Sofa Bed, Upstairs/Downstairs, Ceiling Fan</td>
+                                                <td><a href="">View</a></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Master Bedroom</strong></td>
                                                 <td>1 Queen, Upstairs/Downstairs, Ceiling Fan, Closet/Clothes Rack, TV
                                                 </td>
+                                                <td><a href="">View</a></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>2nd Queen Bedroom</strong></td>
                                                 <td>1 Queen, Main Level, Closet/Clothes Rack</td>
+                                                <td><a href="">View</a></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>2 Twins</strong></td>
                                                 <td>2 Single, Upstairs/Downstairs, Ceiling Fan, Closet/Clothes Rack</td>
+                                                <td><a href="">View</a></td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Main Living/Dining Room</strong></td>
                                                 <td>1 Couch</td>
+                                                <td><a href="">View</a></td>
                                             </tr>
                                         </tbody>
                                     </table>
