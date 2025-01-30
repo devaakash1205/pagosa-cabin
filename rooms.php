@@ -13,6 +13,7 @@
     ?>
     <title>Pagosa Cabin | Room</title>
 </head>
+
 <body>
     <?php
     include("header.php");
@@ -109,7 +110,7 @@
                                 <!-- Sleeping Arrangements -->
                                 <div class="col-lg-6 col-md-12">
                                     <h5 class="text-center mb-3">Sleeping Arrangements</h5>
-                                    <div class="row g-3">
+                                    <!-- <div class="row g-3">
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="bg-light text-dark text-center custom-box p-3 h-100">
                                                 <div class="d-flex justify-content-center">
@@ -167,13 +168,45 @@
                                                 <a href="javascript:void(0);" class="custom-style">More</a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><strong>Rooms</strong></th>
+                                                <th scope="col"><strong>Details</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>4th Bedroom in Studio</strong></td>
+                                                <td>1 Double, 1 Sofa Bed, Upstairs/Downstairs, Ceiling Fan</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Master Bedroom</strong></td>
+                                                <td>1 Queen, Upstairs/Downstairs, Ceiling Fan, Closet/Clothes Rack, TV
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>2nd Queen Bedroom</strong></td>
+                                                <td>1 Queen, Main Level, Closet/Clothes Rack</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>2 Twins</strong></td>
+                                                <td>2 Single, Upstairs/Downstairs, Ceiling Fan, Closet/Clothes Rack</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Main Living/Dining Room</strong></td>
+                                                <td>1 Couch</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
 
                                 <!-- Bathroom Arrangements -->
                                 <div class="col-lg-6 col-md-12">
                                     <h5 class="text-center mb-3">Bathroom Arrangements</h5>
-                                    <div class="row g-3">
+                                    <!-- <div class="row g-3">
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="bg-light text-dark text-center custom-box p-3 h-100">
                                                 <div class="d-flex justify-content-center">
@@ -219,7 +252,29 @@
                                                 <a href="javascript:void(0);" class="custom-style">More</a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"><strong>Room</strong></th>
+                                                <th scope="col"><strong>Details</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong>Studio 3/4 Bath, Full</strong></td>
+                                                <td>Sink, Shower, Toilet, Hotel Amenities</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Upstairs Bath, Full</strong></td>
+                                                <td>Sink, Toilet, Combination Tub/Shower, Hotel Amenities</td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Downstairs Bath, Full</strong></td>
+                                                <td>Sink, Shower, Toilet, Hotel Amenities</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -408,8 +463,7 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-sm-12 col-md-12">
-                                        <button type="submit" class="default-btn btn-bg-three"
-                                            name="submit_booking">
+                                        <button type="submit" class="default-btn btn-bg-three" name="submit_booking">
                                             Book Now
                                         </button>
                                     </div>
