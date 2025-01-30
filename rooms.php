@@ -25,9 +25,9 @@
                         <a href="./">Home</a>
                     </li>
                     <li><i class="bx bx-chevron-right"></i></li>
-                    <li>Room</li>
+                    <li>Rooms</li>
                 </ul>
-                <h3>Room</h3>
+                <h3>Rooms</h3>
             </div>
         </div>
     </div>

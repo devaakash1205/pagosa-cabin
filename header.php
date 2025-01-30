@@ -59,7 +59,7 @@ $roomData = getRooms();
                             <a href="about-us.php" class="nav-link text-decoration"> About </a>
                         </li>
                         <li class="nav-item">
-                            <a href="rooms.php" class="nav-link text-decoration"> Room </a>
+                            <a href="rooms.php" class="nav-link text-decoration"> Rooms </a>
                         </li>
                         <li class="nav-item">
                             <a href="gallery.php" class="nav-link text-decoration"> Gallery </a>
@@ -72,11 +72,11 @@ $roomData = getRooms();
                             </a>
                         </li>
                         <li class="nav-item-btn">
-                            <a href="contact.php" class="default-btn btn-bg-one text-decoration">Book Now</a>
+                            <a href="rooms.php" class="default-btn btn-bg-one text-decoration">Book Now</a>
                         </li>
                     </ul>
                     <div class="nav-btn">
-                        <a href="contact.php" class="default-btn btn-bg-one text-decoration">Book Now</a>
+                        <a href="rooms.php" class="default-btn btn-bg-one text-decoration">Book Now</a>
                     </div>
                 </div>
             </nav>

@@ -15,12 +15,12 @@ if (isset($_POST['submit_booking'])) {
         SELECT * 
         FROM booking_request 
         WHERE name = '$name' 
-        OR email = '$email' 
-        OR phone = '$phone' 
-        OR checkin = '$checkin' 
-        OR checkout = '$checkout' 
-        OR no_of_adults = '$no_of_adults' 
-        OR no_of_children = '$no_of_children'
+        AND email = '$email' 
+        AND phone = '$phone' 
+        AND checkin = '$checkin' 
+        AND checkout = '$checkout' 
+        AND no_of_adults = '$no_of_adults' 
+        AND no_of_children = '$no_of_children'
     ";
     $checkResult = mysqli_query($conn, $checkQuery);
 
@@ -52,10 +52,8 @@ if (isset($_POST['submit_review'])) {
 VALUES ('$name', '$email','$phone','$address','$description')";
     $query = mysqli_query($conn, $sql);
     if ($query) {
-        echo "<script>alert('Review Added Successfully..')</script>";
+        echo "<script>alert('Review Added Successfully..'); window.location.href='reviews.php';</script>";
     } else {
         echo "<script>alert('something went wrong!!..')</script>";
     }
 }
-
-?>
