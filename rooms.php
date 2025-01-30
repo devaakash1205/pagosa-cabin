@@ -108,8 +108,9 @@
                         <div class="container">
                             <div class="row">
                                 <!-- Sleeping Arrangements -->
-                                <div class="col-lg-6 col-md-12">
+                                <div class="col-lg-12 col-md-12">
                                     <h5 class="text-center mb-3">Sleeping Arrangements</h5>
+                                    <hr>
                                     <!-- <div class="row g-3">
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="bg-light text-dark text-center custom-box p-3 h-100">
@@ -204,8 +205,9 @@
                                 </div>
 
                                 <!-- Bathroom Arrangements -->
-                                <div class="col-lg-6 col-md-12">
+                                <div class="col-lg-12 col-md-12">
                                     <h5 class="text-center mb-3">Bathroom Arrangements</h5>
+                                    <hr>
                                     <!-- <div class="row g-3">
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="bg-light text-dark text-center custom-box p-3 h-100">
