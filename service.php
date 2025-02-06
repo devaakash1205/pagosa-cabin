@@ -41,29 +41,37 @@
         <h1 class="section-heading font-weight-bold text-success">Explore Our Activities</h1>
         <div class="row g-4">
             <?php
-            foreach ($category as $key => $value) {
+            foreach ($category as $cat) {
             ?>
                 <h3 class="section-heading font-weight-bold text-dark">
-                    <?php echo $value['name']; ?>
+                    <?php echo $cat['name']; ?>
                 </h3>
-                <?php
-                foreach ($activityDetails as $key => $value) {
-                ?>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="card activity-card shadow-sm">
-                            <div class="card-body">
-                                <img src="admin/dashboard/<?php echo $value['image_url']?>"class="activity-icon">
-                                <h5 class="card-title mt-2"><?php echo $value['title']; ?></h5>
-                                <p class="card-text">
-                                    <?php echo $value['description']; ?>
-                                </p>
+                <div class="row">
+                    <?php
+                    $found = false;
+                    foreach ($activityDetails as $activity) {
+                        if ($activity['category'] == $cat['id']) {
+                            $found = true;
+                    ?>
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12 g-4">
+                                <div class="card activity-card shadow-sm">
+                                    <div class="card-body">
+                                        <img src="admin/dashboard/<?php echo $activity['image_url']; ?>" class="activity-icon">
+                                        <h5 class="card-title mt-2"><?php echo $activity['title']; ?></h5>
+                                        <p class="card-text">
+                                            <?php echo $activity['description']; ?>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                <?php
-                }
-                ?>
-
+                    <?php
+                        }
+                    }
+                    if (!$found) {
+                        echo "<p class='text-muted'>no activity found!</p>";
+                    }
+                    ?>
+                </div>
             <?php
             }
             ?>

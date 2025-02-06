@@ -71,7 +71,8 @@
 /* Icon styling */
 
 .activity-icon {
-    font-size: 36px;
+    width: 70px;
+    height: 70px;
     color: #28a745;
 }
 

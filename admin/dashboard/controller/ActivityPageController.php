@@ -40,6 +40,21 @@ class Activities
 
         return $data;
     }
+
+    function getSixActivity()
+    {
+        $data = [];
+
+        $sql = $this->conn->query("SELECT * FROM activities WHERE status = 1 LIMIT 6");
+
+        if ($sql->num_rows > 0) {
+            while ($res = $sql->fetch_assoc()) {
+                $data[] = $res;
+            }
+        }
+
+        return $data;
+    }
 }
 
 // add activities category

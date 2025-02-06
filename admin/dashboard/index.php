@@ -34,59 +34,42 @@
 
         <section class="section dashboard">
             <div class="row">
-
-                <!-- Revenue Card -->
-                <?php
-                $sql_page = mysqli_query($conn, "SELECT * FROM pages");
-                if (mysqli_num_rows($sql_page) > 0) {
-                    while ($result_page = mysqli_fetch_assoc($sql_page)) {
-                ?>
-                        <div class="col-lg-4 col-md-6">
-                            <a href="<?php echo $result_page['url'] ?>">
-                                <div class="card info-card revenue-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center"><?php echo $result_page['name'] ?></h5>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                <?php
-                    }
-                }
-                ?>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <a href="booking-request.php">
                         <div class="card info-card revenue-card">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Room Booking Request</h5>
+                            <div class="card-body text-center p-0">
+                                <img src="image/booking.png" class="img-fluid mt-3" width="50" alt="">
+                                <h5 class="card-title text-center">View Bookings</h5>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <a href="reviews.php">
-                        <div class="card info-card revenue-card">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">View Reviews</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <a href="contact-message.php">
                         <div class="card info-card revenue-card">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Contact Message</h5>
+                            <div class="card-body text-center p-0 ">
+                                <img src="image/messages.png" class="img-fluid mt-3" width="50" alt="">
+                                <h5 class="card-title text-center">Contact Messages</h5>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <a href="profile.php">
+                <div class="col-lg-3 col-md-6">
+                    <a href="our-room-page.php">
                         <div class="card info-card revenue-card">
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Profile</h5>
+                            <div class="card-body text-center p-0 ">
+                                <img src="image/room.png" class="img-fluid mt-3" width="50" alt="">
+                                <h5 class="card-title text-center">My Rooms</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <a href="pages.php">
+                        <div class="card info-card revenue-card">
+                            <div class="card-body text-center p-0 ">
+                                <img src="image/page.png" class="img-fluid mt-3" width="50" alt="">
+                                <h5 class="card-title text-center">All Pages</h5>
                             </div>
                         </div>
                     </a>

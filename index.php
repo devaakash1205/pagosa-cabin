@@ -7,11 +7,19 @@
     <?php
     include("link.php");
     require_once("./admin/config.php");
+    //home page details
     require_once("./admin/dashboard/controller/HomePageController.php");
     $homeData = new Home($conn);
     $home_banner = $homeData->getBannerImage($conn);
-    //banner details
     $homepage_details = $homeData->getHomePageDetails($conn);
+    // about us details  
+    require_once("./admin/dashboard/controller/AboutPageController.php");
+    $aboutData = new About($conn);
+    $aboutDetails = $aboutData->getAboutUsDetails();
+    // activity page details
+    require_once("./admin/dashboard/controller/ActivityPageController.php");
+    $activityData = new Activities($conn);
+    $activityDetails = $activityData->getSixActivity();
     ?>
     <title>Pagosa Cabin | Home</title>
 </head>
@@ -54,23 +62,37 @@ include("header.php");
     <div class="container-fluid">
         <div class="section-title text-center">
             <span>About Us</span>
-            <h2>About Us</h2>
+            <h2>Our About Us</h2>
         </div>
         <div class="row align-items-center justify-content-center">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                <div class="about-img">
-                    <img src="assets/img/about/about-img.jpeg" alt="Images" class="img-height" />
-                </div>
+            <div class="col-lg-6">
+                <?php
+                if (!empty($aboutDetails) && is_array($aboutDetails)) {
+                ?>
+                    <div class="about-img">
+                        <img src="admin/dashboard/<?php echo $aboutDetails['image_url']; ?>" alt="Images" class="img-height" />
+                    </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-10">
                 <div class="about-content">
-                    <h2><b>A Pagosa Springs, </b><span class="text-success"><b>Colorado Vacation Home in the Heart of
-                                the San Juan Mtns.</b></span></h2>
-
+                    <?php
+                    $title = $aboutDetails['title'];
+                    $greenLength = ceil(strlen($title) * 0.1);
+                    $firstPart = substr($title, 0, $greenLength);
+                    $secondPart = substr($title, $greenLength);
+                    ?>
+                    <h2>
+                        <b>
+                            <span><?php echo htmlspecialchars($firstPart); ?></span>
+                            <span class="text-success"><?php echo htmlspecialchars($secondPart); ?></span>
+                        </b>
+                    </h2>
                     <p>
-                        Nestled on the mountain side of The San Juan River Village, this lovely mountain home with
-                        reliable high-speed Starlinks wifi has a secluded setting and a magnificent panoramic view
-                        of the San Juan Mountains.
+                        <?php
+                        $words = explode(' ', $aboutDetails['description']);
+                        $shortText = implode(' ', array_slice($words, 0, 188));
+                        echo $shortText . '.';
+                        ?>
                     </p>
                     <div class="text-left">
                         <a href="about-us.php" class="default-btn btn-bg-one text-decoration">Read
@@ -78,11 +100,14 @@ include("header.php");
                     </div>
                 </div>
             </div>
+        <?php
+                }
+        ?>
         </div>
     </div>
 </div>
 
-<div class="about-area pt-20 pb-70">
+<div class="pt-20 pb-70">
     <div class="container-fluid">
         <div class="section-title text-center">
             <span>Room</span>
@@ -133,57 +158,27 @@ include("header.php");
         </div>
     </div>
 </div>
-
-<!-- Activity Item with Increased Icon Size -->
+<!--Activity-->
 <div class="services-area-two pt-70 pb-70">
     <div class="container">
         <div class="section-title text-center">
             <span class="sp-color">Activity</span>
             <h2>Our Activities</h2>
         </div>
-        <div class="row pt-45">
-            <div class="col-lg-4 col-sm-6">
-                <div class="services-card">
-                    <i class="fas fa-sleigh text-color"></i>
-                    <h3><a href="service-details.html">Sleigh Rides</a></h3>
-                    <p>Whimsical sleigh rides and sledding opportunities.</p>
+        <div class="row ">
+            <?php
+            foreach ($activityDetails as $key => $value) {
+            ?>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="services-card">
+                        <img src="admin/dashboard/<?php echo $value['image_url']; ?>" class="activity-icon">
+                        <h3><a href="service.php"><?php echo $value['title']; ?></a></h3>
+                        <p><?php echo $value['description']; ?></p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="services-card">
-                    <i class="fas fa-skiing text-color"></i>
-                    <h3><a href="service-details.html">Downhill Skiing</a></h3>
-                    <p>Downhill skiing and snowmobiling at nearby trails.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="services-card">
-                    <i class="fas fa-hot-tub text-color"></i>
-                    <h3><a href="service-details.html">Pagosa Hot Springs</a></h3>
-                    <p>Soak in the Pagosa Hot Springs year-round, a rejuvenating experience surrounded by nature.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="services-card">
-                    <i class="fas fa-hiking text-color"></i>
-                    <h3><a href="service-details.html">Hiking</a></h3>
-                    <p>Explore 3 million acres of the surrounding San Juan National Forest.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="services-card">
-                    <i class="fas fa-fish text-color"></i>
-                    <h3><a href="service-details.html">Fishing</a></h3>
-                    <p>Enjoy private access to the San Juan River and nearby trout ponds.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="services-card">
-                    <i class="fas fa-water text-color"></i>
-                    <h3><a href="service-details.html">Water Activities</a></h3>
-                    <p>Try river rafting or relax by the shimmering waters of the San Juan River.</p>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
         <div class="text-center">
             <a href="service.php" class="default-btn btn-bg-one text-decoration">

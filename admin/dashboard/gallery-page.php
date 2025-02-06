@@ -11,7 +11,6 @@
     include("../config.php");
     include("global-function.php");
     include("modal.php");
-    $homepage_details = getHomePageDetails($conn);
     ?>
 </head>
 
