@@ -11,7 +11,9 @@
     include("../config.php");
     include("global-function.php");
     include("modal.php");
-    $aboutpage_details = getAboutPageDetails($conn);
+    require_once('controller/AboutPageController.php');
+    $aboutData =  new About($conn);
+    $aboutDetails = $aboutData->getAboutUsDetails();
     ?>
 </head>
 
@@ -33,82 +35,111 @@
             </nav>
         </div>
         <!-- End Page Title -->
-
         <section class="section">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- Form to update or add homepage details -->
-                    <div class="card p-4">
-                        <form action="" method="post" enctype="multipart/form-data" onsubmit="syncCKEditorContent('#editor')">
-                            <!-- Banner Text -->
-                            <div class="row mb-2">
-                                <label for="description" class="col-sm-2 col-form-label">Banner Text</label>
-                                <div class="col-sm-10">
-                                    <textarea name="description" id="editor" class="form-control">
-                                        <?php echo $aboutpage_details ? $aboutpage_details['description'] : ''; ?>
-                                    </textarea>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title">About Page Banner</h5>
+                                    <a href="" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addAboutBannerModal">
+                                        <i class="bi bi-upload"></i> Add New Banner
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Image</th>
+                                                <th scope="col">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $aboutpage_banner = $aboutData->getBannerImage($conn);
+                                            if (empty($aboutpage_banner)) {
+                                                echo "<tr><td>Banner Not Found</td></tr>";
+                                            } else {
+                                                foreach ($aboutpage_banner as $res_banner) {
+                                            ?>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="<?php echo $res_banner['dest']; ?>" width="150" height="auto">
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript:void(0);" onclick="deleteBanner(<?php echo $res_banner['id']; ?>)">
+                                                                <i class="fas fa-trash text-danger"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                            <?php
+                                                }
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <!-- Banner Image Upload -->
-                            <div class="mb-1">
-                                <label for="Banner" class="form-label">Banner Image</label>
-                                <input type="file" class="form-control" name="banner" id="banner">
-                            </div>
-                            <!-- Submit Button -->
-                            <input type="submit" value="Submit" name="add_about_us_details" class="btn btn-primary btn-sm">
-                        </form>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body d-flex justify-content-between align-items-center">
-                            <h5 class="card-title">About Us Banner</h5>
-                        </div>
-                        <div class="card-body">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Image</th>
-                                        <th scope="col">Date</th>
-                                        <th scope="col">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $sql_banner = mysqli_query($conn, "SELECT * FROM about_page_details WHERE dest != '' LIMIT 1");
-
-                                    if (mysqli_num_rows($sql_banner) == 0) {
-                                        echo "<tr><td colspan='4'>No banner found</td></tr>";
-                                    } else {
-                                        $count = 1;
-                                        while ($res_banner = mysqli_fetch_array($sql_banner)) {
-                                    ?>
-                                            <tr>
-                                                <th scope="row"><?php echo $count++; ?></th>
-                                                <td>
-                                                    <img src="<?php echo $res_banner['dest']; ?>" alt="Banner<?php echo $res_banner['id']; ?>" width="150" height="auto">
-                                                </td>
-                                                <td>
-                                                    <?php echo date('Y-m-d', strtotime($res_banner['created_at'])); ?> <!-- Adjust to your date format -->
-                                                </td>
-                                                <td>
-                                                    <a href="javascript:void(0);" class="text-danger" onclick="confirmDeleteAboutBanner(<?php echo $res_banner['id']; ?>)">
-                                                        <i class="ri-delete-bin-5-fill"></i> Delete
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                    <?php
-                                        }
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!--About Us section-->
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card p-1">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">About Page</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content pt-2" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="card-body">
+                                                    <form action="" method="post" enctype="multipart/form-data">
+                                                        <div class="row g-3">
+                                                            <div class="col-lg-6">
+                                                                <label for="title" class="form-label">Title <span class="text-danger">*</span></label>
+                                                                <input type="text" placeholder="Enter the Room Title" id="title"
+                                                                    class="form-control" name="title" required value="<?php echo $aboutDetails ? $aboutDetails['title'] : '' ?>">
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <label for="image_url" class="form-label">Feature Image <input type="file" class="form-control" id="image_url" name="image_url" <?php echo $aboutDetails ? "" : "required" ?>>
 
+                                                                    <img src="<?php echo $aboutDetails ? $aboutDetails['image_url'] : '' ?>" class="img-fluid mt-2" alt="" style="width: 30%;">
+                                                            </div>
+                                                            <div class="col-lg-12 mb-2">
+                                                                <label for="sectionDescription">Description <span class="text-danger">*</span></label>
+                                                                <div class="quill-container">
+                                                                    <div class="quillEditor form-control" placeholder="Enter description"></div>
+                                                                    <textarea class="editorContent" name="description" style="display:none;">
+                                                                            <?php echo $aboutDetails ? trim(strip_tags(htmlspecialchars($aboutDetails['description']))) : '' ?>
+                                                                        </textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12">
+                                                                <button type="submit" class="btn btn-primary mt-3" name="addAboutDetails">Update About</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- End #main -->
     <?php include("footer.php") ?>
@@ -116,6 +147,29 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <?php include("script.php") ?>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('.quill-container').forEach(function(container) {
+                let quillEditor = container.querySelector('.quillEditor');
+                let hiddenTextarea = container.querySelector('.editorContent');
+
+                // Initialize Quill for each editor
+                let quill = new Quill(quillEditor, {
+                    theme: 'snow'
+                });
+
+                // Set pre-filled content
+                quill.root.innerHTML = hiddenTextarea.value;
+
+                // Sync Quill content before form submission
+                container.closest("form").addEventListener("submit", function() {
+                    hiddenTextarea.value = quill.root.innerHTML;
+                });
+            });
+        });
+    </script>
+
 
 </body>
 

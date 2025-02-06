@@ -99,3 +99,45 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0O3wS0mPzjMGxG5ANr8H8E6Sjj0ZzlvK7nD6r+qwm9sV5hT6" crossorigin="anonymous"></script>
+<script>
+    var quill = new Quill('#quillEditor', {
+        theme: 'snow',
+        placeholder: 'Enter details...',
+        modules: {
+            toolbar: [
+                [{
+                    'header': '1'
+                }, {
+                    'header': '2'
+                }, {
+                    'font': []
+                }],
+                [{
+                    'list': 'ordered'
+                }, {
+                    'list': 'bullet'
+                }],
+                [{
+                    'align': []
+                }],
+                ['bold', 'italic', 'underline'],
+                ['link'],
+                ['blockquote', 'code-block'],
+                [{
+                    'color': []
+                }, {
+                    'background': []
+                }], // Add color and background options
+                [{
+                    'size': ['small', false, 'large', 'huge']
+                }] // Add font size options
+            ]
+        }
+    });
+
+    // Sync Quill content with the hidden textarea
+    quill.on('text-change', function() {
+        var descriptionContent = quill.root.innerHTML;
+        document.getElementById('editorContent').value = descriptionContent;
+    });
+</script>

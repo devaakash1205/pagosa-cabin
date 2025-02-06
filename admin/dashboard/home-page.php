@@ -11,7 +11,9 @@
     include("../config.php");
     include("global-function.php");
     include("modal.php");
-    $homepage_details = getHomePageDetails($conn);
+    include("controller/HomePageController.php");
+    $homeData = new Home($conn);
+    $homepage_details = $homeData->getHomePageDetails($conn);
     ?>
 </head>
 
@@ -33,11 +35,9 @@
             </nav>
         </div>
         <!-- End Page Title -->
-
         <section class="section">
             <div class="row">
                 <div class="col-lg-12">
-
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="card">
@@ -57,20 +57,19 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $sql_banner = mysqli_query($conn, "SELECT * FROM home_page_banner_slider WHERE status = 1");
-
-                                            if (mysqli_num_rows($sql_banner) == 0) {
-                                                echo "<tr><td colspan='4'>No banner found</td></tr>";
+                                            $homepage_banner = $homeData->getBannerImage($conn);
+                                            if (empty($homepage_banner)) {
+                                                echo "<tr><td>Banner Not Found</td></tr>";
                                             } else {
-                                                while ($res_banner = mysqli_fetch_array($sql_banner)) {
+                                                foreach ($homepage_banner as $res_banner) {
                                             ?>
                                                     <tr>
                                                         <td>
-                                                            <img src="<?php echo $res_banner['dest']; ?>" alt="Banner<?php echo $res_banner['id']; ?>" width="150" height="auto">
+                                                            <img src="<?php echo $res_banner['dest']; ?>" width="150" height="auto">
                                                         </td>
                                                         <td>
-                                                            <a href="javascript:void(0);" class="text-danger" onclick="confirmDeleteBanner(<?php echo $res_banner['id']; ?>)">
-                                                                <i class="ri-delete-bin-5-fill"></i> Delete
+                                                            <a href="javascript:void(0);" onclick="deleteBanner(<?php echo $res_banner['id']; ?>)">
+                                                                <i class="fas fa-trash text-danger"></i>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -93,16 +92,16 @@
                                 </div>
                                 <div class="mt-1 mb-1 p-3">
                                     <?php
-                                    $sql_logo = mysqli_query($conn, "SELECT dest,id FROM logo LIMIT 1");
-                                    if (mysqli_num_rows($sql_logo) != 0) {
-                                        $res_logo = mysqli_fetch_assoc($sql_logo);
+                                    $homepage_logo = $homeData->getLogo();
+
+                                    if (!empty($homepage_logo)) {
                                     ?>
                                         <center>
-                                            <img src="<?php echo $res_logo['dest']; ?>" alt="Banner<?php echo $res_logo['id']; ?>" width="150" height="auto">
+                                            <img src="<?php echo $homepage_logo['dest']; ?>" alt="Logo <?php echo $homepage_logo['id']; ?>" width="150" height="auto">
                                         </center>
                                     <?php
                                     } else {
-                                        echo "No Logo Found";
+                                        echo "<center><p>No logo found</p></center>";
                                     }
                                     ?>
                                 </div>
@@ -144,14 +143,35 @@
                 </div>
             </div>
         </section>
-
     </main>
     <!-- End #main -->
     <?php include("footer.php") ?>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
     <?php include("script.php") ?>
+    <script>
+            function deleteBanner(bannerId) {
+                if (confirm("Are you sure you want to delete this banner?")) {
+                    $.ajax({
+                        url: "delete/delete_banner.php",
+                        type: "POST",
+                        data: {
+                            deleteBanner: bannerId
+                        },
+                        dataType: "json",
+                        success: function(response) {
+                            alert(response.message);
+                            if (response.status === "success") {
+                                location.reload(); // Reload page after deletion
+                            }
+                        },
+                        error: function() {
+                            alert("An error occurred while deleting the banner.");
+                        }
+                    });
+                }
+            }
+    </script>
 
 </body>
 

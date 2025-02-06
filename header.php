@@ -3,6 +3,9 @@ include("./admin/config.php");
 include("./admin/dashboard/global-function.php");
 $galleryData = getGalleryImage($conn);
 $roomData = getRooms();
+require_once("./admin/dashboard/controller/HomePageController.php");
+$homeData = new Home($conn);
+$logo = $homeData->getLogo();
 ?>
 <header class="top-header top-header-bg">
     <div class="container">

@@ -31,49 +31,6 @@ function getContactUsData()
     }
 }
 
-// ********----------------Home Page------------------**********
-// get logo
-function getLogo($conn)
-{
-    $sql = "SELECT * FROM logo LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) > 0) {
-        return mysqli_fetch_assoc($result);
-    } else {
-        return null;
-    }
-}
-
-// to get homepage details
-function getHomePageDetails($conn)
-{
-    $sql = "SELECT * FROM home_page_details LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) > 0) {
-        return mysqli_fetch_assoc($result);
-    } else {
-        return null;
-    }
-}
-
-// Function to get the banner image
-function getBannerImage($conn)
-{
-    $sql_banner = mysqli_query($conn, "SELECT dest FROM home_page_banner_slider WHERE status = 1");
-    $data = [];
-    if (mysqli_num_rows($sql_banner) > 0) {
-        while ($res_banner = mysqli_fetch_array($sql_banner)) {
-            $data[] = $res_banner;
-        }
-    } else {
-        $data[] = ["dest" => "./admin/dashboard/uploads/home/slider/default_banner.jpg"];
-    }
-
-    return $data;
-}
-
 // Deletion action (to be called in an AJAX request)
 if (isset($_POST['action']) && $_POST['action'] == 'delete_banner' && isset($_POST['banner_id'])) {
     include("../config.php");
@@ -119,18 +76,18 @@ function deleteBanner($bannerId, $conn)
     return false;
 }
 
-// *-----------About Page---------------//
-function getAboutPageDetails($conn)
-{
-    $sql = "SELECT * FROM about_page_details LIMIT 1";
-    $result = mysqli_query($conn, $sql);
+// // *-----------About Page---------------//
+// function getAboutPageDetails($conn)
+// {
+//     $sql = "SELECT * FROM about_page_details LIMIT 1";
+//     $result = mysqli_query($conn, $sql);
 
-    if (mysqli_num_rows($result) > 0) {
-        return mysqli_fetch_assoc($result);
-    } else {
-        return null;
-    }
-}
+//     if (mysqli_num_rows($result) > 0) {
+//         return mysqli_fetch_assoc($result);
+//     } else {
+//         return null;
+//     }
+// }
 
 // Deletion action (to be called in an AJAX request)
 if (isset($_POST['action']) && $_POST['action'] == 'delete_about_banner' && isset($_POST['banner_id'])) {

@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
     include("link.php");
+    require_once("./admin/config.php");
+    require_once("./admin/dashboard/controller/HomePageController.php");
+    $homeData = new Home($conn);
+    $home_banner = $homeData->getBannerImage($conn);
+    //banner details
+    $homepage_details = $homeData->getHomePageDetails($conn);
     ?>
     <title>Pagosa Cabin | Home</title>
 </head>
-
 <?php
 include("header.php");
 ?>
@@ -30,7 +35,8 @@ include("header.php");
         </div>
     </div>
 </div>
-<div class="banner-area">
+
+<div class="banner-area banner-area-bg" style="background-image: url('admin/dashboard/<?php echo $home_banner[0]['dest']; ?>');">
     <div class="container">
         <div class="banner-content">
             <h1>
@@ -40,17 +46,6 @@ include("header.php");
                     : "Serendipity Vacation Home & Studio Apartment Vacation Rental";
                 ?>
             </h1>
-            <div class="nav-btn">
-                <?php
-                if (isset($homepage_details) && $homepage_details["btn_name"] != null && $homepage_details["btn_url"] != null && $homepage_details["enable_btn"] == 1) {
-                    echo "<div style='text-align: center;'>
-                            <a class='default-btn btn-bg-one ' href='" . $homepage_details["btn_url"] . "'>
-                                " . $homepage_details["btn_name"] . "
-                            </a>
-                        </div>";
-                }
-                ?>
-            </div>
         </div>
     </div>
 </div>

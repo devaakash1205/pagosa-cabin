@@ -12,14 +12,15 @@
                 <i class="bi bi-journal-text"></i><span>Pages</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="pages-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pages.php">
+                        <i class="bi bi-circle"></i>
+                        <span>All Pages</span>
+                    </a>
+                </li>
                 <?php
                 getAllPages();
                 ?>
-                <li>
-                    <a href="forms-validation.html">
-                        <i class="bi bi-circle"></i><span>Manage Pages</span>
-                    </a>
-                </li>
             </ul>
         </li>
         <!-- End Forms Nav -->

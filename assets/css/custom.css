@@ -325,3 +325,22 @@
     text-decoration: none;
     color: #549154;
 }
+
+
+/**Home page banner */
+
+.banner-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.banner-imagee {
+    width: 100% !important;
+    height: 400px;
+}
+
+.banner-area-bg {
+    background-size: cover;
+    background-position: center;
+}

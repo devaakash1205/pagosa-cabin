@@ -115,3 +115,23 @@
         </div>
     </div>
 </div>
+<!-- add About page banner -->
+<div class="modal fade" id="addAboutBannerModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Upload Banner</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="mb-1">
+                        <label for="Banner" class="form-label">Banner</label>
+                        <input type="file" required class="form-control" name="banner" id="banner">
+                    </div>
+                    <input type="submit" value="Upload" class="btn btn-primary mt-3" name="upload_about_banner">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

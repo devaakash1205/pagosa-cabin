@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
     include("link.php");
+    require_once("./admin/config.php");
+    require_once("./admin/dashboard/controller/AboutPageController.php");
+    $aboutData = new About($conn);
+    // about banner
+    $about_banner = $aboutData->getBannerImage($conn);
+    // about page details
+    $aboutDetails = $aboutData->getAboutUsDetails();
     ?>
     <title>Pagosa Cabin | About Us</title>
 </head>
@@ -15,7 +22,7 @@
     <?php
     include("header.php");
     ?>
-    <div class="inner-banner inner-bg1">
+    <div class="inner-banner inner-bg1 banner-area-bg" style="background-image: url('admin/dashboard/<?php echo $about_banner[0]['dest']; ?>');">
         <div class="container">
             <div class="inner-title">
                 <ul>
@@ -29,42 +36,42 @@
             </div>
         </div>
     </div>
-
-
     <!--About Us-->
     <div class="about-area pt-100 pb-70">
         <div class="container-fluid">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6">
-                    <div class="about-img">
-                        <img src="assets/img/about/about-img.jpeg" alt="Images" class="img-height" />
-                    </div>
+                    <?php
+                    if (!empty($aboutDetails) && is_array($aboutDetails)) {
+                    ?>
+                        <div class="about-img">
+                            <img src="admin/dashboard/<?php echo $aboutDetails['image_url']; ?>" alt="Images" class="img-height" />
+                        </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-10">
                     <div class="about-content">
-                        <h2><b>A Pagosa Springs,</b><span class="text-success"><b>Colorado Vacation Home in the Heart of the San Juan Mtns.</b></span></h2>
+                        <?php
+                        $title = $aboutDetails['title'];
+                        $greenLength = ceil(strlen($title) * 0.1);
+                        $firstPart = substr($title, 0, $greenLength);
+                        $secondPart = substr($title, $greenLength);
+                        ?>
+                        <h2>
+                            <b>
+                                <span><?php echo htmlspecialchars($firstPart); ?></span>
+                                <span class="text-success"><?php echo htmlspecialchars($secondPart); ?></span>
+                            </b>
+                        </h2>
                         <p>
-                            Nestled on the picturesque mountainside of The San Juan River Village, our charming vacation home offers a peaceful retreat with reliable high-speed <span class="text-success"><b>Starlink Wi-Fi</b></span> and breathtaking panoramic views of the <span class="text-success"><b>San Juan Mountains</b></span> Conveniently located just <span class="text-success"><b>7 miles east of Pagosa Springs,</b></span> Colorado, and a mere <span class="text-success"><b>50 minutes east of Durango,</b></span> this home places you within proximity to a plethora of activities and attractions.
-                            <br>
-                            Our location boasts the perfect blend of serenity and adventure:
-
-                        <ul>
-                            <li>
-                                <i class="fas fa-check text-success font-size-25 mt-4 p-0"></i> 20 minutes from the renowned Wolf Creek Ski Area, celebrated for its premier powder skiing in Colorado.
-                            </li>
-                            <li>
-                                <i class="fas fa-check text-success font-size-25 mt-4 p-0"></i> 10 minutes from the Pagosa Hot Springs, famous for its cascading outdoor pools and natural mineral baths.
-                            </li>
-                            <li>
-                                <i class="fas fa-check text-success font-size-25 mt-4 p-0"></i> This two-story mountain retreat, steeped in an "Old West" aesthetic, features warm wooden accents, plush furnishings, and modern conveniences.
-                            </li>
-                            <li>
-                                <i class="fas fa-check text-success font-size-25 mt-4 p-0"></i> The spacious three-bedroom, two-bath cabin and an optional studio apartment ensure a comfortable and memorable stay for all guests.
-                            </li>
-                        </ul>
+                            <?php echo $aboutDetails['description'];?>
+                       
                         </p>
                     </div>
                 </div>
+
+            <?php
+                    }
+            ?>
             </div>
         </div>
     </div>
