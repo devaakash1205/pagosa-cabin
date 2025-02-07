@@ -57,3 +57,26 @@ VALUES ('$name', '$email','$phone','$address','$description')";
         echo "<script>alert('something went wrong!!..')</script>";
     }
 }
+
+// contact send by clients
+if (isset($_POST['send_contact'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    // SQL Query
+    $sql = "INSERT INTO contact_form(name, email, phone, subject, message) 
+            VALUES ('$name', '$email', '$phone','$subject', '$message')";
+
+    // Query Execute karo
+    if (mysqli_query($conn, $sql)) {
+        echo "<script>alert('Thanks for contacting us! We will get in touch with you soon.')</script>";
+        echo "<script>location.replace('contact.php')</script>";
+    } else {
+        echo "SQL Error: " . mysqli_error($conn);
+    }
+}
+?>
+

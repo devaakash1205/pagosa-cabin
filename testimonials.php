@@ -1,41 +1,38 @@
+<?php
+require_once("./admin/config.php");
+require_once("./admin/dashboard/controller/ReviewController.php");
+$reviewData = new Reviews($conn);
+?>
 <div class="testimonials-area pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
             <h2>What Our Clients Say</h2>
         </div>
-        <div class="testimonials-slider owl-carousel owl-theme pt-45">
-            <div class="testimonials-item">
-                <i class="flaticon-left-quote"></i>
-                <p>
-                    "Thank you-Thank you-Thank you! You guys own a piece of heaven!"
-                </p>
-                <h3>Burke Family</h3>
-                <span>Pasadena, CA</span>
+        <?php
+        $reviews = $reviewData->getAllReviews();
+        if (!empty($reviews) && is_array($reviews)) {
+        ?>
+            <!-- Initialize the testimonials slider only once -->
+            <div class="testimonials-slider owl-carousel owl-theme pt-45">
+                <?php foreach ($reviews as $review) { ?>
+                    <div class="testimonials-item">
+                        <i class="flaticon-left-quote"></i>
+                        <p>
+                            <?php echo $review['description']; ?>
+                        </p>
+                        <h3> <?php echo $review['name']; ?></h3>
+                        <span> <?php echo $review['address']; ?></span>
+                    </div>
+                <?php } ?>
             </div>
-            <div class="testimonials-item">
-                <i class="flaticon-left-quote"></i>
-                <p>
-                    "What a great time we had. What a perfectly gorgeous time of year"
-                </p>
-                <h3>The Snavely's</h3>
-                <span>Harlington, TX</span>
+        <?php
+        } else {
+        ?>
+            <div class="col-12 text-center">
+                <p>No reviews found.</p>
             </div>
-            <div class="testimonials-item">
-                <i class="flaticon-left-quote"></i>
-                <p>
-                    "We loved your place, the snow, and Buddy (the neighbor's dog), can't wait to return next year!"
-                </p>
-                <h3>The Miletello's</h3>
-                <span>Ruston, LA</span>
-            </div>
-            <div class="testimonials-item">
-                <i class="flaticon-left-quote"></i>
-                <p>
-                    "The studio apartment was perfect for us,and we're now looking for a similar our guest room."
-                </p>
-                <h3>The Freeman's</h3>
-                <span>San Gabriel, CA</span>
-            </div>
-        </div>
+        <?php
+        }
+        ?>
     </div>
 </div>

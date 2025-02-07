@@ -14,8 +14,19 @@
     require_once('controller/AboutPageController.php');
     $aboutData =  new About($conn);
     $aboutDetails = $aboutData->getAboutUsDetails();
+    //delete about banner
+    if (isset($_POST['action']) && $_POST['action'] == 'delete_about_banner') {
+        $aboutbannerId = $_POST['id'];
+        echo deleteAboutBanner($conn, $aboutbannerId);
+    }
     ?>
 </head>
+<style>
+    .quillEditor {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+</style>
 
 <body>
     <?php
@@ -57,7 +68,7 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $aboutpage_banner = $aboutData->getBannerImage($conn);
+                                            $aboutpage_banner = $aboutData->getBannerImage($conn); 
                                             if (empty($aboutpage_banner)) {
                                                 echo "<tr><td>Banner Not Found</td></tr>";
                                             } else {
@@ -68,8 +79,8 @@
                                                             <img src="<?php echo $res_banner['dest']; ?>" width="150" height="auto">
                                                         </td>
                                                         <td>
-                                                            <a href="javascript:void(0);" onclick="deleteBanner(<?php echo $res_banner['id']; ?>)">
-                                                                <i class="fas fa-trash text-danger"></i>
+                                                            <a href="javascript:void(0);" class="text-danger" onclick="deleteActivity(<?php echo $res_banner['id']; ?>)">
+                                                                <i class="ri-delete-bin-5-fill"></i> Delete
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -110,24 +121,27 @@
                                                                 <input type="text" placeholder="Enter the Room Title" id="title"
                                                                     class="form-control" name="title" required value="<?php echo $aboutDetails ? $aboutDetails['title'] : '' ?>">
                                                             </div>
+
                                                             <div class="col-lg-6">
                                                                 <label for="image_url" class="form-label">Feature Image <input type="file" class="form-control" id="image_url" name="image_url" <?php echo $aboutDetails ? "" : "required" ?>>
 
                                                                     <img src="<?php echo $aboutDetails ? $aboutDetails['image_url'] : '' ?>" class="img-fluid mt-2" alt="" style="width: 30%;">
                                                             </div>
-                                                            <div class="col-lg-12 mb-2">
-                                                                <label for="sectionDescription">Description <span class="text-danger">*</span></label>
-                                                                <div class="quill-container">
-                                                                    <div class="quillEditor form-control" placeholder="Enter description"></div>
-                                                                    <textarea class="editorContent" name="description" style="display:none;">
+
+                                                            <div class="col-md-12">
+                                                                <div class="form-group mb-2">
+                                                                    <label for="sectionDescription">Description</label>
+                                                                    <div class="quill-container">
+                                                                        <div class="quillEditor form-control" placeholder="Enter description"></div>
+                                                                        <textarea class="editorContent" name="description" style="display:none;">
                                                                             <?php echo $aboutDetails ? trim(strip_tags(htmlspecialchars($aboutDetails['description']))) : '' ?>
                                                                         </textarea>
+                                                                    </div>
+
+                                                                    <div class="col-lg-12">
+                                                                        <button type="submit" class="btn btn-primary mt-3" name="addAboutDetails">Update About</button>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="col-lg-12">
-                                                                <button type="submit" class="btn btn-primary mt-3" name="addAboutDetails">Update About</button>
-                                                            </div>
-                                                        </div>
                                                     </form>
                                                 </div>
                                             </div>
@@ -147,16 +161,47 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <?php include("script.php") ?>
-
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             document.querySelectorAll('.quill-container').forEach(function(container) {
                 let quillEditor = container.querySelector('.quillEditor');
                 let hiddenTextarea = container.querySelector('.editorContent');
 
-                // Initialize Quill for each editor
+                // Initialize Quill for each editor with color options in toolbar
                 let quill = new Quill(quillEditor, {
-                    theme: 'snow'
+                    theme: 'snow',
+                    modules: {
+                        toolbar: [
+                            [{
+                                'font': []
+                            }, {
+                                'size': []
+                            }],
+                            [{
+                                'header': '1'
+                            }, {
+                                'header': '2'
+                            }, {
+                                'font': []
+                            }],
+                            [{
+                                'align': []
+                            }],
+                            ['bold', 'italic', 'underline'],
+                            [{
+                                'list': 'ordered'
+                            }, {
+                                'list': 'bullet'
+                            }],
+                            [{
+                                'color': []
+                            }, {
+                                'background': []
+                            }], // Adding color options
+                            ['link'],
+                            ['blockquote', 'code-block']
+                        ]
+                    }
                 });
 
                 // Set pre-filled content
@@ -169,8 +214,30 @@
             });
         });
     </script>
-
-
+    <script>
+        // AJAX function to delete message
+        function deleteActivity(id) {
+            if (confirm('Are you sure you want to delete this about banner?')) {
+                $.ajax({
+                    url: 'about-us-page.php',
+                    method: 'POST',
+                    data: {
+                        action: 'delete_about_banner',
+                        id: id
+                    },
+                    success: function(response) {
+                        var data = JSON.parse(response);
+                        if (data.success) {
+                            alert('banner deleted successfully');
+                            location.reload();
+                        } else {
+                            alert('Error deleting banner');
+                        }
+                    }
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>

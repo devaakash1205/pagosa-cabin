@@ -5,7 +5,6 @@ $galleryData = getGalleryImage($conn);
 $roomData = getRooms();
 require_once("./admin/dashboard/controller/HomePageController.php");
 $homeData = new Home($conn);
-$logo = $homeData->getLogo();
 ?>
 <header class="top-header top-header-bg">
     <div class="container">
@@ -37,20 +36,37 @@ $logo = $homeData->getLogo();
         </div>
     </div>
 </header>
-
 <div class="navbar-area">
     <div class="mobile-nav">
-        <a href="./" class="logo">
-            <img src="assets/img/logos/logo2.png" class="logo-one" alt="Logo" style="width: auto;" />
-        </a>
+        <?php
+        $logo = $homeData->getLogo();
+        if (empty($logo)) {
+            echo "<tr><td>Logo not found</td></tr>";
+        } else {
+        ?>
+            <a href="./" class="logo">
+                <img src="admin/dashboard/<?php echo $logo['dest']; ?>" class="logo-one" alt="Logo" style="width: auto;" />
+            </a>
+        <?php
+        }
+        ?>
     </div>
 
     <div class="main-nav">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand" href="./">
-                    <img src="assets/img/logos/logo2.png" class="logo-one" alt="Logo" />
-                </a>
+                <?php
+                $logo = $homeData->getLogo();
+                if (empty($logo)) {
+                    echo "<tr><td>Logo not found</td></tr>";
+                } else {
+                ?>
+                    <a class="navbar-brand" href="./">
+                        <img src="admin/dashboard/<?php echo $logo['dest']; ?>" class="logo-one" alt="Logo" />
+                    </a>
+                <?php
+                }
+                ?>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">

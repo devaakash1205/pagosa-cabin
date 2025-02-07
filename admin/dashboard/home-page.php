@@ -14,6 +14,11 @@
     include("controller/HomePageController.php");
     $homeData = new Home($conn);
     $homepage_details = $homeData->getHomePageDetails($conn);
+    //delete banner 
+    if (isset($_POST['action']) && $_POST['action'] == 'delete_banner') {
+        $bannerId = $_POST['id'];
+        echo deleteHomeBanner($conn, $bannerId);
+    }
     ?>
 </head>
 
@@ -68,8 +73,8 @@
                                                             <img src="<?php echo $res_banner['dest']; ?>" width="150" height="auto">
                                                         </td>
                                                         <td>
-                                                            <a href="javascript:void(0);" onclick="deleteBanner(<?php echo $res_banner['id']; ?>)">
-                                                                <i class="fas fa-trash text-danger"></i>
+                                                            <a href="javascript:void(0);" class="text-danger" onclick="deletebanner(<?php echo $res_banner['id']; ?>)">
+                                                                <i class="ri-delete-bin-5-fill"></i>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -97,7 +102,7 @@
                                     if (!empty($homepage_logo)) {
                                     ?>
                                         <center>
-                                            <img src="<?php echo $homepage_logo['dest']; ?>" alt="Logo <?php echo $homepage_logo['id']; ?>" width="150" height="auto">
+                                            <img src="<?php echo $homepage_logo['dest']; ?>" alt="Logo <?php echo $homepage_logo['id']; ?>" width="230" height="auto">
                                         </center>
                                     <?php
                                     } else {
@@ -150,27 +155,27 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <?php include("script.php") ?>
     <script>
-            function deleteBanner(bannerId) {
-                if (confirm("Are you sure you want to delete this banner?")) {
-                    $.ajax({
-                        url: "delete/delete_banner.php",
-                        type: "POST",
-                        data: {
-                            deleteBanner: bannerId
-                        },
-                        dataType: "json",
-                        success: function(response) {
-                            alert(response.message);
-                            if (response.status === "success") {
-                                location.reload(); // Reload page after deletion
-                            }
-                        },
-                        error: function() {
-                            alert("An error occurred while deleting the banner.");
+        function deletebanner(id) {
+            if (confirm('Are you sure you want to delete this home banner')) {
+                $.ajax({
+                    url: 'home-page.php',
+                    method: 'POST',
+                    data: {
+                        action: 'delete_banner',
+                        id: id
+                    },
+                    success: function(response) {
+                        var data = JSON.parse(response);
+                        if (data.success) {
+                            alert('banner deleted successfully');
+                            location.reload();
+                        } else {
+                            alert('Error deleting banner');
                         }
-                    });
-                }
+                    }
+                });
             }
+        }
     </script>
 
 </body>

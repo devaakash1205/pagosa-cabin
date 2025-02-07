@@ -17,20 +17,6 @@ function getAllPages()
     }
 }
 
-// -------------- Contact US --------------------
-//get contact us data
-function getContactUsData()
-{
-    global $conn;
-    $sql_contactUsData = mysqli_query($conn, "SELECT * FROM contact_details LIMIT 1");
-    if (mysqli_num_rows($sql_contactUsData) > 0) {
-        $result = mysqli_fetch_assoc($sql_contactUsData);
-        return $result;
-    } else {
-        return null;
-    }
-}
-
 // Deletion action (to be called in an AJAX request)
 if (isset($_POST['action']) && $_POST['action'] == 'delete_banner' && isset($_POST['banner_id'])) {
     include("../config.php");
@@ -76,63 +62,6 @@ function deleteBanner($bannerId, $conn)
     return false;
 }
 
-// // *-----------About Page---------------//
-// function getAboutPageDetails($conn)
-// {
-//     $sql = "SELECT * FROM about_page_details LIMIT 1";
-//     $result = mysqli_query($conn, $sql);
-
-//     if (mysqli_num_rows($result) > 0) {
-//         return mysqli_fetch_assoc($result);
-//     } else {
-//         return null;
-//     }
-// }
-
-// Deletion action (to be called in an AJAX request)
-if (isset($_POST['action']) && $_POST['action'] == 'delete_about_banner' && isset($_POST['banner_id'])) {
-    include("../config.php");
-    $bannerId = $_POST['banner_id'];
-    $deleteStatus = deleteAboutBanner($bannerId, $conn);
-
-    if ($deleteStatus) {
-        echo json_encode(['status' => 'success']);
-    } else {
-        echo json_encode(['status' => 'error']);
-    }
-}
-
-// Function to delete the banner
-function deleteAboutBanner($bannerId, $conn)
-{
-    // global $conn;  // Ensure $conn is accessible
-
-    if ($conn === null) {
-        die("Connection to the database failed.");
-    }
-
-    // Select the banner file path
-    $sql = "SELECT dest FROM about_page_details WHERE id = '$bannerId' LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-
-    if ($result && mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $bannerImagePath = $row['dest'];
-
-        // Delete the image file if it exists
-        if (file_exists($bannerImagePath)) {
-            unlink($bannerImagePath);
-        }
-
-        // Delete the banner record from the database
-        $update_sql = "UPDATE about_page_details SET dest = '' WHERE id = '$bannerId'";
-        $delete_result = mysqli_query($conn, $update_sql);
-
-        return $delete_result;
-    }
-
-    return false;
-}
 // *************Contact Us---------------***************
 function fetchContactUsData($conn)
 {
@@ -178,6 +107,86 @@ function deleteContactMessage($conn, $messageId)
     $sql = "DELETE FROM contact_form WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $messageId);
+
+    if ($stmt->execute()) {
+        return json_encode(["success" => true]);
+    } else {
+        return json_encode(["success" => false]);
+    }
+
+    $stmt->close();
+}
+
+// Function to delete a  gallery image
+function deleteGalleryImage($conn, $galleryId)
+{
+    $sql = "DELETE FROM gallery WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $galleryId);
+
+    if ($stmt->execute()) {
+        return json_encode(["success" => true]);
+    } else {
+        return json_encode(["success" => false]);
+    }
+
+    $stmt->close();
+}
+
+// Function to delete activity
+function deleteActivity($conn, $activityId)
+{
+    $sql = "DELETE FROM activities WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $activityId);
+
+    if ($stmt->execute()) {
+        return json_encode(["success" => true]);
+    } else {
+        return json_encode(["success" => false]);
+    }
+
+    $stmt->close();
+}
+
+// Function to delete category
+function deleteCategory($conn, $categoryId)
+{
+    $sql = "DELETE FROM activity_category WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $categoryId);
+
+    if ($stmt->execute()) {
+        return json_encode(["success" => true]);
+    } else {
+        return json_encode(["success" => false]);
+    }
+
+    $stmt->close();
+}
+
+// Function to delete category
+function deleteHomeBanner($conn, $bannerId)
+{
+    $sql = "DELETE FROM home_page_banner_slider WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $bannerId);
+
+    if ($stmt->execute()) {
+        return json_encode(["success" => true]);
+    } else {
+        return json_encode(["success" => false]);
+    }
+
+    $stmt->close();
+}
+
+// Function to delete category
+function deleteAboutBanner($conn, $aboutbannerId)
+{
+    $sql = "DELETE FROM  about_page_banner WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $aboutbannerId);
 
     if ($stmt->execute()) {
         return json_encode(["success" => true]);
@@ -248,40 +257,5 @@ function getUserData($conn)
         return null;
     }
 }
-
-class Reviews
-{
-    private $conn;
-
-    public function __construct($connection)
-    {
-        $this->conn = $connection;
-    }
-
-    //get all reviews
-    function getAllReviews()
-    {
-        $sql = $this->conn->query("SELECT `name`, `description`,`address` FROM user_reviews WHERE status = 1");
-        $result = [];
-        if ($sql->num_rows > 0) {
-            while ($pageResult = $sql->fetch_assoc()) {
-                $result[] = $pageResult;
-            }
-        }
-        return $result;
-    }
-
-    function getReviewById($id)
-    {
-        $sql = $this->conn->query("SELECT `name`, `description`, `address`, `email`, `phone` FORM user_reviews WHERE id = '$id'");
-
-        if($sql->num_row > 0){
-            return $sql->fetch_assoc();
-        }
-
-        return null;
-    }
-}
-
 
 ?>

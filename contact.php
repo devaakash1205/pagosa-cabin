@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
     include("link.php");
+    require_once("./admin/config.php");
+    include('form-submit.php');
+    require_once("./admin/dashboard/controller/ContactUsPageController.php");
+    $contactData = new Contact($conn);
+    $contactDetails =  $contactData->getContact();
     ?>
     <title>Pagosa Cabin | Contact</title>
 </head>
@@ -30,53 +35,46 @@
             </div>
         </div>
     </div>
-
-
     <div class="contact-area pt-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-content">
                         <div class="contact-form">
-                            <form id="contactForm">
+                            <form method="post" action="">
                                 <div class="row justify-content-center">
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Name">
-                                            <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
                                             <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Email">
-                                            <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
-                                            <div class="help-block with-errors"></div>
+                                            <input type="text" name="phone" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Phone">
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
-                                            <div class="help-block with-errors"></div>
+                                            <input type="text" name="subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-group">
                                             <textarea name="message" class="form-control" id="message" cols="30" rows="8" required data-error="Write your message" placeholder="Your Message"></textarea>
-                                            <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12 col-md-12">
-                                        <button type="submit" class="default-btn btn-bg-three">
+                                        <button type="submit"
+                                            class="default-btn btn-bg-three"
+                                            name="send_contact">
                                             Send Message
                                         </button>
-                                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                        <div class="clearfix"></div>
                                     </div>
                                 </div>
                             </form>
@@ -88,7 +86,7 @@
                         <div class="section-title">
                             <h2>Contacts Info</h2>
                             <p>
-                            Nestled on the mountain side of The San Juan River Village, this lovely mountain home with reliable high-speed Starlinks wifi has a secluded setting and a magnificent panoramic view of the San Juan Mountains. 
+                                <?php echo isset($contactDetails) && !empty($contactDetails['description']) ? $contactDetails['description'] : ""; ?>
                             </p>
                         </div>
                         <div class="contact-item">
@@ -96,19 +94,23 @@
                                 <li>
                                     <i class="bx bx-home-alt"></i>
                                     <div class="content">
-                                        <span>Colorado</span>
+                                        <span> <?php echo isset($contactDetails) && !empty($contactDetails['address']) ? $contactDetails['address'] : ""; ?></span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="bx bx-phone-call"></i>
                                     <div class="content">
-                                        <span><a href="tel:+(626) 482-7900"  style="text-decoration:none;">+(626) 482-7900</a></span>
+                                        <span><a href="tel:<?php echo isset($contactDetails) && !empty($contactDetails['phone']) ? $contactDetails['phone'] : ""; ?>">+<?php echo isset($contactDetails) && !empty($contactDetails['phone']) ? $contactDetails['phone'] : ""; ?></a></span>
                                     </div>
                                 </li>
                                 <li>
                                     <i class="bx bx-envelope"></i>
                                     <div class="content">
-                                        <span><a href="mailto:codopagosa@earthlink.net" style="text-decoration:none;"><span>codopagosa@earthlink.net</span></a></span>
+                                        <span>
+                                            <a href="mailto:<?php echo isset($contactDetails) && !empty($contactDetails['email']) ? $contactDetails['email'] : ""; ?>">
+                                                <?php echo isset($contactDetails) && !empty($contactDetails['email']) ? $contactDetails['email'] : ""; ?>
+                                            </a>
+                                        </span>
                                     </div>
                                 </li>
                             </ul>

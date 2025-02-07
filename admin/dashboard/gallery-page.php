@@ -11,6 +11,10 @@
     include("../config.php");
     include("global-function.php");
     include("modal.php");
+    if (isset($_POST['action']) && $_POST['action'] == 'delete_message') {
+        $galleryId = $_POST['id'];
+        echo deleteGalleryImage($conn, $galleryId);
+    }
     ?>
 </head>
 
@@ -52,8 +56,7 @@
                                             <tr>
                                                 <th scope="col">#</th>
                                                 <th scope="col">Image</th>
-                                                <th scope="col">Description</th>
-                                                <th scope="col">Flag</th>
+                                                <th scope="col">Title</th>
                                                 <th scope="col">Action</th>
                                             </tr>
                                         </thead>
@@ -76,10 +79,9 @@
                                                             <?php echo $key["description"]; ?>
                                                         </td>
                                                         <td>
-                                                            Flag
-                                                        </td>
-                                                        <td>
-                                                            Action
+                                                            <a href="javascript:void(0);" class="text-danger" onclick="deleteContactMessage(<?php echo $key['id']; ?>)">
+                                                                <i class="ri-delete-bin-5-fill"></i> Delete
+                                                            </a>
                                                         </td>
                                                     </tr>
                                             <?php
@@ -106,7 +108,30 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <?php include("script.php") ?>
-
+    <script>
+        // AJAX function to delete message
+        function deleteContactMessage(id) {
+            if (confirm('Are you sure you want to delete this Image?')) {
+                $.ajax({
+                    url: 'gallery-page.php',
+                    method: 'POST',
+                    data: {
+                        action: 'delete_message',
+                        id: id
+                    },
+                    success: function(response) {
+                        var data = JSON.parse(response);
+                        if (data.success) {
+                            alert('Image deleted successfully');
+                            location.reload();
+                        } else {
+                            alert('Error deleting Image');
+                        }
+                    }
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -10,11 +10,13 @@
     include("link.php");
     include("../config.php");
     include("global-function.php");
-    include("form-submit.php");
-    $contactUsData = getContactUsData();
+    include("modal.php");
+    require_once('controller/ContactUsPageController.php');
+    //contact details
+    $contactData = new Contact($conn);
+    $contactDetails = $contactData->getContact();
     ?>
 </head>
-
 <body>
     <?php
     include("header.php");
@@ -32,116 +34,63 @@
             </nav>
         </div>
         <!-- End Page Title -->
-
-        <section class="section dashboard">
-            <div class="card p-3">
-                <h5>Social Media Links</h5>
-                <hr>
+        <section class="section">
+            <div class="row">
                 <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <form action="" method="post">
-                                <!-- Address -->
-                                <div class="row mb-2">
-                                    <label for="office_address" class="col-sm-2 col-form-label">Address <span class="text-danger">*</span></label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" placeholder="Enter Address" name="office_address" required
-                                            value="<?php echo isset($contactUsData) && $contactUsData['office_address'] != null ? $contactUsData['office_address'] : ''; ?>">
-                                    </div>
-                                </div>
+                    <div class="card p-1">
+                        <!-- Tabs Navigation -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                                    aria-selected="true">Contact Us</button>
+                            </li>
+                        </ul>
 
-                                <!-- Contact Numbers -->
-                                <div class="row mb-2">
-                                    <label for="contact_number1" class="col-sm-2 col-form-label">Contact Number <span class="text-danger">*</span></label>
-                                    <div class="col-sm-5">
-                                        <input type="text" class="form-control" placeholder="Enter Contact Number" name="contact_number1" required
-                                            value="<?php echo isset($contactUsData) && $contactUsData['contact_number1'] != null ? $contactUsData['contact_number1'] : ''; ?>">
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <input type="text" class="form-control" placeholder="Enter Alternate Number" name="contact_number2"
-                                            value="<?php echo isset($contactUsData) && $contactUsData['contact_number2'] != null ? $contactUsData['contact_number2'] : ''; ?>">
-                                    </div>
+                        <!-- Tabs Content -->
+                        <div class="tab-content pt-2" id="myTabContent">
+                            <!-- Rooms Tab -->
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="card-body d-flex justify-content-between align-items-center">
+                                    <h5 class="card-title mb-0">Contact Us Details</h5>
                                 </div>
-
-                                <!-- Email -->
-                                <div class="row mb-2">
-                                    <label for="email" class="col-sm-2 col-form-label">Email <span class="text-danger">*</span></label>
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" placeholder="Enter Email" name="email"
-                                            value="<?php echo isset($contactUsData) && $contactUsData['email'] != null ? $contactUsData['email'] : ''; ?>">
+                                <div class="card-body"></div>
+                                <form action="" method="post" enctype="multipart/form-data">
+                                    <div class="container">
+                                        <div class="row g-3">
+                                            <div class="col-lg-4">
+                                                <label for="room_name" class="form-label">Office Address</label>
+                                                <input type="text" placeholder="Enter the Address" id="room_name"
+                                                    class="form-control" name="address" value="<?php echo $contactDetails && $contactDetails['address'] ? $contactDetails['address'] : "" ?>">
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label for="room_name" class="form-label">Email</label>
+                                                <input type="text" placeholder="Enter the Email" id="room_name"
+                                                    class="form-control" name="email" value="<?php echo $contactDetails && $contactDetails['address'] ? $contactDetails['email'] : "" ?>">
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label for="price" class="form-label">Contact Number</label>
+                                                <input type="number" placeholder="Enter the Contact Number" id="price"
+                                                    class="form-control" name="phone" value="<?php echo $contactDetails && $contactDetails['address'] ? $contactDetails['phone'] : "" ?>">
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <label for="sectionDescription" class="form-label">Description</label>
+                                                <textarea id="editorContent" name="description" class="form-control">
+                                                <?php echo $contactDetails ? trim(strip_tags(htmlspecialchars_decode($contactDetails['description']))) : '' ?>
+                                                </textarea>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <button type="submit" class="btn btn-primary mt-3" name="submit_contact"> Update Contact Details</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Social Media Links -->
-                                <div class="row mb-2">
-                                    <label class="col-sm-2 col-form-label">Twitter</label>
-                                    <div class="col-sm-8">
-                                        <input type="url" class="form-control" placeholder="Enter Twitter Link" name="twitter_link"
-                                            value="<?php echo isset($contactUsData) && $contactUsData['twitter_link'] != null ? $contactUsData['twitter_link'] : ''; ?>">
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <input type="checkbox" name="enable_twitter" id="enable_twitter"
-                                            <?php echo isset($contactUsData) && $contactUsData['enable_twitter'] == 1 ? 'checked' : ''; ?>> Enable
-                                    </div>
-                                </div>
-
-                                <div class="row mb-2">
-                                    <label class="col-sm-2 col-form-label">Facebook</label>
-                                    <div class="col-sm-8">
-                                        <input type="url" class="form-control" placeholder="Enter Facebook Link" name="facebook_link"
-                                            value="<?php echo isset($contactUsData) && $contactUsData['facebook_link'] != null ? $contactUsData['facebook_link'] : ''; ?>">
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <input type="checkbox" name="enable_facebook" id="enable_facebook"
-                                            <?php echo isset($contactUsData) && $contactUsData['enable_facebook'] == 1 ? 'checked' : ''; ?>> Enable
-                                    </div>
-                                </div>
-
-                                <div class="row mb-2">
-                                    <label class="col-sm-2 col-form-label">Instagram</label>
-                                    <div class="col-sm-8">
-                                        <input type="url" class="form-control" placeholder="Enter Instagram Link" name="instagram_link"
-                                            value="<?php echo isset($contactUsData) && $contactUsData['instagram_link'] != null ? $contactUsData['instagram_link'] : ''; ?>">
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <input type="checkbox" name="enable_instagram" id="enable_instagram"
-                                            <?php echo isset($contactUsData) && $contactUsData['enable_instagram'] == 1 ? 'checked' : ''; ?>> Enable
-                                    </div>
-                                </div>
-
-                                <div class="row mb-2">
-                                    <label class="col-sm-2 col-form-label">YouTube</label>
-                                    <div class="col-sm-8">
-                                        <input type="url" class="form-control" placeholder="Enter YouTube Link" name="youtube_link"
-                                            value="<?php echo isset($contactUsData) && $contactUsData['youtube_link'] != null ? $contactUsData['youtube_link'] : ''; ?>">
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <input type="checkbox" name="enable_youtube" id="enable_youtube"
-                                            <?php echo isset($contactUsData) && $contactUsData['enable_youtube'] == 1 ? 'checked' : ''; ?>> Enable
-                                    </div>
-                                </div>
-
-                                <div class="row mb-2">
-                                    <label class="col-sm-2 col-form-label">LinkedIn</label>
-                                    <div class="col-sm-8">
-                                        <input type="url" class="form-control" placeholder="Enter LinkedIn Link" name="linkedin_link"
-                                            value="<?php echo isset($contactUsData) && $contactUsData['linkedin_link'] != null ? $contactUsData['linkedin_link'] : ''; ?>">
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <input type="checkbox" name="enable_linkedin" id="enable_linkedin"
-                                            <?php echo isset($contactUsData) && $contactUsData['enable_linkedin'] == 1 ? 'checked' : ''; ?>> Enable
-                                    </div>
-                                </div>
-
-                                <!-- Submit Button -->
-                                <input type="submit" value="Update Address" class="btn btn-primary btn-sm" name="update_address">
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
     <!-- End #main -->
     <?php include("footer.php") ?>
@@ -150,6 +99,20 @@
             class="bi bi-arrow-up-short"></i></a>
 
     <?php include("script.php") ?>
+    <script>
+        var quill = new Quill('#quillEditor', {
+            theme: 'snow' // or 'bubble'
+        });
+
+        // Get content from textarea and set it in Quill
+        var description = document.getElementById("editorContent").value.trim();
+        quill.root.innerHTML = description;
+
+        // Sync back to textarea when form submits
+        document.querySelector("form").onsubmit = function() {
+            document.getElementById("editorContent").value = quill.root.innerHTML.trim();
+        };
+    </script>
 
 </body>
 
