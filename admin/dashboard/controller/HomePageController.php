@@ -46,11 +46,9 @@ class Home
         $sql_banner = mysqli_query($conn, "SELECT id, dest FROM home_page_banner_slider WHERE status = 1");
         $data = [];
         if (mysqli_num_rows($sql_banner) > 0) {
-            while ($res_banner = mysqli_fetch_array($sql_banner)) {
+            while ($res_banner = mysqli_fetch_assoc($sql_banner)) {
                 $data[] = $res_banner;
             }
-        } else {
-            $data[] = ["dest" => "./admin/dashboard/uploads/home/slider/default_banner.jpg"];
         }
 
         return $data;

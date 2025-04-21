@@ -17,6 +17,16 @@
     $categoryData = $activityData->getAllCategories();
     // activities Details
     $activities = $activityData->getAllActivity();
+    //delete activity
+    if (isset($_POST['action']) && $_POST['action'] == 'delete_activity') {
+        $activityId = $_POST['id'];
+        echo deleteActivity($conn, $activityId);
+    }
+    //delete category
+    if (isset($_POST['action']) && $_POST['action'] == 'delete_category') {
+        $categoryId = $_POST['id'];
+        echo deleteCategory($conn, $categoryId);
+    }
     ?>
 </head>
 
@@ -144,7 +154,7 @@
                                                         </td>
                                                         <td>
                                                             <img src="<?php echo $key['image_url']; ?>"
-                                                                alt="Image<?php echo $key['id']; ?>" width="150" height="auto">
+                                                                alt="Image<?php echo $key['id']; ?>" width="80" height="auto">
                                                         </td>
                                                         <td>
                                                             <?php
@@ -169,11 +179,9 @@
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </button>
                                                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                                    <!-- <li><a class="dropdown-item"
-                                                                            href="edit-room-details.php?id=<?php echo $key['id']; ?>"><i
-                                                                                class="bx bx-pencil"></i> Edit</a></li> -->
-                                                                    <li>
-                                                                        <a href="javascript:void(0);" class="text-danger delete-room" data-id="<?php echo $key['id']; ?>"><i class="bx bx-trash"></i> Delete</a>
+                                                                        <a href="javascript:void(0);" class="text-danger" onclick="deleteActivity(<?php echo $key['id']; ?>)">
+                                                                            <i class="ri-delete-bin-5-fill"></i> Delete
+                                                                        </a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -234,8 +242,9 @@
                                                     <th scope="row"><?php echo $count++; ?></th>
                                                     <td><?php echo htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8'); ?></td>
                                                     <td>
-                                                        <a href="delete/delete-amenities.php?amenities=<?php echo $row['id']; ?>&delete_amenities=true"
-                                                            class="text-danger"><i class="bx bx-trash"></i></a>
+                                                        <a href="javascript:void(0);" class="text-danger" onclick="deleteCategory(<?php echo $row['id']; ?>)">
+                                                            <i class="ri-delete-bin-5-fill"></i>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                         <?php
@@ -259,6 +268,52 @@
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
     <?php include("script.php") ?>
+    <script>
+        // AJAX function to delete message
+        function deleteActivity(id) {
+            if (confirm('Are you sure you want to delete this activity?')) {
+                $.ajax({
+                    url: 'activity-page.php',
+                    method: 'POST',
+                    data: {
+                        action: 'delete_activity',
+                        id: id
+                    },
+                    success: function(response) {
+                        var data = JSON.parse(response);
+                        if (data.success) {
+                            alert('activity deleted successfully');
+                            location.reload();
+                        } else {
+                            alert('Error deleting activity');
+                        }
+                    }
+                });
+            }
+        }
+
+        function deleteCategory(id) {
+            if (confirm('Are you sure you want to delete this category?')) {
+                $.ajax({
+                    url: 'activity-page.php',
+                    method: 'POST',
+                    data: {
+                        action: 'delete_category',
+                        id: id
+                    },
+                    success: function(response) {
+                        var data = JSON.parse(response);
+                        if (data.success) {
+                            alert('category deleted successfully');
+                            location.reload();
+                        } else {
+                            alert('Error deleting category');
+                        }
+                    }
+                });
+            }
+        }
+    </script>
 </body>
 
 </html>

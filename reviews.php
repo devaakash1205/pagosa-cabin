@@ -8,6 +8,10 @@
     <?php
     include("link.php");
     include('form-submit.php');
+    require_once("./admin/config.php");
+    //review
+    require_once("./admin/dashboard/controller/ReviewController.php");
+    $reviewData = new Reviews($conn);
     ?>
     <title>Pagosa Cabin | Room</title>
 </head>
@@ -15,9 +19,6 @@
 <body>
     <?php
     include("header.php");
-    // 
-    $reviewsData = new Reviews($conn);
-
     ?>
     <div class="inner-banner inner-bg9">
         <div class="container">
@@ -35,10 +36,10 @@
     </div>
     <div class="row justify-content-center mt-5">
         <?php
-        $reviews = $reviewsData->getAllReviews();
+        $reviews = $reviewData->getAllReviews();
         if (!empty($reviews) && is_array($reviews)) {
             foreach ($reviews as $review) {
-                ?>
+        ?>
                 <div class="col-lg-11 col-md-11 col-sm-11 col-11 mb-4">
                     <div class="review-card">
                         <div class="review-header">
@@ -53,14 +54,14 @@
                         </div>
                     </div>
                 </div>
-                <?php
+            <?php
             }
         } else {
             ?>
             <div class="col-12 text-center">
                 <p>No reviews found.</p>
             </div>
-            <?php
+        <?php
         }
         ?>
     </div>
